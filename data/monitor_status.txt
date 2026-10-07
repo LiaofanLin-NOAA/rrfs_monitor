@@ -1,112 +1,488 @@
 ================================================================================
-RRFSv2X Ensemble Output Monitor
+RRFSv2X Ensemble Forecast Monitor
 ================================================================================
-Current UTC time: 2026-10-07 20:48:12 UTC
+Current UTC time: 2026-10-07 20:58:21 UTC
+Lookback cycles: 12
+Ensemble members: 30
+File pattern: mpasout*
 
-mem001 forecast files for the past 12 hourly cycles
-
---------------------------------------------------------------------------------
+================================================================================
 Cycle: 2026100720
-Directory: /scratch3/BMC/rtwrfruc/RRFSv2X/NCO_dirs/RRFSv2X/com/rrfs/v2.1.4/rrfs.20261007/20/fcst/enkf/mem001
-Status: Directory not found
+================================================================================
+mem001: MISSING (directory not found)
+mem002: MISSING (directory not found)
+mem003: MISSING (directory not found)
+mem004: MISSING (directory not found)
+mem005: MISSING (directory not found)
+mem006: MISSING (directory not found)
+mem007: MISSING (directory not found)
+mem008: MISSING (directory not found)
+mem009: MISSING (directory not found)
+mem010: MISSING (directory not found)
+mem011: MISSING (directory not found)
+mem012: MISSING (directory not found)
+mem013: MISSING (directory not found)
+mem014: MISSING (directory not found)
+mem015: MISSING (directory not found)
+mem016: MISSING (directory not found)
+mem017: MISSING (directory not found)
+mem018: MISSING (directory not found)
+mem019: MISSING (directory not found)
+mem020: MISSING (directory not found)
+mem021: MISSING (directory not found)
+mem022: MISSING (directory not found)
+mem023: MISSING (directory not found)
+mem024: MISSING (directory not found)
+mem025: MISSING (directory not found)
+mem026: MISSING (directory not found)
+mem027: MISSING (directory not found)
+mem028: MISSING (directory not found)
+mem029: MISSING (directory not found)
+mem030: MISSING (directory not found)
 
---------------------------------------------------------------------------------
+Summary:
+  Available members: 0/30
+  Status: INCOMPLETE
+  Missing members: mem001, mem002, mem003, mem004, mem005, mem006, mem007, mem008, mem009, mem010, mem011, mem012, mem013, mem014, mem015, mem016, mem017, mem018, mem019, mem020, mem021, mem022, mem023, mem024, mem025, mem026, mem027, mem028, mem029, mem030
+
+================================================================================
 Cycle: 2026100719
-Directory: /scratch3/BMC/rtwrfruc/RRFSv2X/NCO_dirs/RRFSv2X/com/rrfs/v2.1.4/rrfs.20261007/19/fcst/enkf/mem001
-File count: 4
-  log.atmosphere.0000.out
-  mpasout.2026-10-07_20.00.00.nc
-  namelist.atmosphere
-  streams.atmosphere
+================================================================================
+mem001: OK (1 files)
+mem002: OK (1 files)
+mem003: OK (1 files)
+mem004: OK (1 files)
+mem005: OK (1 files)
+mem006: OK (1 files)
+mem007: OK (1 files)
+mem008: OK (1 files)
+mem009: OK (1 files)
+mem010: OK (1 files)
+mem011: OK (1 files)
+mem012: OK (1 files)
+mem013: OK (1 files)
+mem014: OK (1 files)
+mem015: OK (1 files)
+mem016: OK (1 files)
+mem017: OK (1 files)
+mem018: OK (1 files)
+mem019: OK (1 files)
+mem020: OK (1 files)
+mem021: OK (1 files)
+mem022: OK (1 files)
+mem023: OK (1 files)
+mem024: OK (1 files)
+mem025: OK (1 files)
+mem026: OK (1 files)
+mem027: OK (1 files)
+mem028: OK (1 files)
+mem029: OK (1 files)
+mem030: OK (1 files)
 
---------------------------------------------------------------------------------
+Summary:
+  Available members: 30/30
+  Status: COMPLETE
+  mpasout file count range: 1 - 1
+  File count consistency: CONSISTENT
+
+================================================================================
 Cycle: 2026100718
-Directory: /scratch3/BMC/rtwrfruc/RRFSv2X/NCO_dirs/RRFSv2X/com/rrfs/v2.1.4/rrfs.20261007/18/fcst/enkf/mem001
-File count: 4
-  log.atmosphere.0000.out
-  mpasout.2026-10-07_19.00.00.nc
-  namelist.atmosphere
-  streams.atmosphere
+================================================================================
+mem001: OK (1 files)
+mem002: OK (1 files)
+mem003: OK (1 files)
+mem004: OK (1 files)
+mem005: OK (1 files)
+mem006: OK (1 files)
+mem007: OK (1 files)
+mem008: OK (1 files)
+mem009: OK (1 files)
+mem010: OK (1 files)
+mem011: OK (1 files)
+mem012: OK (1 files)
+mem013: OK (1 files)
+mem014: OK (1 files)
+mem015: OK (1 files)
+mem016: OK (1 files)
+mem017: OK (1 files)
+mem018: OK (1 files)
+mem019: OK (1 files)
+mem020: OK (1 files)
+mem021: OK (1 files)
+mem022: OK (1 files)
+mem023: OK (1 files)
+mem024: OK (1 files)
+mem025: OK (1 files)
+mem026: OK (1 files)
+mem027: OK (1 files)
+mem028: OK (1 files)
+mem029: OK (1 files)
+mem030: OK (1 files)
 
---------------------------------------------------------------------------------
+Summary:
+  Available members: 30/30
+  Status: COMPLETE
+  mpasout file count range: 1 - 1
+  File count consistency: CONSISTENT
+
+================================================================================
 Cycle: 2026100717
-Directory: /scratch3/BMC/rtwrfruc/RRFSv2X/NCO_dirs/RRFSv2X/com/rrfs/v2.1.4/rrfs.20261007/17/fcst/enkf/mem001
-File count: 4
-  log.atmosphere.0000.out
-  mpasout.2026-10-07_18.00.00.nc
-  namelist.atmosphere
-  streams.atmosphere
+================================================================================
+mem001: OK (1 files)
+mem002: OK (1 files)
+mem003: OK (1 files)
+mem004: OK (1 files)
+mem005: OK (1 files)
+mem006: OK (1 files)
+mem007: OK (1 files)
+mem008: OK (1 files)
+mem009: OK (1 files)
+mem010: OK (1 files)
+mem011: OK (1 files)
+mem012: OK (1 files)
+mem013: OK (1 files)
+mem014: OK (1 files)
+mem015: OK (1 files)
+mem016: OK (1 files)
+mem017: OK (1 files)
+mem018: OK (1 files)
+mem019: OK (1 files)
+mem020: OK (1 files)
+mem021: OK (1 files)
+mem022: OK (1 files)
+mem023: OK (1 files)
+mem024: OK (1 files)
+mem025: OK (1 files)
+mem026: OK (1 files)
+mem027: OK (1 files)
+mem028: OK (1 files)
+mem029: OK (1 files)
+mem030: OK (1 files)
 
---------------------------------------------------------------------------------
+Summary:
+  Available members: 30/30
+  Status: COMPLETE
+  mpasout file count range: 1 - 1
+  File count consistency: CONSISTENT
+
+================================================================================
 Cycle: 2026100716
-Directory: /scratch3/BMC/rtwrfruc/RRFSv2X/NCO_dirs/RRFSv2X/com/rrfs/v2.1.4/rrfs.20261007/16/fcst/enkf/mem001
-File count: 4
-  log.atmosphere.0000.out
-  mpasout.2026-10-07_17.00.00.nc
-  namelist.atmosphere
-  streams.atmosphere
+================================================================================
+mem001: OK (1 files)
+mem002: OK (1 files)
+mem003: OK (1 files)
+mem004: OK (1 files)
+mem005: OK (1 files)
+mem006: OK (1 files)
+mem007: OK (1 files)
+mem008: OK (1 files)
+mem009: OK (1 files)
+mem010: OK (1 files)
+mem011: OK (1 files)
+mem012: OK (1 files)
+mem013: OK (1 files)
+mem014: OK (1 files)
+mem015: OK (1 files)
+mem016: OK (1 files)
+mem017: OK (1 files)
+mem018: OK (1 files)
+mem019: OK (1 files)
+mem020: OK (1 files)
+mem021: OK (1 files)
+mem022: OK (1 files)
+mem023: OK (1 files)
+mem024: OK (1 files)
+mem025: OK (1 files)
+mem026: OK (1 files)
+mem027: OK (1 files)
+mem028: OK (1 files)
+mem029: OK (1 files)
+mem030: OK (1 files)
 
---------------------------------------------------------------------------------
+Summary:
+  Available members: 30/30
+  Status: COMPLETE
+  mpasout file count range: 1 - 1
+  File count consistency: CONSISTENT
+
+================================================================================
 Cycle: 2026100715
-Directory: /scratch3/BMC/rtwrfruc/RRFSv2X/NCO_dirs/RRFSv2X/com/rrfs/v2.1.4/rrfs.20261007/15/fcst/enkf/mem001
-File count: 4
-  log.atmosphere.0000.out
-  mpasout.2026-10-07_16.00.00.nc
-  namelist.atmosphere
-  streams.atmosphere
+================================================================================
+mem001: OK (1 files)
+mem002: OK (1 files)
+mem003: OK (1 files)
+mem004: OK (1 files)
+mem005: OK (1 files)
+mem006: OK (1 files)
+mem007: OK (1 files)
+mem008: OK (1 files)
+mem009: OK (1 files)
+mem010: OK (1 files)
+mem011: OK (1 files)
+mem012: OK (1 files)
+mem013: OK (1 files)
+mem014: OK (1 files)
+mem015: OK (1 files)
+mem016: OK (1 files)
+mem017: OK (1 files)
+mem018: OK (1 files)
+mem019: OK (1 files)
+mem020: OK (1 files)
+mem021: OK (1 files)
+mem022: OK (1 files)
+mem023: OK (1 files)
+mem024: OK (1 files)
+mem025: OK (1 files)
+mem026: OK (1 files)
+mem027: OK (1 files)
+mem028: OK (1 files)
+mem029: OK (1 files)
+mem030: OK (1 files)
 
---------------------------------------------------------------------------------
+Summary:
+  Available members: 30/30
+  Status: COMPLETE
+  mpasout file count range: 1 - 1
+  File count consistency: CONSISTENT
+
+================================================================================
 Cycle: 2026100714
-Directory: /scratch3/BMC/rtwrfruc/RRFSv2X/NCO_dirs/RRFSv2X/com/rrfs/v2.1.4/rrfs.20261007/14/fcst/enkf/mem001
-File count: 4
-  log.atmosphere.0000.out
-  mpasout.2026-10-07_15.00.00.nc
-  namelist.atmosphere
-  streams.atmosphere
+================================================================================
+mem001: OK (1 files)
+mem002: OK (1 files)
+mem003: OK (1 files)
+mem004: OK (1 files)
+mem005: OK (1 files)
+mem006: OK (1 files)
+mem007: OK (1 files)
+mem008: OK (1 files)
+mem009: OK (1 files)
+mem010: OK (1 files)
+mem011: OK (1 files)
+mem012: OK (1 files)
+mem013: OK (1 files)
+mem014: OK (1 files)
+mem015: OK (1 files)
+mem016: OK (1 files)
+mem017: OK (1 files)
+mem018: OK (1 files)
+mem019: OK (1 files)
+mem020: OK (1 files)
+mem021: OK (1 files)
+mem022: OK (1 files)
+mem023: OK (1 files)
+mem024: OK (1 files)
+mem025: OK (1 files)
+mem026: OK (1 files)
+mem027: OK (1 files)
+mem028: OK (1 files)
+mem029: OK (1 files)
+mem030: OK (1 files)
 
---------------------------------------------------------------------------------
+Summary:
+  Available members: 30/30
+  Status: COMPLETE
+  mpasout file count range: 1 - 1
+  File count consistency: CONSISTENT
+
+================================================================================
 Cycle: 2026100713
-Directory: /scratch3/BMC/rtwrfruc/RRFSv2X/NCO_dirs/RRFSv2X/com/rrfs/v2.1.4/rrfs.20261007/13/fcst/enkf/mem001
-File count: 4
-  log.atmosphere.0000.out
-  mpasout.2026-10-07_14.00.00.nc
-  namelist.atmosphere
-  streams.atmosphere
+================================================================================
+mem001: OK (1 files)
+mem002: OK (1 files)
+mem003: OK (1 files)
+mem004: OK (1 files)
+mem005: OK (1 files)
+mem006: OK (1 files)
+mem007: OK (1 files)
+mem008: OK (1 files)
+mem009: OK (1 files)
+mem010: OK (1 files)
+mem011: OK (1 files)
+mem012: OK (1 files)
+mem013: OK (1 files)
+mem014: OK (1 files)
+mem015: OK (1 files)
+mem016: OK (1 files)
+mem017: OK (1 files)
+mem018: OK (1 files)
+mem019: OK (1 files)
+mem020: OK (1 files)
+mem021: OK (1 files)
+mem022: OK (1 files)
+mem023: OK (1 files)
+mem024: OK (1 files)
+mem025: OK (1 files)
+mem026: OK (1 files)
+mem027: OK (1 files)
+mem028: OK (1 files)
+mem029: OK (1 files)
+mem030: OK (1 files)
 
---------------------------------------------------------------------------------
+Summary:
+  Available members: 30/30
+  Status: COMPLETE
+  mpasout file count range: 1 - 1
+  File count consistency: CONSISTENT
+
+================================================================================
 Cycle: 2026100712
-Directory: /scratch3/BMC/rtwrfruc/RRFSv2X/NCO_dirs/RRFSv2X/com/rrfs/v2.1.4/rrfs.20261007/12/fcst/enkf/mem001
-File count: 4
-  log.atmosphere.0000.out
-  mpasout.2026-10-07_13.00.00.nc
-  namelist.atmosphere
-  streams.atmosphere
+================================================================================
+mem001: OK (1 files)
+mem002: OK (1 files)
+mem003: OK (1 files)
+mem004: OK (1 files)
+mem005: OK (1 files)
+mem006: OK (1 files)
+mem007: OK (1 files)
+mem008: OK (1 files)
+mem009: OK (1 files)
+mem010: OK (1 files)
+mem011: OK (1 files)
+mem012: OK (1 files)
+mem013: OK (1 files)
+mem014: OK (1 files)
+mem015: OK (1 files)
+mem016: OK (1 files)
+mem017: OK (1 files)
+mem018: OK (1 files)
+mem019: OK (1 files)
+mem020: OK (1 files)
+mem021: OK (1 files)
+mem022: OK (1 files)
+mem023: OK (1 files)
+mem024: OK (1 files)
+mem025: OK (1 files)
+mem026: OK (1 files)
+mem027: OK (1 files)
+mem028: OK (1 files)
+mem029: OK (1 files)
+mem030: OK (1 files)
 
---------------------------------------------------------------------------------
+Summary:
+  Available members: 30/30
+  Status: COMPLETE
+  mpasout file count range: 1 - 1
+  File count consistency: CONSISTENT
+
+================================================================================
 Cycle: 2026100711
-Directory: /scratch3/BMC/rtwrfruc/RRFSv2X/NCO_dirs/RRFSv2X/com/rrfs/v2.1.4/rrfs.20261007/11/fcst/enkf/mem001
-File count: 4
-  log.atmosphere.0000.out
-  mpasout.2026-10-07_12.00.00.nc
-  namelist.atmosphere
-  streams.atmosphere
+================================================================================
+mem001: OK (1 files)
+mem002: OK (1 files)
+mem003: OK (1 files)
+mem004: OK (1 files)
+mem005: OK (1 files)
+mem006: OK (1 files)
+mem007: OK (1 files)
+mem008: OK (1 files)
+mem009: OK (1 files)
+mem010: OK (1 files)
+mem011: OK (1 files)
+mem012: OK (1 files)
+mem013: OK (1 files)
+mem014: OK (1 files)
+mem015: OK (1 files)
+mem016: OK (1 files)
+mem017: OK (1 files)
+mem018: OK (1 files)
+mem019: OK (1 files)
+mem020: OK (1 files)
+mem021: OK (1 files)
+mem022: OK (1 files)
+mem023: OK (1 files)
+mem024: OK (1 files)
+mem025: OK (1 files)
+mem026: OK (1 files)
+mem027: OK (1 files)
+mem028: OK (1 files)
+mem029: OK (1 files)
+mem030: OK (1 files)
 
---------------------------------------------------------------------------------
+Summary:
+  Available members: 30/30
+  Status: COMPLETE
+  mpasout file count range: 1 - 1
+  File count consistency: CONSISTENT
+
+================================================================================
 Cycle: 2026100710
-Directory: /scratch3/BMC/rtwrfruc/RRFSv2X/NCO_dirs/RRFSv2X/com/rrfs/v2.1.4/rrfs.20261007/10/fcst/enkf/mem001
-File count: 4
-  log.atmosphere.0000.out
-  mpasout.2026-10-07_11.00.00.nc
-  namelist.atmosphere
-  streams.atmosphere
+================================================================================
+mem001: OK (1 files)
+mem002: OK (1 files)
+mem003: OK (1 files)
+mem004: OK (1 files)
+mem005: OK (1 files)
+mem006: OK (1 files)
+mem007: OK (1 files)
+mem008: OK (1 files)
+mem009: OK (1 files)
+mem010: OK (1 files)
+mem011: OK (1 files)
+mem012: OK (1 files)
+mem013: OK (1 files)
+mem014: OK (1 files)
+mem015: OK (1 files)
+mem016: OK (1 files)
+mem017: OK (1 files)
+mem018: OK (1 files)
+mem019: OK (1 files)
+mem020: OK (1 files)
+mem021: OK (1 files)
+mem022: OK (1 files)
+mem023: OK (1 files)
+mem024: OK (1 files)
+mem025: OK (1 files)
+mem026: OK (1 files)
+mem027: OK (1 files)
+mem028: OK (1 files)
+mem029: OK (1 files)
+mem030: OK (1 files)
 
---------------------------------------------------------------------------------
+Summary:
+  Available members: 30/30
+  Status: COMPLETE
+  mpasout file count range: 1 - 1
+  File count consistency: CONSISTENT
+
+================================================================================
 Cycle: 2026100709
-Directory: /scratch3/BMC/rtwrfruc/RRFSv2X/NCO_dirs/RRFSv2X/com/rrfs/v2.1.4/rrfs.20261007/09/fcst/enkf/mem001
-File count: 4
-  log.atmosphere.0000.out
-  mpasout.2026-10-07_10.00.00.nc
-  namelist.atmosphere
-  streams.atmosphere
+================================================================================
+mem001: OK (1 files)
+mem002: OK (1 files)
+mem003: OK (1 files)
+mem004: OK (1 files)
+mem005: OK (1 files)
+mem006: OK (1 files)
+mem007: OK (1 files)
+mem008: OK (1 files)
+mem009: OK (1 files)
+mem010: OK (1 files)
+mem011: OK (1 files)
+mem012: OK (1 files)
+mem013: OK (1 files)
+mem014: OK (1 files)
+mem015: OK (1 files)
+mem016: OK (1 files)
+mem017: OK (1 files)
+mem018: OK (1 files)
+mem019: OK (1 files)
+mem020: OK (1 files)
+mem021: OK (1 files)
+mem022: OK (1 files)
+mem023: OK (1 files)
+mem024: OK (1 files)
+mem025: OK (1 files)
+mem026: OK (1 files)
+mem027: OK (1 files)
+mem028: OK (1 files)
+mem029: OK (1 files)
+mem030: OK (1 files)
+
+Summary:
+  Available members: 30/30
+  Status: COMPLETE
+  mpasout file count range: 1 - 1
+  File count consistency: CONSISTENT
 
 ================================================================================
