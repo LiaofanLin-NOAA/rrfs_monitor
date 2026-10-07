@@ -1,0 +1,112 @@
+================================================================================
+RRFSv2X Ensemble Output Monitor
+================================================================================
+Current UTC time: 2026-10-07 20:48:12 UTC
+
+mem001 forecast files for the past 12 hourly cycles
+
+--------------------------------------------------------------------------------
+Cycle: 2026100720
+Directory: /scratch3/BMC/rtwrfruc/RRFSv2X/NCO_dirs/RRFSv2X/com/rrfs/v2.1.4/rrfs.20261007/20/fcst/enkf/mem001
+Status: Directory not found
+
+--------------------------------------------------------------------------------
+Cycle: 2026100719
+Directory: /scratch3/BMC/rtwrfruc/RRFSv2X/NCO_dirs/RRFSv2X/com/rrfs/v2.1.4/rrfs.20261007/19/fcst/enkf/mem001
+File count: 4
+  log.atmosphere.0000.out
+  mpasout.2026-10-07_20.00.00.nc
+  namelist.atmosphere
+  streams.atmosphere
+
+--------------------------------------------------------------------------------
+Cycle: 2026100718
+Directory: /scratch3/BMC/rtwrfruc/RRFSv2X/NCO_dirs/RRFSv2X/com/rrfs/v2.1.4/rrfs.20261007/18/fcst/enkf/mem001
+File count: 4
+  log.atmosphere.0000.out
+  mpasout.2026-10-07_19.00.00.nc
+  namelist.atmosphere
+  streams.atmosphere
+
+--------------------------------------------------------------------------------
+Cycle: 2026100717
+Directory: /scratch3/BMC/rtwrfruc/RRFSv2X/NCO_dirs/RRFSv2X/com/rrfs/v2.1.4/rrfs.20261007/17/fcst/enkf/mem001
+File count: 4
+  log.atmosphere.0000.out
+  mpasout.2026-10-07_18.00.00.nc
+  namelist.atmosphere
+  streams.atmosphere
+
+--------------------------------------------------------------------------------
+Cycle: 2026100716
+Directory: /scratch3/BMC/rtwrfruc/RRFSv2X/NCO_dirs/RRFSv2X/com/rrfs/v2.1.4/rrfs.20261007/16/fcst/enkf/mem001
+File count: 4
+  log.atmosphere.0000.out
+  mpasout.2026-10-07_17.00.00.nc
+  namelist.atmosphere
+  streams.atmosphere
+
+--------------------------------------------------------------------------------
+Cycle: 2026100715
+Directory: /scratch3/BMC/rtwrfruc/RRFSv2X/NCO_dirs/RRFSv2X/com/rrfs/v2.1.4/rrfs.20261007/15/fcst/enkf/mem001
+File count: 4
+  log.atmosphere.0000.out
+  mpasout.2026-10-07_16.00.00.nc
+  namelist.atmosphere
+  streams.atmosphere
+
+--------------------------------------------------------------------------------
+Cycle: 2026100714
+Directory: /scratch3/BMC/rtwrfruc/RRFSv2X/NCO_dirs/RRFSv2X/com/rrfs/v2.1.4/rrfs.20261007/14/fcst/enkf/mem001
+File count: 4
+  log.atmosphere.0000.out
+  mpasout.2026-10-07_15.00.00.nc
+  namelist.atmosphere
+  streams.atmosphere
+
+--------------------------------------------------------------------------------
+Cycle: 2026100713
+Directory: /scratch3/BMC/rtwrfruc/RRFSv2X/NCO_dirs/RRFSv2X/com/rrfs/v2.1.4/rrfs.20261007/13/fcst/enkf/mem001
+File count: 4
+  log.atmosphere.0000.out
+  mpasout.2026-10-07_14.00.00.nc
+  namelist.atmosphere
+  streams.atmosphere
+
+--------------------------------------------------------------------------------
+Cycle: 2026100712
+Directory: /scratch3/BMC/rtwrfruc/RRFSv2X/NCO_dirs/RRFSv2X/com/rrfs/v2.1.4/rrfs.20261007/12/fcst/enkf/mem001
+File count: 4
+  log.atmosphere.0000.out
+  mpasout.2026-10-07_13.00.00.nc
+  namelist.atmosphere
+  streams.atmosphere
+
+--------------------------------------------------------------------------------
+Cycle: 2026100711
+Directory: /scratch3/BMC/rtwrfruc/RRFSv2X/NCO_dirs/RRFSv2X/com/rrfs/v2.1.4/rrfs.20261007/11/fcst/enkf/mem001
+File count: 4
+  log.atmosphere.0000.out
+  mpasout.2026-10-07_12.00.00.nc
+  namelist.atmosphere
+  streams.atmosphere
+
+--------------------------------------------------------------------------------
+Cycle: 2026100710
+Directory: /scratch3/BMC/rtwrfruc/RRFSv2X/NCO_dirs/RRFSv2X/com/rrfs/v2.1.4/rrfs.20261007/10/fcst/enkf/mem001
+File count: 4
+  log.atmosphere.0000.out
+  mpasout.2026-10-07_11.00.00.nc
+  namelist.atmosphere
+  streams.atmosphere
+
+--------------------------------------------------------------------------------
+Cycle: 2026100709
+Directory: /scratch3/BMC/rtwrfruc/RRFSv2X/NCO_dirs/RRFSv2X/com/rrfs/v2.1.4/rrfs.20261007/09/fcst/enkf/mem001
+File count: 4
+  log.atmosphere.0000.out
+  mpasout.2026-10-07_10.00.00.nc
+  namelist.atmosphere
+  streams.atmosphere
+
+================================================================================
