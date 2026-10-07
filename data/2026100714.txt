@@ -1,0 +1,20 @@
+================================================================================
+RRFSv2X Ensemble Variable Monitor
+================================================================================
+Cycle: 2026100714
+Members: 30
+Files processed: 30
+
+temperature_2m
+  Variable: t2m
+  Long name: 2-meter temperature
+  Minimum: 263.977753 K
+  Maximum: 308.558899 K
+
+specific_humidity_2m
+  Variable: q2
+  Long name: 2-meter specific humidity
+  Minimum: 0.000152 kg kg^{-1}
+  Maximum: 0.025662 kg kg^{-1}
+
+================================================================================
