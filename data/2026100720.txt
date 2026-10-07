@@ -8,13 +8,15 @@ Files processed: 30
 temperature_2m
   Variable: t2m
   Long name: 2-meter temperature
-  Minimum: 268.665894 K
-  Maximum: 314.885773 K
+  Units: K
+  Minimum: 268.665894
+  Maximum: 314.885773
 
 specific_humidity_2m
   Variable: q2
   Long name: 2-meter specific humidity
-  Minimum: 0.000350 kg kg^{-1}
-  Maximum: 0.026428 kg kg^{-1}
+  Units: kg kg^{-1}
+  Minimum: 0.000350
+  Maximum: 0.026428
 
 ================================================================================
