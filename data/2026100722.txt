@@ -1,7 +1,7 @@
 ================================================================================
 RRFSv2X Ensemble Variable Monitor
 ================================================================================
-Cycle: 2026100720
+Cycle: 2026100722
 Members: 30
 Files processed: 30
 Total grid cells: 2341818
@@ -12,24 +12,24 @@ temperature_2m
   Variable: t2m
   Long name: 2-meter temperature
   Units: K
-  Percentile 1: 276.195374
-  Percentile 10: 284.736328
-  Spatial mean: 295.650391
-  Percentile 90: 304.545532
-  Percentile 99: 310.518311
-  Minimum: 268.665894
-  Maximum: 314.885773
+  Percentile 1: 202.804916
+  Percentile 10: 207.580795
+  Spatial mean: 217.781906
+  Percentile 90: 226.461731
+  Percentile 99: 242.474640
+  Minimum: 0.000000
+  Maximum: 315.809875
 
 specific_humidity_2m
   Variable: q2
   Long name: 2-meter specific humidity
   Units: kg kg^{-1}
-  Percentile 1: 0.002821
-  Percentile 10: 0.003817
-  Spatial mean: 0.007213
-  Percentile 90: 0.011623
-  Percentile 99: 0.018927
-  Minimum: 0.000350
-  Maximum: 0.025685
+  Percentile 1: 0.002734
+  Percentile 10: 0.003730
+  Spatial mean: 0.007114
+  Percentile 90: 0.011610
+  Percentile 99: 0.018017
+  Minimum: 0.000000
+  Maximum: 0.025518
 
 ================================================================================
