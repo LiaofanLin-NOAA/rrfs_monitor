@@ -1,0 +1,38 @@
+================================================================================
+RRFSv2X Ensemble Variable Monitor
+================================================================================
+Cycle: 2026100818
+Members: 30
+Files processed: 30
+Spread STD ddof: 1
+Total grid cells: 2341818
+Land grid cells: 1461560
+Ocean grid cells: 880258
+
+temperature_2m
+  Variable: t2m
+  Long name: 2-meter temperature
+  Units: K
+  Spread percentile 1: 0.193663
+  Spread percentile 10: 0.274018
+  Spread spatial mean: 0.492525
+  Spread percentile 90: 0.771890
+  Spread percentile 99: 1.292215
+  Minimum: 269.918915
+  Maximum: 315.222443
+  Spread figure: /scratch4/BMC/wrfruc/llin/ursa/260901-misc/rrfs_monitor/figure/2026100818/2026100818_t2m_spread.png
+
+specific_humidity_2m
+  Variable: q2
+  Long name: 2-meter specific humidity
+  Units: kg kg^{-1}
+  Spread percentile 1: 0.000128
+  Spread percentile 10: 0.000201
+  Spread spatial mean: 0.000480
+  Spread percentile 90: 0.000859
+  Spread percentile 99: 0.001447
+  Minimum: 0.000098
+  Maximum: 0.026676
+  Spread figure: /scratch4/BMC/wrfruc/llin/ursa/260901-misc/rrfs_monitor/figure/2026100818/2026100818_q2_spread.png
+
+================================================================================
