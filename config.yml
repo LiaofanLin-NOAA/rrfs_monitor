@@ -1,0 +1,91 @@
+# config.yml
+#
+# Shared configuration for RRFS workflow monitoring and
+# RRFSv2X ensemble output monitoring.
+#
+# Copy this file to `myexps.yml` if you want to keep local
+# machine-specific modifications out of Git.
+
+common:
+  default_exp: ursa/rrfsv2x_det
+
+  workflow_xml: rrfs.xml
+  workflow_db: rrfs.db
+
+  lookback_cycles: 72
+
+  recipients:
+    - first.last@noaa.gov
+
+  checks:
+    dead_jobs:
+      enabled: true
+
+    stall:
+      enabled: true
+      threshold_sec: 3600
+
+    hung_jobs:
+      enabled: false
+      action: alert
+      tasks:
+        - name: fcst
+          log_pattern: "{workdir}/fcst_{cyc}/log.atmosphere.0000.out"
+          max_idle_sec: 1200
+
+  # --------------------------------------------------------------------
+  # RRFSv2X ensemble output monitor
+  # --------------------------------------------------------------------
+  rrfs_monitor:
+    enabled: true
+
+    # Base RRFS COM directory
+    rrfs_com: /scratch3/BMC/rtwrfruc/RRFSv2X/NCO_dirs/RRFSv2X/com/rrfs/v2.1.4
+
+    # MPAS invariant/static file used for grid information
+    # such as latCell, lonCell, and landmask
+    invariant_file: /scratch3/BMC/rtwrfruc/RRFSv2X/code/rrfs-workflow.20260803/fix/conus3km/conus3km.invariant.nc_L60_GEFS
+
+    # Number of most recent hourly cycles to check
+    lookback_cycles: 4
+
+    # RRFS ensemble members mem001 - mem030
+    num_members: 30
+
+    # Exactly one forecast file is expected per member/cycle
+    forecast_file_pattern: "mpasout*"
+
+    # Standard deviation convention used for ensemble spread
+    # ddof=1 is consistent with the existing ensemble-spread script
+    spread_ddof: 1
+
+    # Use land grid cells only for monitoring statistics
+    land_only: true
+
+    # Output directory relative to the repository root
+    output_dir: data
+
+    # Main status file
+    status_file: monitor_status.txt
+
+    # Variables processed for complete ensemble cycles
+    monitor_variables:
+      - name: temperature_2m
+        variable: t2m
+        long_name: 2-meter temperature
+        units: K
+
+      - name: specific_humidity_2m
+        variable: q2
+        long_name: 2-meter specific humidity
+        units: "kg kg^{-1}"
+
+
+experiments:
+  - name: rrfsv2x_det
+    expdir: /scratch3/BMC/rtwrfruc/RRFSv2X/NCO_dirs/RRFSv2X/exp/rrfsdet
+    subject_prefix: rrfsv2x_det
+
+  - name: rrfsv2x_ens
+    expdir: /scratch3/BMC/rtwrfruc/RRFSv2X/NCO_dirs/RRFSv2X/exp/rrfsenkf
+    subject_prefix: rrfsv2x_ens

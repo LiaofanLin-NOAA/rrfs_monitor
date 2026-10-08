@@ -82,3 +82,4 @@ echo "PYTHON_BIN=${PYTHON_BIN}"
 "${PYTHON_BIN}" --version
 
 
+exec "${PYTHON_BIN}" "${SCRIPT_DIR}/rrfs_monitor.py"
