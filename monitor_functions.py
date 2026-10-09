@@ -137,7 +137,7 @@ def plot_spread(
     # Precision settings
     # ------------------------------------------------------------------
 
-    if variable_name == "q2":
+    if variable_name in ("q2", "smois"):
         title_mean_fmt = ".6f"
         tick_fmt = "%.6f"
     else:
@@ -554,6 +554,13 @@ def process_cycle(
             )
         )
 
+        # Optional soil-layer selection (1-based, so layer 1 is index 0).
+        layer = variable_config.get("layer")
+        if layer is not None:
+            layer = int(layer)
+            if layer < 1:
+                raise ValueError(f"{display_name}: layer must be >= 1")
+
         # --------------------------------------------------------------
         # Full-domain fields from all members
         #
@@ -593,13 +600,27 @@ def process_cycle(
                         f"{mpas_file}"
                     )
 
-                data = (
-                    ds[
-                        variable_name
-                    ]
-                    .squeeze()
-                    .values
-                )
+                field = ds[variable_name]
+
+                if layer is not None:
+                    # Remove singleton dimensions such as Time, but retain
+                    # the soil dimension until after selecting the layer.
+                    field = field.squeeze(drop=True)
+                    other_dims = [d for d in field.dims if d != "nCells"]
+                    if len(other_dims) != 1 or "nCells" not in field.dims:
+                        raise ValueError(
+                            f"{variable_name}: expected nCells and one soil "
+                            f"dimension; got {field.dims}"
+                        )
+                    soil_dim = other_dims[0]
+                    if layer > field.sizes[soil_dim]:
+                        raise ValueError(
+                            f"{variable_name}: requested layer {layer}, "
+                            f"but only {field.sizes[soil_dim]} available"
+                        )
+                    field = field.isel({soil_dim: layer - 1})
+
+                data = field.squeeze().values
 
                 # ------------------------------------------------------
                 # Verify shape
@@ -756,7 +777,7 @@ def process_cycle(
             lat=lat,
             spread=ensemble_spread,
             cycle_time=cycle_time,
-            variable_name=variable_name,
+            variable_name=variable_name if layer is None else f"{variable_name}_layer{layer}",
             long_name=long_name,
             units=units,
             n_land=n_land,

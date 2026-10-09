@@ -80,6 +80,18 @@ common:
         long_name: 2-meter specific humidity
         units: "kg kg^{-1}"
 
+      - name: soil_moisture_layer1
+        variable: smois
+        layer: 1
+        long_name: Soil moisture (layer 1)
+        units: "m^3 m^{-3}"
+
+      - name: soil_temperature_layer1
+        variable: tslb
+        layer: 1
+        long_name: Soil temperature (layer 1)
+        units: K
+
 
 experiments:
   - name: rrfsv2x_det
