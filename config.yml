@@ -49,6 +49,15 @@ common:
     # Number of most recent hourly cycles to check
     lookback_cycles: 4
 
+    # Number of past hourly cycles included in docs/json/monitor.json.
+    # This is independent of lookback_cycles; reads existing data/*.txt.
+    lookback_json: 4
+
+    # Soil temperature (first layer) alerts over land, in K.
+    soil_temperature_alert:
+      min_k: 263.0
+      max_k: 323.0
+
     # RRFS ensemble members mem001 - mem030
     num_members: 30
 

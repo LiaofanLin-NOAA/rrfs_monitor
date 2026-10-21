@@ -26,6 +26,9 @@ For one complete ensemble cycle:
 """
 
 import datetime as dt
+import json
+import math
+import re
 from pathlib import Path
 
 import cartopy.crs as ccrs
@@ -883,3 +886,157 @@ def process_cycle(
     )
 
     return output_file
+
+# ----------------------------------------------------------------------
+# Dashboard JSON: read only the existing processed text reports.
+# ----------------------------------------------------------------------
+
+_REPORT_FIELDS = {
+    "Spread percentile 1": "spread_percentile_1",
+    "Spread percentile 10": "spread_percentile_10",
+    "Spread spatial mean": "spread_spatial_mean",
+    "Spread percentile 90": "spread_percentile_90",
+    "Spread percentile 99": "spread_percentile_99",
+    "Minimum": "minimum",
+    "Maximum": "maximum",
+}
+_HEADER_FIELDS = {
+    "Members": "members",
+    "Files processed": "files_processed",
+    "Spread STD ddof": "spread_ddof",
+    "Total grid cells": "total_grid_cells",
+    "Land grid cells": "land_grid_cells",
+    "Ocean grid cells": "ocean_grid_cells",
+}
+
+
+def parse_cycle_report(report_file: Path, monitor_variables: list[dict]) -> dict:
+    """Parse a completed data/YYYYMMDDHH.txt report (no MPAS I/O)."""
+    text = report_file.read_text(encoding="utf-8")
+    result = {"source": f"data/{report_file.name}", "variables": {}}
+    expected = {entry["name"]: entry for entry in monitor_variables}
+    current = None
+    for raw_line in text.splitlines():
+        line = raw_line.strip()
+        if not line or set(line) == {"="}:
+            continue
+        if line in expected:
+            current = line
+            result["variables"][current] = {}
+            continue
+        if ":" not in line:
+            continue
+        key, value = (part.strip() for part in line.split(":", 1))
+        if current is None:
+            if key == "Cycle":
+                result["cycle"] = value
+            elif key in _HEADER_FIELDS:
+                result[_HEADER_FIELDS[key]] = int(value)
+        else:
+            variable = result["variables"][current]
+            if key == "Variable":
+                variable["variable"] = value
+            elif key == "Long name":
+                variable["long_name"] = value
+            elif key == "Units":
+                variable["units"] = value
+            elif key in _REPORT_FIELDS:
+                number = float(value)
+                if not math.isfinite(number):
+                    raise ValueError(f"Non-finite {key} in {report_file}")
+                variable[_REPORT_FIELDS[key]] = number
+
+    if result.get("cycle") != report_file.stem:
+        raise ValueError(f"Invalid cycle header in {report_file}")
+    for field in _HEADER_FIELDS.values():
+        if field not in result:
+            raise ValueError(f"Missing {field} in {report_file}")
+    if result["files_processed"] != result["members"]:
+        raise ValueError(f"Incomplete member processing in {report_file}")
+    for name, expected_config in expected.items():
+        variable = result["variables"].get(name)
+        if variable is None:
+            raise ValueError(f"Missing variable {name} in {report_file}")
+        if variable.get("variable") != expected_config["variable"]:
+            raise ValueError(f"Unexpected variable for {name} in {report_file}")
+        for required in ("long_name", "units", *_REPORT_FIELDS.values()):
+            if required not in variable:
+                raise ValueError(f"Missing {name}.{required} in {report_file}")
+    return result
+
+
+def write_dashboard_json(
+    now: dt.datetime,
+    config: dict,
+    output_dir: Path,
+    json_file: Path,
+) -> Path:
+    """Build dashboard JSON for the latest lookback_json hourly cycles.
+
+    Missing or malformed reports are explicitly represented as unavailable.
+    The MPAS ensemble output is never reread.
+    """
+    monitor_config = config["common"]["rrfs_monitor"]
+    lookback_json = int(monitor_config.get("lookback_json", 4))
+    if lookback_json < 1:
+        raise ValueError("lookback_json must be >= 1")
+    threshold = monitor_config.get("soil_temperature_alert", {})
+    low = float(threshold.get("min_k", 263.0))
+    high = float(threshold.get("max_k", 323.0))
+    if not math.isfinite(low) or not math.isfinite(high) or low >= high:
+        raise ValueError("Invalid soil_temperature_alert thresholds")
+    current_cycle = now.replace(minute=0, second=0, microsecond=0)
+    cycles = []
+    alerts = []
+    variables = monitor_config["monitor_variables"]
+    soil_names = [v["name"] for v in variables if v["variable"] == "tslb" and int(v.get("layer", 1)) == 1]
+
+    for offset in range(lookback_json):
+        cycle_time = current_cycle - dt.timedelta(hours=offset)
+        cycle = cycle_time.strftime("%Y%m%d%H")
+        report_file = output_dir / f"{cycle}.txt"
+        if not report_file.is_file():
+            cycles.append({"cycle": cycle, "status": "unavailable", "reason": "report_missing", "variables": {}})
+            continue
+        try:
+            item = parse_cycle_report(report_file, variables)
+        except (OSError, ValueError) as exc:
+            cycles.append({"cycle": cycle, "status": "unavailable", "reason": "report_invalid", "detail": str(exc), "variables": {}})
+            continue
+        item["status"] = "available"
+        item["alerts"] = []
+        for name in soil_names:
+            soil = item["variables"][name]
+            for stat, comparison, limit in (("minimum", "below", low), ("maximum", "above", high)):
+                value = soil[stat]
+                if (comparison == "below" and value < limit) or (comparison == "above" and value > limit):
+                    alert = {
+                        "cycle": cycle,
+                        "variable": name,
+                        "field": stat,
+                        "value": value,
+                        "threshold": limit,
+                        "units": "K",
+                        "message": f"{name} {stat} {value:.6f} K {comparison} {limit:g} K",
+                    }
+                    item["alerts"].append(alert)
+                    alerts.append(alert)
+        cycles.append(item)
+
+    payload = {
+        "title": "RRFSv2X Ensemble Variable Monitor",
+        "generated_at_utc": now.astimezone(dt.timezone.utc).isoformat().replace("+00:00", "Z"),
+        "lookback_json": lookback_json,
+        "soil_temperature_alert": {"min_k": low, "max_k": high, "units": "K"},
+        "alerts": alerts,
+        "cycles": cycles,
+    }
+    json_file.parent.mkdir(parents=True, exist_ok=True)
+    # Atomic replacement prevents the dashboard from seeing half-written JSON.
+    temp_file = json_file.with_name(json_file.name + ".tmp")
+    try:
+        temp_file.write_text(json.dumps(payload, indent=2, allow_nan=False) + "\n", encoding="utf-8")
+        temp_file.replace(json_file)
+    finally:
+        temp_file.unlink(missing_ok=True)
+    return json_file

@@ -24,7 +24,7 @@ from pathlib import Path
 
 import yaml
 
-from monitor_functions import process_cycle
+from monitor_functions import process_cycle, write_dashboard_json
 
 
 # ----------------------------------------------------------------------
@@ -402,7 +402,7 @@ def git_commit_and_push(
     """
     Commit and push generated monitoring data.
 
-    Only files under data/ are staged.
+    Only files under data/ and docs/json/monitor.json are staged.
 
     Files under figure/ remain local and are NOT pushed.
     """
@@ -429,13 +429,15 @@ def git_commit_and_push(
         return False
 
     # --------------------------------------------------------------
-    # Stage data only
+    # Stage processed data and dashboard JSON only
     # --------------------------------------------------------------
 
     result = run_git(
         [
             "add",
+            "--",
             "data/",
+            "docs/json/monitor.json",
         ],
         repo_root,
     )
@@ -702,7 +704,26 @@ def main() -> int:
     print()
 
     # ------------------------------------------------------------------
-    # Commit/push data only
+    # Generate dashboard JSON from the existing processed text reports.
+    # The JSON lookback is independent of the MPAS processing lookback.
+    # ------------------------------------------------------------------
+
+    try:
+        json_file = write_dashboard_json(
+            now=now,
+            config=config,
+            output_dir=output_dir,
+            json_file=SCRIPT_DIR / "docs" / "json" / "monitor.json",
+        )
+    except Exception as exc:
+        print(f"ERROR generating dashboard JSON: {exc}")
+        return 1
+
+    print(f"Dashboard JSON written to: {json_file}")
+    print()
+
+    # ------------------------------------------------------------------
+    # Commit/push processed data and dashboard JSON
     # ------------------------------------------------------------------
 
     if not git_commit_and_push(

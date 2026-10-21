@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="color-scheme" content="light">
-  <title>RRFSv2X | Ensemble Variable Monitor</title>
+  <title>RRFSv2X | Ensemble Variable Monitor (Near Real Time)</title>
   <style>
     :root { --bg:#f5f7fa; --panel:#fff; --ink:#182b43; --muted:#637489; --line:#dce4ed; --blue:#145f9b; --blue-soft:#eaf3fb; --red:#ad2935; --red-soft:#fff0f0; --amber:#98621b; --amber-soft:#fff7e7; --green:#16704d; --green-soft:#e8f6ef; }
     * { box-sizing:border-box; }
@@ -14,7 +14,10 @@
     .header-inner { padding-top:24px; padding-bottom:25px; }
     .eyebrow { color:#8fd1ee; letter-spacing:.12em; font-weight:750; font-size:11px; text-transform:uppercase; }
     h1 { font-size:clamp(23px, 3.1vw, 31px); margin:5px 0 7px; letter-spacing:-.035em; line-height:1.2; }
-    .subtitle { color:#cadce9; font-size:13px; }
+    .subtitle { color:#cadce9; font-size:13px; max-width:1100px; line-height:1.65; }
+    .subtitle p { margin:9px 0 0; }
+    .subtitle a { color:#9bdcff; text-decoration:underline; text-underline-offset:2px; }
+    .subtitle a:hover, .subtitle a:focus-visible { color:#fff; }
     main { padding-top:23px; padding-bottom:35px; }
     .summary { display:flex; gap:11px; flex-wrap:wrap; margin-bottom:20px; }
     .stat { flex:1 1 185px; min-width:160px; background:var(--panel); border:1px solid var(--line); border-radius:9px; padding:13px 17px; }
@@ -68,8 +71,11 @@
   <header class="header">
     <div class="header-inner">
       <div class="eyebrow">RRFSv2X · Ensemble monitoring</div>
-      <h1>Ensemble Variable Monitor</h1>
-      <div class="subtitle">Hourly-cycle statistics for 2-m temperature, 2-m specific humidity, layer-1 soil moisture, and layer-1 soil temperature</div>
+      <h1>Ensemble Variable Monitor (Near Real Time)</h1>
+      <div class="subtitle">
+        <p>RRFSv2X is the current real-time prototype of the Rapid Refresh Forecast System Version 2 (RRFSv2), running at NOAA’s Global Systems Laboratory (GSL) on NOAA high-performance computing (HPC) systems. Learn more on the <a href="https://gsl.noaa.gov/rrfs/" target="_blank" rel="noopener noreferrer">GSL RRFS website</a> and view the <a href="https://rapidrefresh.noaa.gov/hrrr/MPAS/Welcome.cgi?dsKey=mpas_rrfsv2x_ursa" target="_blank" rel="noopener noreferrer">RRFSv2X forecast graphics</a>.</p>
+        <p>This site provides near-real-time monitoring of RRFSv2X ensemble statistics, particularly near-surface and land-surface variables, to help assess ensemble stability. Monitored variables include 2-m temperature, 2-m specific humidity, layer-1 soil moisture, and layer-1 soil temperature.</p>
+      </div>
     </div>
   </header>
   <main>
