@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="light">
+  <title>RRFSv2X | Ensemble Variable Monitor</title>
+  <style>
+    :root { --bg:#f5f7fa; --panel:#fff; --ink:#182b43; --muted:#637489; --line:#dce4ed; --blue:#145f9b; --blue-soft:#eaf3fb; --red:#ad2935; --red-soft:#fff0f0; --amber:#98621b; --amber-soft:#fff7e7; --green:#16704d; --green-soft:#e8f6ef; }
+    * { box-sizing:border-box; }
+    body { margin:0; font:14px/1.5 -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; color:var(--ink); background:var(--bg); }
+    .header { background:#102f51; color:#fff; border-bottom:4px solid #4ca9d5; }
+    .header-inner, main, .footer-inner { max-width:1250px; margin:0 auto; padding-left:22px; padding-right:22px; }
+    .header-inner { padding-top:24px; padding-bottom:25px; }
+    .eyebrow { color:#8fd1ee; letter-spacing:.12em; font-weight:750; font-size:11px; text-transform:uppercase; }
+    h1 { font-size:clamp(23px, 3.1vw, 31px); margin:5px 0 7px; letter-spacing:-.035em; line-height:1.2; }
+    .subtitle { color:#cadce9; font-size:13px; }
+    main { padding-top:23px; padding-bottom:35px; }
+    .summary { display:flex; gap:11px; flex-wrap:wrap; margin-bottom:20px; }
+    .stat { flex:1 1 185px; min-width:160px; background:var(--panel); border:1px solid var(--line); border-radius:9px; padding:13px 17px; }
+    .stat-label { color:var(--muted); font-size:11px; text-transform:uppercase; font-weight:700; letter-spacing:.055em; }
+    .stat-value { margin-top:3px; font-size:19px; font-weight:730; font-variant-numeric:tabular-nums; }
+    .stat-value.small { font-size:14px; padding-top:4px; }
+    .section-heading { display:flex; align-items:center; justify-content:space-between; gap:10px; flex-wrap:wrap; margin:21px 0 12px; }
+    h2 { font-size:17px; margin:0; letter-spacing:-.015em; }
+    .note { color:var(--muted); font-size:12px; }
+    .panel { background:var(--panel); border:1px solid var(--line); border-radius:10px; overflow:hidden; }
+    .alert-area { padding:13px 17px; }
+    .alert-empty { display:flex; align-items:center; gap:8px; color:var(--green); font-weight:600; }
+    .alert-item { display:flex; align-items:flex-start; gap:10px; padding:10px 0; }
+    .alert-item + .alert-item { border-top:1px solid #f0d5d6; }
+    .alert-icon { background:var(--red-soft); color:var(--red); font-weight:800; padding:2px 8px; border-radius:5px; }
+    .alert-main { font-weight:700; color:var(--red); }
+    .alert-detail { color:var(--muted); font-size:12px; margin-top:2px; }
+    .cycle { margin-bottom:16px; border:1px solid var(--line); border-radius:10px; overflow:hidden; background:var(--panel); }
+    .cycle-header { display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:12px; padding:12px 17px; background:#f9fbfe; border-bottom:1px solid var(--line); }
+    .cycle-id { font-size:17px; font-weight:750; font-variant-numeric:tabular-nums; }
+    .cycle-time { font-size:12px; color:var(--muted); margin-top:1px; }
+    .cycle-meta { display:flex; align-items:center; gap:8px; flex-wrap:wrap; }
+    .badge { display:inline-block; padding:4px 9px; border-radius:20px; font-size:11px; font-weight:750; }
+    .badge.ok { background:var(--green-soft); color:var(--green); }
+    .badge.warn { background:var(--amber-soft); color:var(--amber); }
+    .badge.alert { background:var(--red-soft); color:var(--red); }
+    .table-scroll { overflow-x:auto; }
+    table { width:100%; border-collapse:collapse; min-width:970px; font-size:13px; }
+    th, td { border-right:1px solid #e4eaf2; border-bottom:1px solid #e9eef4; padding:11px 10px; }
+    tr > :last-child { border-right:0; }
+    tbody tr:last-child td { border-bottom:0; }
+    thead .group th { background:#e7f0f9; color:#26577f; padding-top:9px; padding-bottom:9px; text-align:center; font-size:11px; text-transform:uppercase; letter-spacing:.045em; }
+    thead .columns th { background:#f2f6fb; color:#49617b; font-size:11px; font-weight:750; text-align:right; white-space:nowrap; }
+    thead .columns th:nth-child(-n+2) { text-align:left; }
+    thead .group th.left-heading { text-align:left; }
+    td { text-align:right; white-space:nowrap; font-variant-numeric:tabular-nums; }
+    td:first-child { font-weight:650; text-align:left; }
+    td:nth-child(2) { color:var(--muted); text-align:left; }
+    td.mean { background:#f2f8ff; font-weight:750; color:#1b5b96; }
+    td.outlier { background:var(--red-soft); color:var(--red); font-weight:800; }
+    .table-caption { padding:9px 15px; background:#fcfdfe; color:var(--muted); font-size:11px; border-top:1px solid var(--line); }
+    .unavailable { padding:20px 17px; color:var(--muted); }
+    .error { color:var(--red); background:var(--red-soft); border:1px solid #efc8cb; padding:14px; border-radius:8px; margin:10px 0; }
+    footer { border-top:1px solid var(--line); color:var(--muted); font-size:12px; }
+    .footer-inner { padding-top:18px; padding-bottom:20px; }
+    a { color:var(--blue); }
+    @media (max-width:700px) { .header-inner, main, .footer-inner { padding-left:14px; padding-right:14px; } .stat { flex-basis:calc(50% - 11px); min-width:135px; } .cycle-header { align-items:flex-start; } }
+  </style>
+</head>
+<body>
+  <header class="header">
+    <div class="header-inner">
+      <div class="eyebrow">RRFSv2X · Ensemble monitoring</div>
+      <h1>Ensemble Variable Monitor</h1>
+      <div class="subtitle">Hourly-cycle statistics for 2-m temperature, 2-m specific humidity, layer-1 soil moisture, and layer-1 soil temperature</div>
+    </div>
+  </header>
+  <main>
+    <section class="summary" aria-label="Monitor summary">
+      <div class="stat"><div class="stat-label">Last updated (UTC)</div><div class="stat-value small" id="lastUpdated">Loading…</div></div>
+      <div class="stat"><div class="stat-label">Cycles shown</div><div class="stat-value" id="cycleCount">—</div></div>
+      <div class="stat"><div class="stat-label">Available reports</div><div class="stat-value" id="availableCount">—</div></div>
+      <div class="stat"><div class="stat-label">Soil-temperature alerts</div><div class="stat-value" id="alertCount">—</div></div>
+    </section>
+
+    <div class="section-heading"><h2>Soil temperature alerts</h2><span class="note" id="thresholdNote">Layer 1 · Land only</span></div>
+    <section class="panel alert-area" id="alerts" aria-live="polite"><span class="note">Loading alerts…</span></section>
+
+    <div class="section-heading"><h2>Cycle statistics</h2><span class="note">Newest cycle first · All statistics over land grid cells only</span></div>
+    <div id="cycles" aria-live="polite"><div class="panel unavailable">Loading monitoring data…</div></div>
+  </main>
+  <footer><div class="footer-inner">Statistics are calculated over <strong>land grid cells only</strong>. Spread percentiles and spatial mean describe the spatial distribution of ensemble standard deviation; minimum and maximum are taken across all ensemble members and land grid cells. All cycle times are UTC. <span id="refreshNotice"></span></div></footer>
+  <script>
+    'use strict';
+    const DATA_URL = './json/monitor.json';
+    const variableOrder = ['temperature_2m', 'specific_humidity_2m', 'soil_moisture_layer1', 'soil_temperature_layer1'];
+    const numberFields = ['spread_percentile_1', 'spread_percentile_10', 'spread_spatial_mean', 'spread_percentile_90', 'spread_percentile_99', 'minimum', 'maximum'];
+    const $ = id => document.getElementById(id);
+    function elt(tag, className, value) {
+      const node = document.createElement(tag);
+      if (className) node.className = className;
+      if (value !== undefined) node.textContent = String(value);
+      return node;
+    }
+    function formatCycle(cycle) {
+      const s = String(cycle || '');
+      return /^\d{10}$/.test(s) ? `${s.slice(0,4)}-${s.slice(4,6)}-${s.slice(6,8)} ${s.slice(8,10)}:00 UTC` : s;
+    }
+    function formatValue(value) { return typeof value === 'number' && Number.isFinite(value) ? value.toFixed(6) : '—'; }
+    function dateUTC(value) {
+      if (!value) return 'Unknown';
+      const d = new Date(value);
+      return Number.isNaN(d.getTime()) ? String(value) : new Intl.DateTimeFormat('en-US', { timeZone:'UTC', year:'numeric', month:'short', day:'numeric', hour:'2-digit', minute:'2-digit', hour12:false }).format(d) + ' UTC';
+    }
+    function renderAlerts(data) {
+      const list = $('alerts'); list.replaceChildren();
+      const alerts = Array.isArray(data.alerts) ? data.alerts : [];
+      $('alertCount').textContent = String(alerts.length);
+      const thresholds = data.soil_temperature_alert || { min_k:263, max_k:323 };
+      $('thresholdNote').textContent = `Layer 1 · Alert if min < ${thresholds.min_k} K or max > ${thresholds.max_k} K · Land only`;
+      if (!alerts.length) { list.append(elt('div', 'alert-empty', '✓ No soil-temperature threshold exceedances in the available reports.')); return; }
+      const sorted = [...alerts].sort((a,b) => String(b.cycle).localeCompare(String(a.cycle)));
+      sorted.forEach(item => {
+        const row = elt('div', 'alert-item');
+        row.append(elt('span', 'alert-icon', '!'));
+        const content = elt('div');
+        const field = item.field === 'minimum' ? 'Minimum' : item.field === 'maximum' ? 'Maximum' : String(item.field || 'Value');
+        content.append(elt('div', 'alert-main', `${formatCycle(item.cycle)} — ${field}: ${formatValue(item.value)} K`));
+        content.append(elt('div', 'alert-detail', `Soil temperature (layer 1) · ${item.field === 'minimum' ? 'Below lower limit' : 'Above upper limit'} (${item.threshold} K)`));
+        row.append(content); list.append(row);
+      });
+    }
+    function appendHeader(table) {
+      const thead = elt('thead');
+      const group = elt('tr', 'group');
+      const variable = elt('th', 'left-heading', 'Variable'); variable.rowSpan = 2; variable.scope = 'col'; group.append(variable);
+      const units = elt('th', 'left-heading', 'Units'); units.rowSpan = 2; units.scope = 'col'; group.append(units);
+      const spread = elt('th', '', 'Spatial statistics for ensemble spread'); spread.colSpan=5; spread.scope='colgroup'; group.append(spread);
+      const all = elt('th', '', 'Values from all members'); all.colSpan=2; all.scope='colgroup'; group.append(all);
+      const labels = ['1%', '10%', 'Spatial mean', '90%', '99%', 'Min', 'Max'];
+      const columns = elt('tr', 'columns');
+      labels.forEach(label => { const th=elt('th', '', label); th.scope='col'; columns.append(th); });
+      thead.append(group,columns); table.append(thead);
+    }
+    function renderCycle(item, thresholds, overallAlerts) {
+      const card = elt('section', 'cycle');
+      const head = elt('div', 'cycle-header');
+      const id = elt('div');
+      id.append(elt('div', 'cycle-id', `Cycle ${item.cycle}`));
+      id.append(elt('div', 'cycle-time', formatCycle(item.cycle)));
+      head.append(id);
+      const meta = elt('div', 'cycle-meta');
+      if (item.status !== 'available') {
+        meta.append(elt('span', 'badge warn', 'Report unavailable'));
+        head.append(meta); card.append(head);
+        card.append(elt('div', 'unavailable', item.reason === 'report_invalid' ? 'Processed report is invalid or incomplete.' : 'No processed report available for this cycle.'));
+        return card;
+      }
+      const cycleAlerts = Array.isArray(item.alerts) ? item.alerts : overallAlerts.filter(a => String(a.cycle) === String(item.cycle));
+      meta.append(elt('span', cycleAlerts.length ? 'badge alert' : 'badge ok', cycleAlerts.length ? `${cycleAlerts.length} soil alert${cycleAlerts.length === 1 ? '' : 's'}` : 'Available'));
+      meta.append(elt('span', 'note', `${item.files_processed ?? '—'}/${item.members ?? '—'} members · ${item.land_grid_cells !== undefined ? Number(item.land_grid_cells).toLocaleString('en-US') : '—'} land cells`));
+      head.append(meta); card.append(head);
+      const wrapper = elt('div', 'table-scroll');
+      const table = elt('table');
+      table.setAttribute('aria-label', `Land-only ensemble statistics for cycle ${item.cycle}`);
+      appendHeader(table);
+      const body = elt('tbody');
+      const vars = item.variables || {};
+      const names = [...variableOrder.filter(name => Object.hasOwn(vars,name)), ...Object.keys(vars).filter(name => !variableOrder.includes(name))];
+      names.forEach(name => {
+        const v = vars[name] || {};
+        const tr = elt('tr');
+        tr.append(elt('td', '', v.long_name || name));
+        tr.append(elt('td', '', v.units || '—'));
+        numberFields.forEach(key => {
+          let style = key === 'spread_spatial_mean' ? 'mean' : '';
+          if (v.variable === 'tslb' && name === 'soil_temperature_layer1') {
+            if ((key === 'minimum' && typeof v[key] === 'number' && v[key] < thresholds.min_k) || (key === 'maximum' && typeof v[key] === 'number' && v[key] > thresholds.max_k)) style = 'outlier';
+          }
+          tr.append(elt('td', style, formatValue(v[key])));
+        });
+        body.append(tr);
+      });
+      table.append(body); wrapper.append(table); card.append(wrapper);
+      card.append(elt('div', 'table-caption', `Land-only statistics · Ensemble spread: spatial percentiles / mean · Min / max: across all ${item.members ?? 'available'} ensemble members and all land cells · STD ddof = ${item.spread_ddof ?? '—'}`));
+      return card;
+    }
+    async function load() {
+      try {
+        const response = await fetch(DATA_URL + '?v=' + Date.now(), { cache: 'no-store' });
+        if (!response.ok) throw new Error(`HTTP ${response.status}`);
+        const data = await response.json();
+        if (!Array.isArray(data.cycles)) throw new Error('Invalid monitor.json: cycles array is missing');
+        $('lastUpdated').textContent = dateUTC(data.generated_at_utc);
+        $('cycleCount').textContent = String(data.cycles.length);
+        $('availableCount').textContent = String(data.cycles.filter(item => item.status === 'available').length);
+        renderAlerts(data);
+        const cycles = $('cycles'); cycles.replaceChildren();
+        const sorted = [...data.cycles].sort((a,b) => String(b.cycle).localeCompare(String(a.cycle)));
+        const thresholds = data.soil_temperature_alert || { min_k:263, max_k:323 };
+        const alerts = Array.isArray(data.alerts) ? data.alerts : [];
+        if (!sorted.length) cycles.append(elt('div', 'panel unavailable', 'No cycles in monitor.json.'));
+        sorted.forEach(item => cycles.append(renderCycle(item, thresholds, alerts)));
+      } catch (error) {
+        $('lastUpdated').textContent = 'Unavailable';
+        $('alerts').replaceChildren(elt('div', 'note', 'Alert information unavailable.'));
+        $('cycles').replaceChildren(elt('div', 'error', `Unable to load ${DATA_URL}: ${error.message}. Confirm that monitor.json exists and that this page is served through a web server (for example, GitHub Pages).`));
+      }
+    }
+    load();
+  </script>
+</body>
+</html>
