@@ -184,7 +184,7 @@
         body.append(tr);
       });
       table.append(body); wrapper.append(table); card.append(wrapper);
-      card.append(elt('div', 'table-caption', `Land-only statistics · Ensemble spread: spatial percentiles / mean · Min / max: across all ${item.members ?? 'available'} ensemble members and all land cells · STD ddof = ${item.spread_ddof ?? '—'}`));
+      card.append(elt('div', 'table-caption', `Land-only statistics · Ensemble spread: spatial percentiles / mean · Min / max: across all ${item.members ?? 'available'} ensemble members and all land cells`));
       return card;
     }
     async function load() {
