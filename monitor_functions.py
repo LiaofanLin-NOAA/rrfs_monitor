@@ -106,10 +106,10 @@ def plot_spread(
 
     Statistics shown in the title are calculated over land only.
 
-    The color scale is centered on the land spatial-mean spread:
+    The land spatial-mean spread is at 25% of the color scale:
         minimum = 0
-        middle  = land spatial mean
-        maximum = 2 × land spatial mean
+        25%     = land spatial mean
+        maximum = 4 × land spatial mean
 
     Values greater than the maximum colorbar value are clipped
     to the red end of the jet colormap.
@@ -150,15 +150,15 @@ def plot_spread(
     # ------------------------------------------------------------------
     # Color scale
     #
-    # Spatial mean over land is exactly at the midpoint.
+    # Spatial mean over land is exactly at 25% of the colorbar.
     #
     # Example:
     #
     # mean = 0.000480
     #
-    # 0.000000 -------- 0.000480 -------- 0.000960
+    # 0.000000 --- 0.000480 ----------- 0.001920
     #
-    # Values >= 0.000960 are plotted using the red end of jet.
+    # Values >= 0.001920 are plotted using the red end of jet.
     # ------------------------------------------------------------------
 
     vmin = 0.0
@@ -168,14 +168,14 @@ def plot_spread(
     )
 
     vmax = (
-        2.0
+        4.0
         * vcenter
     )
 
     # Safety check in case spread is exactly zero.
     if vmax <= 0.0:
         vmax = 1.0e-12
-        vcenter = 0.5 * vmax
+        vcenter = 0.25 * vmax
 
     # ------------------------------------------------------------------
     # Create map
@@ -219,23 +219,23 @@ def plot_spread(
     )
 
     # ------------------------------------------------------------------
-    # Put the land spatial mean exactly at the center tick.
+    # Put the land spatial mean exactly at the 25% tick.
     #
     # Five equally spaced ticks:
     #
     #   0
-    #   0.5 * mean
     #   mean
-    #   1.5 * mean
     #   2.0 * mean
+    #   3.0 * mean
+    #   4.0 * mean
     # ------------------------------------------------------------------
 
     tick_values = np.array(
         [
             vmin,
-            0.5 * vcenter,
             vcenter,
-            1.5 * vcenter,
+            2.0 * vcenter,
+            3.0 * vcenter,
             vmax,
         ]
     )
@@ -981,7 +981,7 @@ def write_dashboard_json(
     if lookback_json < 1:
         raise ValueError("lookback_json must be >= 1")
     threshold = monitor_config.get("soil_temperature_alert", {})
-    low = float(threshold.get("min_k", 263.0))
+    low = float(threshold.get("min_k", 253.0))
     high = float(threshold.get("max_k", 323.0))
     if not math.isfinite(low) or not math.isfinite(high) or low >= high:
         raise ValueError("Invalid soil_temperature_alert thresholds")

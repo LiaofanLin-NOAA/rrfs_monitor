@@ -47,15 +47,15 @@ common:
     invariant_file: /scratch3/BMC/rtwrfruc/RRFSv2X/code/rrfs-workflow.20260803/fix/conus3km/conus3km.invariant.nc_L60_GEFS
 
     # Number of most recent hourly cycles to check
-    lookback_cycles: 4
+    lookback_cycles: 12
 
     # Number of past hourly cycles included in docs/json/monitor.json.
     # This is independent of lookback_cycles; reads existing data/*.txt.
-    lookback_json: 4
+    lookback_json: 48
 
     # Soil temperature (first layer) alerts over land, in K.
     soil_temperature_alert:
-      min_k: 263.0
+      min_k: 253.0
       max_k: 323.0
 
     # RRFS ensemble members mem001 - mem030
