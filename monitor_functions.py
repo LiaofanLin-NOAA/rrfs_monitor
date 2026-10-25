@@ -23,6 +23,9 @@ For one complete ensemble cycle:
        data/YYYYMMDDHH.txt
 5. Write figures to:
        figure/YYYYMMDDHH/YYYYMMDDHH_VARIABLE_spread.png
+   For tslb layer 1, also write per-cell ensemble extrema over land:
+       figure/YYYYMMDDHH/YYYYMMDDHH_tslb_layer1_ens_min.png
+       figure/YYYYMMDDHH/YYYYMMDDHH_tslb_layer1_ens_max.png
 """
 
 import datetime as dt
@@ -282,6 +285,108 @@ def plot_spread(
 
     plt.close(fig)
 
+    return figure_file
+
+
+
+# ----------------------------------------------------------------------
+# Plot layer-1 soil-temperature ensemble minima and maxima
+# ----------------------------------------------------------------------
+
+def plot_tslb_ensemble_extreme(
+    lon: np.ndarray,
+    lat: np.ndarray,
+    values: np.ndarray,
+    land_mask: np.ndarray,
+    ensemble: np.ndarray,
+    cycle_time: dt.datetime,
+    extreme: str,
+    figure_dir: Path,
+) -> Path:
+    """Plot per-cell minimum/maximum across members for tslb layer 1.
+
+    Only land cells are displayed because soil temperature is a land field.
+    The annotated global extreme is likewise restricted to land cells.
+    The MPAS cell index in the title is 1-based (Python array index + 1).
+    """
+    if extreme not in ("min", "max"):
+        raise ValueError("extreme must be 'min' or 'max'")
+
+    if not (lon.shape == lat.shape == values.shape == land_mask.shape):
+        raise ValueError("Longitude, latitude, values, and land mask must match")
+
+    land_indices = np.flatnonzero(land_mask & np.isfinite(values))
+    if land_indices.size == 0:
+        raise ValueError("No finite soil temperature values over land")
+
+    land_values = values[land_indices]
+    local_index = (np.argmin(land_values) if extreme == "min"
+                   else np.argmax(land_values))
+    cell_index = int(land_indices[local_index])
+    extreme_value = float(values[cell_index])
+    extreme_lon = float(lon[cell_index])
+    extreme_lat = float(lat[cell_index])
+
+    # Identify the member contributing the extreme at this MPAS cell.
+    # Member rows are ordered mem001, mem002, ..., mem030.
+    if ensemble.ndim != 2 or ensemble.shape[1] != values.size:
+        raise ValueError("Expected ensemble shape (nMembers, nCells)")
+    cell_member_values = ensemble[:, cell_index]
+    if not np.any(np.isfinite(cell_member_values)):
+        raise ValueError("No finite member values at extreme MPAS cell")
+    member_index = (np.nanargmin(cell_member_values) if extreme == "min"
+                    else np.nanargmax(cell_member_values))
+    member_name = f"mem{member_index + 1:03d}"
+
+    cycle_string = cycle_time.strftime("%Y%m%d%H")
+    valid_time = cycle_time + dt.timedelta(hours=1)
+    figure_dir.mkdir(parents=True, exist_ok=True)
+    figure_file = figure_dir / f"{cycle_string}_tslb_layer1_ens_{extreme}.png"
+
+    fig, ax = create_map_axis()
+    # Use a 10 K color range anchored to the actual land extreme.
+    # Values outside this range are clipped to the end of the colormap.
+    if extreme == "min":
+        vmin, vmax = extreme_value, extreme_value + 10.0
+        colorbar_extend = "max"
+    else:
+        vmin, vmax = extreme_value - 10.0, extreme_value
+        colorbar_extend = "min"
+
+    scatter = ax.scatter(
+        lon[land_indices], lat[land_indices], c=land_values,
+        s=0.6, alpha=0.9, linewidths=0,
+        cmap="jet", vmin=vmin, vmax=vmax,
+        transform=ccrs.PlateCarree(), rasterized=True,
+    )
+    # Mark the extreme location with a large hollow circle (no fill).
+    ax.plot(
+        extreme_lon, extreme_lat, marker="o", markersize=20,
+        markerfacecolor="none", markeredgecolor="black",
+        markeredgewidth=2.0, linestyle="None",
+        transform=ccrs.PlateCarree(), zorder=10,
+    )
+    colorbar = fig.colorbar(
+        scatter, ax=ax, orientation="horizontal",
+        pad=0.05, shrink=0.8, extend=colorbar_extend,
+    )
+    colorbar.set_label("Soil temperature (K)")
+    colorbar.ax.xaxis.set_major_formatter(mticker.FormatStrFormatter("%.1f"))
+
+    label = "Minimum" if extreme == "min" else "Maximum"
+    ax.set_title(
+        f"RRFSv2X Soil temperature (layer 1) Ensemble {label}\n"
+        f"Initialization: {cycle_time:%Y-%m-%d %H UTC}  "
+        f"|  Valid: {valid_time:%Y-%m-%d %H UTC}\n"
+        f"Over land, {label.lower()}: {extreme_value:.3f} K "
+        f"at lon {extreme_lon:.3f}, lat {extreme_lat:.3f} "
+        f"| MPAS cell index (1-based): {cell_index + 1:,} "
+        f"| Member: {member_name}",
+        fontsize=12,
+    )
+    fig.tight_layout()
+    fig.savefig(figure_file, dpi=150, bbox_inches="tight")
+    plt.close(fig)
     return figure_file
 
 
@@ -787,6 +892,24 @@ def process_cycle(
             spread_spatial_mean=spread_spatial_mean,
             figure_dir=figure_dir,
         )
+
+        # Additional maps for first-layer soil temperature only.
+        # Per-cell extrema are taken across all ensemble members; map and
+        # reported global extreme are restricted to land cells.
+        if variable_name == "tslb" and layer == 1:
+            tslb_ens_min = np.nanmin(ensemble, axis=0)
+            tslb_ens_max = np.nanmax(ensemble, axis=0)
+            plot_tslb_ensemble_extreme(
+                lon=lon, lat=lat, values=tslb_ens_min,
+                land_mask=land_mask, ensemble=ensemble, cycle_time=cycle_time,
+                extreme="min", figure_dir=figure_dir,
+            )
+            plot_tslb_ensemble_extreme(
+                lon=lon, lat=lat, values=tslb_ens_max,
+                land_mask=land_mask, ensemble=ensemble, cycle_time=cycle_time,
+                extreme="max", figure_dir=figure_dir,
+            )
+            del tslb_ens_min, tslb_ens_max
 
         # --------------------------------------------------------------
         # Output precision

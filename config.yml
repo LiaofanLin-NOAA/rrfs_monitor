@@ -51,7 +51,7 @@ common:
 
     # Number of past hourly cycles included in docs/json/monitor.json.
     # This is independent of lookback_cycles; reads existing data/*.txt.
-    lookback_json: 48
+    lookback_json: 72
 
     # Soil temperature (first layer) alerts over land, in K.
     soil_temperature_alert:
