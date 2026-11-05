@@ -1,6 +1,6 @@
 {
   "title": "RRFSv2X Ensemble Variable Monitor",
-  "generated_at_utc": "2026-11-05T18:00:11.575698Z",
+  "generated_at_utc": "2026-11-05T17:59:54.702853Z",
   "lookback_json": 96,
   "soil_temperature_alert": {
     "min_k": 253.0,
@@ -154,12 +154,6 @@
     }
   ],
   "cycles": [
-    {
-      "cycle": "2026110518",
-      "status": "unavailable",
-      "reason": "report_missing",
-      "variables": {}
-    },
     {
       "cycle": "2026110517",
       "status": "unavailable",
@@ -1113,10 +1107,66 @@
       "alerts": []
     },
     {
+      "source": "data/2026110418.txt",
+      "variables": {
+        "temperature_2m": {
+          "variable": "t2m",
+          "long_name": "2-meter temperature",
+          "units": "K",
+          "spread_percentile_1": 0.201339,
+          "spread_percentile_10": 0.326768,
+          "spread_spatial_mean": 0.602289,
+          "spread_percentile_90": 0.963339,
+          "spread_percentile_99": 1.594492,
+          "minimum": 260.738068,
+          "maximum": 310.00708
+        },
+        "specific_humidity_2m": {
+          "variable": "q2",
+          "long_name": "2-meter specific humidity",
+          "units": "kg kg^{-1}",
+          "spread_percentile_1": 0.000127,
+          "spread_percentile_10": 0.000183,
+          "spread_spatial_mean": 0.000403,
+          "spread_percentile_90": 0.000694,
+          "spread_percentile_99": 0.00133,
+          "minimum": 0.000138,
+          "maximum": 0.021602
+        },
+        "soil_moisture_layer1": {
+          "variable": "smois",
+          "long_name": "Soil moisture (layer 1)",
+          "units": "m^3 m^{-3}",
+          "spread_percentile_1": 0.000353,
+          "spread_percentile_10": 0.000694,
+          "spread_spatial_mean": 0.007545,
+          "spread_percentile_90": 0.018033,
+          "spread_percentile_99": 0.039918,
+          "minimum": 0.00358,
+          "maximum": 0.492
+        },
+        "soil_temperature_layer1": {
+          "variable": "tslb",
+          "long_name": "Soil temperature (layer 1)",
+          "units": "K",
+          "spread_percentile_1": 0.053238,
+          "spread_percentile_10": 0.317766,
+          "spread_spatial_mean": 0.715264,
+          "spread_percentile_90": 1.239574,
+          "spread_percentile_99": 2.010235,
+          "minimum": 259.812378,
+          "maximum": 316.223938
+        }
+      },
       "cycle": "2026110418",
-      "status": "unavailable",
-      "reason": "report_missing",
-      "variables": {}
+      "members": 30,
+      "files_processed": 30,
+      "spread_ddof": 1,
+      "total_grid_cells": 2341818,
+      "land_grid_cells": 1461560,
+      "ocean_grid_cells": 880258,
+      "status": "available",
+      "alerts": []
     },
     {
       "cycle": "2026110417",
@@ -3969,6 +4019,12 @@
       "ocean_grid_cells": 880258,
       "status": "available",
       "alerts": []
+    },
+    {
+      "cycle": "2026110118",
+      "status": "unavailable",
+      "reason": "report_missing",
+      "variables": {}
     }
   ]
 }
