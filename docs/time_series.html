@@ -228,9 +228,11 @@ function draw() {
       yaxis: {title:info.unit,showgrid:true,gridcolor:'#e7edf3'},
       showlegend:true
     };
+    // List traces in top-to-bottom order on the plot, so that the
+    // unified hover labels and legend follow the same visual order.
     Plotly.newPlot(spreadId, [
-      series('p01','1st percentile'),series('p10','10th percentile'),
-      series('mean','Spatial mean'),series('p90','90th percentile'),series('p99','99th percentile')
+      series('p99','99th percentile'),series('p90','90th percentile'),
+      series('mean','Spatial mean'),series('p10','10th percentile'),series('p01','1st percentile')
     ], theme, {responsive:true,displaylogo:false});
     const shapes = [];
     if (variable === 'soil_temperature_layer1') {
@@ -239,7 +241,7 @@ function draw() {
           line:{color:'#c43b3b',dash:'dash',width:1}});
       }
     }
-    Plotly.newPlot(extremesId, [series('min','Minimum'),series('max','Maximum')],
+    Plotly.newPlot(extremesId, [series('max','Maximum'),series('min','Minimum')],
       {...theme, shapes}, {responsive:true,displaylogo:false});
   }
 }
