@@ -47,7 +47,7 @@ common:
     invariant_file: /scratch3/BMC/rtwrfruc/RRFSv2X/code/rrfs-workflow.20260803/fix/conus3km/conus3km.invariant.nc_L60_GEFS
 
     # Number of most recent hourly cycles to check
-    lookback_cycles: 12
+    lookback_cycles: 24
 
     # Number of past hourly cycles included in docs/json/monitor.json.
     # This is independent of lookback_cycles; reads existing data/*.txt.
