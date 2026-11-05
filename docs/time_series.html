@@ -1,0 +1,267 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="light">
+  <title>RRFSv2X | 30-Day Ensemble Time Series</title>
+  <script src="https://cdn.plot.ly/plotly-2.35.2.min.js"></script>
+  <style>
+    :root { --bg:#f5f7fa; --panel:#fff; --ink:#182b43; --muted:#637489; --line:#dce4ed; --blue:#145f9b; --red:#ad2935; }
+    * { box-sizing:border-box; }
+    body { margin:0; background:var(--bg); color:var(--ink); font:14px/1.5 -apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif; }
+    .header { background:#102f51; border-bottom:4px solid #4ca9d5; color:#fff; }
+    .wrap { max-width:1250px; margin:auto; padding:22px; }
+    .header-inner { max-width:1250px; margin:0 auto; padding:24px 22px 25px; }
+    h1 { font-size:clamp(23px,3.1vw,31px); margin:5px 0 7px; letter-spacing:-.035em; line-height:1.2; }
+    .eyebrow { color:#8fd1ee; font-size:11px; font-weight:750; letter-spacing:.12em; text-transform:uppercase; }
+    .subtitle { color:#cadce9; font-size:13px; max-width:1100px; line-height:1.65; }
+    .subtitle p { margin:9px 0 0; }
+    .subtitle a { color:#9bdcff; text-decoration:underline; text-underline-offset:2px; }
+    .subtitle a:hover,.subtitle a:focus-visible { color:#fff; }
+    main.wrap { padding-top:23px; }
+    .panel { background:var(--panel); border:1px solid var(--line); border-radius:10px; padding:18px; margin-bottom:15px; }
+    .controls { display:flex; gap:16px; align-items:end; flex-wrap:wrap; }
+    label { display:block; color:var(--muted); font-size:12px; font-weight:700; margin-bottom:5px; }
+    select,input[type="date"],button { padding:8px 12px; font:inherit; border:1px solid #bbcada; border-radius:7px; background:white; color:var(--ink); }
+    button { cursor:pointer; background:#145f9b; color:white; border-color:#145f9b; }
+    button:disabled { opacity:.55; cursor:default; }
+    .status { font-size:12px; color:var(--muted); margin-top:11px; }
+    .status.error { color:var(--red); }
+    .chart { width:100%; height:360px; }
+    .top-nav { display:flex; gap:8px; flex-wrap:wrap; margin-top:17px; }
+    .top-nav a { display:inline-block; padding:7px 12px; border:1px solid #76b9dc; border-radius:7px; color:#dff4ff; text-decoration:none; font-weight:700; background:rgba(255,255,255,.06); }
+    .top-nav a:hover, .top-nav a:focus-visible { background:rgba(255,255,255,.14); color:#fff; }
+    .top-nav a.active { background:#fff; color:#145f9b; border-color:#fff; }
+    h2 { font-size:17px; margin:0 0 7px; }
+    .note { color:var(--muted); font-size:12px; }
+    footer { color:var(--muted); padding-bottom:22px; font-size:12px; }
+    @media (max-width:600px) { .wrap { padding:14px; } .header-inner { padding-left:14px; padding-right:14px; } .panel { padding:12px; } .chart { height:320px; } }
+  </style>
+</head>
+<body>
+  <header class="header"><div class="header-inner">
+  <div class="eyebrow">RRFSv2X · Ensemble monitoring</div>
+  <h1>Ensemble Variable Monitor (Near Real Time)</h1>
+  <div class="subtitle"><p>RRFSv2X is the current real-time prototype of the Rapid Refresh Forecast System Version 2 (RRFSv2), running at NOAA’s Global Systems Laboratory (GSL) on NOAA high-performance computing (HPC) systems.
+  Learn more on the <a href="https://gsl.noaa.gov/rrfs/" target="_blank" rel="noopener noreferrer">GSL RRFS website</a>, view the <a href="https://rapidrefresh.noaa.gov/hrrr/MPAS/Welcome.cgi?dsKey=mpas_rrfsv2x_ursa" target="_blank" rel="noopener noreferrer">RRFSv2X forecast graphics</a>, and check the <a href="https://rrfsx.github.io/workflow_status/#ursa%2Frrfsv2x_enkf" target="_blank" rel="noopener noreferrer">real-time RRFSv2X workflow status</a>. This site provides near-real-time monitoring of RRFSv2X ensemble statistics, particularly near-surface and land-surface variables, to help assess ensemble stability. Monitored variables include 2-m temperature, 2-m specific humidity, layer-1 soil moisture, and layer-1 soil temperature. Selected ensemble spread maps are available via <a href="https://drive.google.com/drive/u/1/folders/14S5I6OLdT54ELewtxRkOEUNQk17JQyxJ" target="_blank" rel="noopener noreferrer">Google Drive</a>.</p></div>
+  <nav class="top-nav" aria-label="Monitor pages">
+    <a href="./index.html">Current Monitor</a>
+    <a class="active" href="./time_series.html" aria-current="page">30-Day Time Series</a>
+  </nav>
+</div></header>
+  <main class="wrap">
+    <section class="panel">
+      <div class="controls">
+        <div>
+          <label for="endDate">End date (UTC)</label>
+          <input id="endDate" type="date">
+        </div>
+        <button id="reload" type="button">Generate 30-Day Plots</button>
+      </div>
+      <div class="status" id="status" aria-live="polite">Loading reports…</div>
+      <div class="note">UTC hourly cycles · All four variables shown below · 30 days, including the selected end date · Missing reports appear as gaps (lines never bridge missing hours). GitHub Pages reads committed files; there is no server-side plotting job.</div>
+    </section>
+    <div id="allPlots">
+      <section class="panel"><h2>Loading time series…</h2></section>
+    </div>
+  </main>
+  <footer class="wrap">The input text files are created by your existing RRFS monitoring workflow. Plot updates require only that the ordinary reports have been committed to GitHub.</footer>
+<script>
+'use strict';
+const OWNER = 'LiaofanLin-NOAA';
+const REPO = 'rrfs_monitor';
+const BRANCH = 'main';
+const HOURS = 30 * 24;
+const GITHUB_TREE = `https://api.github.com/repos/${OWNER}/${REPO}/git/trees/${BRANCH}?recursive=1`;
+const RAW_ROOT = `https://raw.githubusercontent.com/${OWNER}/${REPO}/${BRANCH}/data/`;
+const VARS = {
+  temperature_2m: { section:'temperature_2m', unit:'K', name:'2-m temperature' },
+  specific_humidity_2m: { section:'specific_humidity_2m', unit:'kg/kg', name:'2-m specific humidity' },
+  soil_moisture_layer1: { section:'soil_moisture_layer1', unit:'m³/m³', name:'Soil moisture (layer 1)' },
+  soil_temperature_layer1: { section:'soil_temperature_layer1', unit:'K', name:'Soil temperature (layer 1)' }
+};
+const LABEL_TO_FIELD = {
+  'Spread percentile 1':'p01', 'Spread percentile 10':'p10',
+  'Spread spatial mean':'mean', 'Spread percentile 90':'p90',
+  'Spread percentile 99':'p99', 'Minimum':'min', 'Maximum':'max'
+};
+const COLORS = {p01:'#8fabc3', p10:'#4ba3c3', mean:'#125a98', p90:'#d68d38', p99:'#b44755', min:'#b44755', max:'#125a98'};
+const $ = id => document.getElementById(id);
+let rows = [];
+
+function cycleStamp(date) {
+  return date.getUTCFullYear().toString() +
+    String(date.getUTCMonth()+1).padStart(2,'0') +
+    String(date.getUTCDate()).padStart(2,'0') +
+    String(date.getUTCHours()).padStart(2,'0');
+}
+function cycleDate(stamp) {
+  return `${stamp.slice(0,4)}-${stamp.slice(4,6)}-${stamp.slice(6,8)}T${stamp.slice(8,10)}:00:00Z`;
+}
+function utcDateText(date) {
+  return date.getUTCFullYear() + '-' +
+    String(date.getUTCMonth()+1).padStart(2,'0') + '-' +
+    String(date.getUTCDate()).padStart(2,'0');
+}
+function wantedCycles() {
+  // The selected end date is inclusive, through 23 UTC.
+  // Exactly 720 hourly slots preserve gaps even if reports are absent.
+  const selected = $('endDate').value;
+  if (!/^\d{4}-\d{2}-\d{2}$/.test(selected)) throw new Error('Select a valid UTC end date.');
+  const end = Date.parse(selected + 'T23:00:00Z');
+  if (!Number.isFinite(end)) throw new Error('Invalid end date.');
+  return Array.from({length:HOURS},(_,i) => cycleStamp(new Date(end-(HOURS-1-i)*3600000)));
+}
+
+function parseReport(text, expectedCycle) {
+  // This matches the text written by monitor_functions.py, not a tabular CSV.
+  const match = text.match(/^Cycle:\s*(\d{10})\s*$/m);
+  if (!match || match[1] !== expectedCycle) return null;
+  const member = text.match(/^Members:\s*(\d+)\s*$/m);
+  const files = text.match(/^Files processed:\s*(\d+)\s*$/m);
+  if (!member || !files || Number(member[1]) !== Number(files[1])) return null;
+  const result = {cycle:expectedCycle, variables:{}};
+  let current = null;
+  for (const raw of text.split(/\r?\n/)) {
+    const line = raw.trim();
+    // Variable sections appear as unindented lines immediately before "Variable: ...".
+    if (Object.hasOwn(VARS,line)) {
+      current = line;
+      result.variables[current] = {};
+      continue;
+    }
+    if (!current) continue;
+    const pos = line.indexOf(':');
+    if (pos < 0) continue;
+    const label = line.slice(0,pos).trim();
+    const value = line.slice(pos+1).trim();
+    const field = LABEL_TO_FIELD[label];
+    if (field && value !== '') {
+      const n = Number(value);
+      if (Number.isFinite(n)) result.variables[current][field] = n;
+    }
+  }
+  const required = Object.values(LABEL_TO_FIELD);
+  if (!Object.keys(VARS).every(v => required.every(f => Number.isFinite(result.variables[v]?.[f])))) return null;
+  return result;
+}
+async function availableFilenames(cycles) {
+  const response = await fetch(GITHUB_TREE, {cache:'no-store'});
+  if (!response.ok) throw new Error(`GitHub file listing: HTTP ${response.status}. Try refreshing later.`);
+  const tree = await response.json();
+  if (!Array.isArray(tree.tree) || tree.truncated) throw new Error('GitHub could not provide a complete file listing.');
+  const present = new Set(tree.tree.filter(f => f.type==='blob' && /^data\/\d{10}\.txt$/.test(f.path)).map(f => f.path.slice(5,-4)));
+  return cycles.filter(c => present.has(c));
+}
+async function fetchOne(cycle) {
+  const response = await fetch(RAW_ROOT + cycle + '.txt?v=' + Date.now(), {cache:'no-store'});
+  if (!response.ok) return null;
+  return parseReport(await response.text(), cycle);
+}
+async function fetchConcurrent(cycles, concurrency=12) {
+  const output = new Array(cycles.length).fill(null);
+  let next=0, done=0;
+  await Promise.all(Array.from({length:Math.min(concurrency,cycles.length)},async()=>{
+    while (next<cycles.length) {
+      const index=next++;
+      try { output[index] = await fetchOne(cycles[index]); } catch { /* keep a gap */ }
+      done++;
+      if (done%20===0 || done===cycles.length) $('status').textContent=`Loading ${done}/${cycles.length} available text reports…`;
+    }
+  }));
+  return output.filter(Boolean);
+}
+function makeChartPanel(title, description, id) {
+  const panel = document.createElement('section');
+  panel.className = 'panel';
+  const h = document.createElement('h2');
+  h.textContent = title;
+  const note = document.createElement('div');
+  note.className = 'note';
+  note.textContent = description;
+  const chart = document.createElement('div');
+  chart.id = id;
+  chart.className = 'chart';
+  panel.append(h, note, chart);
+  return panel;
+}
+function draw() {
+  if (typeof Plotly === 'undefined') {
+    $('status').textContent = 'Plotly could not load. Check your network connection.';
+    $('status').classList.add('error');
+    return;
+  }
+  const allCycles = wantedCycles();
+  const byCycle = new Map(rows.map(r => [r.cycle, r]));
+  const x = allCycles.map(cycleDate);
+  const plots = $('allPlots');
+  // Clear existing charts before rebuilding all four variables.
+  for (const el of plots.querySelectorAll('.chart')) Plotly.purge(el);
+  plots.replaceChildren();
+
+  for (const [variable, info] of Object.entries(VARS)) {
+    const spreadId = `spread_${variable}`;
+    const extremesId = `extremes_${variable}`;
+    plots.append(
+      makeChartPanel(`${info.name} — ensemble spread`,
+        '1st, 10th, spatial mean, 90th, and 99th percentiles over land grid cells.', spreadId),
+      makeChartPanel(`${info.name} — ensemble extreme values`,
+        'Minimum and maximum across all ensemble members and land grid cells.', extremesId)
+    );
+
+    const series = (field, label) => ({
+      x,
+      // One entry per hourly cycle, including explicit null for missing reports.
+      // Plotly will leave the missing hours blank, never joining across them.
+      y: allCycles.map(c => byCycle.get(c)?.variables[variable]?.[field] ?? null),
+      type: 'scatter', mode: 'lines+markers', name: label, connectgaps: false,
+      line: {color: COLORS[field], width: field === 'mean' ? 3 : 1.8},
+      marker: {size: 4},
+      hovertemplate: '%{x|%Y-%m-%d %H:%M UTC}<br>%{y:.6g} ' + info.unit + '<extra>' + label + '</extra>'
+    });
+    const theme = {
+      font: {family:'Arial, sans-serif', color:'#182b43', size:12},
+      margin: {l:75,r:20,t:20,b:65}, paper_bgcolor:'#fff', plot_bgcolor:'#fff',
+      legend: {orientation:'h',y:-0.30}, hovermode:'x unified',
+      xaxis: {title:'Cycle initialization (UTC)',type:'date',range:[x[0],x[x.length-1]],showgrid:true,gridcolor:'#e7edf3'},
+      yaxis: {title:info.unit,showgrid:true,gridcolor:'#e7edf3'},
+      showlegend:true
+    };
+    Plotly.newPlot(spreadId, [
+      series('p01','1st percentile'),series('p10','10th percentile'),
+      series('mean','Spatial mean'),series('p90','90th percentile'),series('p99','99th percentile')
+    ], theme, {responsive:true,displaylogo:false});
+    const shapes = [];
+    if (variable === 'soil_temperature_layer1') {
+      for (const threshold of [253,323]) {
+        shapes.push({type:'line',xref:'paper',x0:0,x1:1,yref:'y',y0:threshold,y1:threshold,
+          line:{color:'#c43b3b',dash:'dash',width:1}});
+      }
+    }
+    Plotly.newPlot(extremesId, [series('min','Minimum'),series('max','Maximum')],
+      {...theme, shapes}, {responsive:true,displaylogo:false});
+  }
+}
+async function load() {
+  $('reload').disabled=true;
+  $('status').classList.remove('error');
+  $('status').textContent='Checking the selected 30-day period on GitHub…';
+  try {
+    const cycles=wantedCycles();
+    const filenames=await availableFilenames(cycles);
+    rows=await fetchConcurrent(filenames);
+    $('status').textContent=`${rows.length} valid hourly reports loaded for ${cycles[0].slice(0,8)}–${cycles[cycles.length-1].slice(0,8)} UTC (${filenames.length} text files found). Missing hours are left blank.`;
+    draw();
+  } catch (error) {
+    $('status').textContent=`Unable to load GitHub text files: ${error.message}`;
+    $('status').classList.add('error');
+  } finally { $('reload').disabled=false; }
+}
+$('reload').addEventListener('click',load);
+$('endDate').addEventListener('change',load);
+$('endDate').value = utcDateText(new Date());
+load();
+</script>
+</body>
+</html>
