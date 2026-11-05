@@ -23,6 +23,8 @@
     .top-nav a:hover,.top-nav a:focus-visible { background:rgba(255,255,255,.14); color:#fff; }
     .top-nav a.active { background:#fff; color:#145f9b; border-color:#fff; }
     main { padding-top:23px; padding-bottom:35px; }
+    .intro-panel { padding:18px 20px; margin-bottom:20px; line-height:1.65; }
+    .intro-panel p { margin:0; }
     .summary { display:flex; gap:11px; flex-wrap:wrap; margin-bottom:20px; }
     .stat { flex:1 1 185px; min-width:160px; background:var(--panel); border:1px solid var(--line); border-radius:9px; padding:13px 17px; }
     .stat-label { color:var(--muted); font-size:11px; text-transform:uppercase; font-weight:700; letter-spacing:.055em; }
@@ -74,14 +76,17 @@
 <header class="header"><div class="header-inner">
   <div class="eyebrow">RRFSv2X · Ensemble monitoring</div>
   <h1>Ensemble Variable Monitor (Near Real Time)</h1>
-  <div class="subtitle"><p>RRFSv2X is the current real-time prototype of the Rapid Refresh Forecast System Version 2 (RRFSv2), running at NOAA’s Global Systems Laboratory (GSL) on NOAA high-performance computing (HPC) systems.
-  Learn more on the <a href="https://gsl.noaa.gov/rrfs/" target="_blank" rel="noopener noreferrer">GSL RRFS website</a>, view the <a href="https://rapidrefresh.noaa.gov/hrrr/MPAS/Welcome.cgi?dsKey=mpas_rrfsv2x_ursa" target="_blank" rel="noopener noreferrer">RRFSv2X forecast graphics</a>, and check the <a href="https://rrfsx.github.io/workflow_status/#ursa%2Frrfsv2x_enkf" target="_blank" rel="noopener noreferrer">real-time RRFSv2X workflow status</a>. This site provides near-real-time monitoring of RRFSv2X ensemble statistics, particularly near-surface and land-surface variables, to help assess ensemble stability. Monitored variables include 2-m temperature, 2-m specific humidity, layer-1 soil moisture, and layer-1 soil temperature. Selected ensemble spread maps are available via <a href="https://drive.google.com/drive/u/1/folders/14S5I6OLdT54ELewtxRkOEUNQk17JQyxJ" target="_blank" rel="noopener noreferrer">Google Drive</a>.</p></div>
   <nav class="top-nav" aria-label="Monitor pages">
     <a class="active" href="./index.html" aria-current="page">Current Monitor</a>
     <a href="./time_series.html">30-Day Time Series</a>
+    <a href="./notes.html">Notes</a>
+
   </nav>
 </div></header>
 <main>
+  <section class="panel intro-panel" aria-label="About RRFSv2X ensemble monitoring">
+    <p>RRFSv2X is the current real-time prototype of the Rapid Refresh Forecast System Version 2 (RRFSv2), running at NOAA’s Global Systems Laboratory (GSL) on NOAA high-performance computing (HPC) systems. This site provides near-real-time monitoring of RRFSv2X ensemble statistics, particularly near-surface and land-surface variables, to help assess ensemble stability. Monitored variables include 2-m temperature, 2-m specific humidity, layer-1 soil moisture, and layer-1 soil temperature. Selected ensemble spread maps are available via <a href="https://drive.google.com/drive/u/1/folders/14S5I6OLdT54ELewtxRkOEUNQk17JQyxJ" target="_blank" rel="noopener noreferrer">Google Drive</a>.</p>
+  </section>
   <section class="summary">
     <div class="stat"><div class="stat-label">Last updated (UTC)</div><div class="stat-value small" id="lastUpdated">Loading…</div></div>
     <div class="stat"><div class="stat-label">Cycles shown</div><div class="stat-value" id="cycleCount">—</div></div>
