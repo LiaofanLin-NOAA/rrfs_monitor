@@ -1,0 +1,60 @@
+================================================================================
+RRFSv2X Ensemble Variable Monitor
+================================================================================
+Cycle: 2026110522
+Members: 30
+Files processed: 30
+Spread STD ddof: 1
+Total grid cells: 2341818
+Land grid cells: 1461560
+Ocean grid cells: 880258
+
+temperature_2m
+  Variable: t2m
+  Long name: 2-meter temperature
+  Units: K
+  Spread percentile 1: 0.161964
+  Spread percentile 10: 0.310738
+  Spread spatial mean: 0.691740
+  Spread percentile 90: 1.174101
+  Spread percentile 99: 1.830647
+  Minimum: 260.089813
+  Maximum: 309.691650
+
+specific_humidity_2m
+  Variable: q2
+  Long name: 2-meter specific humidity
+  Units: kg kg^{-1}
+  Spread percentile 1: 0.000086
+  Spread percentile 10: 0.000143
+  Spread spatial mean: 0.000444
+  Spread percentile 90: 0.000856
+  Spread percentile 99: 0.001525
+  Minimum: 0.000042
+  Maximum: 0.021367
+
+soil_moisture_layer1
+  Variable: smois
+  Long name: Soil moisture (layer 1)
+  Units: m^3 m^{-3}
+  Spread percentile 1: 0.000252
+  Spread percentile 10: 0.000557
+  Spread spatial mean: 0.007244
+  Spread percentile 90: 0.020594
+  Spread percentile 99: 0.040038
+  Minimum: 0.002000
+  Maximum: 0.485000
+
+soil_temperature_layer1
+  Variable: tslb
+  Long name: Soil temperature (layer 1)
+  Units: K
+  Spread percentile 1: 0.051062
+  Spread percentile 10: 0.294941
+  Spread spatial mean: 0.665080
+  Spread percentile 90: 1.108382
+  Spread percentile 99: 1.703726
+  Minimum: 263.034363
+  Maximum: 311.032654
+
+================================================================================
