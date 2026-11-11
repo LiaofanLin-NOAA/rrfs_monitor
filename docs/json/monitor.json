@@ -1,6 +1,6 @@
 {
   "title": "RRFSv2X Ensemble Variable Monitor",
-  "generated_at_utc": "2026-11-10T12:00:32.497881Z",
+  "generated_at_utc": "2026-11-11T00:00:28.280439Z",
   "lookback_json": 96,
   "soil_temperature_alert": {
     "min_k": 253.0,
@@ -8,6 +8,60 @@
     "units": "K"
   },
   "alerts": [
+    {
+      "cycle": "2026111011",
+      "variable": "soil_temperature_layer1",
+      "field": "minimum",
+      "value": 249.732254,
+      "threshold": 253.0,
+      "units": "K",
+      "message": "soil_temperature_layer1 minimum 249.732254 K below 253 K"
+    },
+    {
+      "cycle": "2026111010",
+      "variable": "soil_temperature_layer1",
+      "field": "minimum",
+      "value": 250.847321,
+      "threshold": 253.0,
+      "units": "K",
+      "message": "soil_temperature_layer1 minimum 250.847321 K below 253 K"
+    },
+    {
+      "cycle": "2026111009",
+      "variable": "soil_temperature_layer1",
+      "field": "minimum",
+      "value": 251.433655,
+      "threshold": 253.0,
+      "units": "K",
+      "message": "soil_temperature_layer1 minimum 251.433655 K below 253 K"
+    },
+    {
+      "cycle": "2026111008",
+      "variable": "soil_temperature_layer1",
+      "field": "minimum",
+      "value": 251.369034,
+      "threshold": 253.0,
+      "units": "K",
+      "message": "soil_temperature_layer1 minimum 251.369034 K below 253 K"
+    },
+    {
+      "cycle": "2026111007",
+      "variable": "soil_temperature_layer1",
+      "field": "minimum",
+      "value": 251.593475,
+      "threshold": 253.0,
+      "units": "K",
+      "message": "soil_temperature_layer1 minimum 251.593475 K below 253 K"
+    },
+    {
+      "cycle": "2026111006",
+      "variable": "soil_temperature_layer1",
+      "field": "minimum",
+      "value": 252.101578,
+      "threshold": 253.0,
+      "units": "K",
+      "message": "soil_temperature_layer1 minimum 252.101578 K below 253 K"
+    },
     {
       "cycle": "2026111005",
       "variable": "soil_temperature_layer1",
@@ -205,27 +259,81 @@
       "threshold": 253.0,
       "units": "K",
       "message": "soil_temperature_layer1 minimum 252.990799 K below 253 K"
-    },
-    {
-      "cycle": "2026110614",
-      "variable": "soil_temperature_layer1",
-      "field": "minimum",
-      "value": 251.872665,
-      "threshold": 253.0,
-      "units": "K",
-      "message": "soil_temperature_layer1 minimum 251.872665 K below 253 K"
-    },
-    {
-      "cycle": "2026110613",
-      "variable": "soil_temperature_layer1",
-      "field": "minimum",
-      "value": 251.38623,
-      "threshold": 253.0,
-      "units": "K",
-      "message": "soil_temperature_layer1 minimum 251.386230 K below 253 K"
     }
   ],
   "cycles": [
+    {
+      "cycle": "2026111100",
+      "status": "unavailable",
+      "reason": "report_missing",
+      "variables": {}
+    },
+    {
+      "cycle": "2026111023",
+      "status": "unavailable",
+      "reason": "report_missing",
+      "variables": {}
+    },
+    {
+      "cycle": "2026111022",
+      "status": "unavailable",
+      "reason": "report_missing",
+      "variables": {}
+    },
+    {
+      "cycle": "2026111021",
+      "status": "unavailable",
+      "reason": "report_missing",
+      "variables": {}
+    },
+    {
+      "cycle": "2026111020",
+      "status": "unavailable",
+      "reason": "report_missing",
+      "variables": {}
+    },
+    {
+      "cycle": "2026111019",
+      "status": "unavailable",
+      "reason": "report_missing",
+      "variables": {}
+    },
+    {
+      "cycle": "2026111018",
+      "status": "unavailable",
+      "reason": "report_missing",
+      "variables": {}
+    },
+    {
+      "cycle": "2026111017",
+      "status": "unavailable",
+      "reason": "report_missing",
+      "variables": {}
+    },
+    {
+      "cycle": "2026111016",
+      "status": "unavailable",
+      "reason": "report_missing",
+      "variables": {}
+    },
+    {
+      "cycle": "2026111015",
+      "status": "unavailable",
+      "reason": "report_missing",
+      "variables": {}
+    },
+    {
+      "cycle": "2026111014",
+      "status": "unavailable",
+      "reason": "report_missing",
+      "variables": {}
+    },
+    {
+      "cycle": "2026111013",
+      "status": "unavailable",
+      "reason": "report_missing",
+      "variables": {}
+    },
     {
       "cycle": "2026111012",
       "status": "unavailable",
@@ -233,40 +341,436 @@
       "variables": {}
     },
     {
+      "source": "data/2026111011.txt",
+      "variables": {
+        "temperature_2m": {
+          "variable": "t2m",
+          "long_name": "2-meter temperature",
+          "units": "K",
+          "spread_percentile_1": 0.141207,
+          "spread_percentile_10": 0.277458,
+          "spread_spatial_mean": 0.508004,
+          "spread_percentile_90": 0.801968,
+          "spread_percentile_99": 1.186205,
+          "minimum": 259.466858,
+          "maximum": 301.237335
+        },
+        "specific_humidity_2m": {
+          "variable": "q2",
+          "long_name": "2-meter specific humidity",
+          "units": "kg kg^{-1}",
+          "spread_percentile_1": 7.5e-05,
+          "spread_percentile_10": 0.000127,
+          "spread_spatial_mean": 0.000266,
+          "spread_percentile_90": 0.000454,
+          "spread_percentile_99": 0.000846,
+          "minimum": 1.4e-05,
+          "maximum": 0.020317
+        },
+        "soil_moisture_layer1": {
+          "variable": "smois",
+          "long_name": "Soil moisture (layer 1)",
+          "units": "m^3 m^{-3}",
+          "spread_percentile_1": 6.2e-05,
+          "spread_percentile_10": 0.000225,
+          "spread_spatial_mean": 0.003669,
+          "spread_percentile_90": 0.012112,
+          "spread_percentile_99": 0.023473,
+          "minimum": 0.028399,
+          "maximum": 0.486198
+        },
+        "soil_temperature_layer1": {
+          "variable": "tslb",
+          "long_name": "Soil temperature (layer 1)",
+          "units": "K",
+          "spread_percentile_1": 0.030567,
+          "spread_percentile_10": 0.2208,
+          "spread_spatial_mean": 0.549905,
+          "spread_percentile_90": 0.961847,
+          "spread_percentile_99": 1.465657,
+          "minimum": 249.732254,
+          "maximum": 301.604645
+        }
+      },
       "cycle": "2026111011",
-      "status": "unavailable",
-      "reason": "report_missing",
-      "variables": {}
+      "members": 30,
+      "files_processed": 30,
+      "spread_ddof": 1,
+      "total_grid_cells": 2341818,
+      "land_grid_cells": 1461560,
+      "ocean_grid_cells": 880258,
+      "status": "available",
+      "alerts": [
+        {
+          "cycle": "2026111011",
+          "variable": "soil_temperature_layer1",
+          "field": "minimum",
+          "value": 249.732254,
+          "threshold": 253.0,
+          "units": "K",
+          "message": "soil_temperature_layer1 minimum 249.732254 K below 253 K"
+        }
+      ]
     },
     {
+      "source": "data/2026111010.txt",
+      "variables": {
+        "temperature_2m": {
+          "variable": "t2m",
+          "long_name": "2-meter temperature",
+          "units": "K",
+          "spread_percentile_1": 0.140675,
+          "spread_percentile_10": 0.273188,
+          "spread_spatial_mean": 0.510047,
+          "spread_percentile_90": 0.798568,
+          "spread_percentile_99": 1.161127,
+          "minimum": 259.746246,
+          "maximum": 300.663818
+        },
+        "specific_humidity_2m": {
+          "variable": "q2",
+          "long_name": "2-meter specific humidity",
+          "units": "kg kg^{-1}",
+          "spread_percentile_1": 7.7e-05,
+          "spread_percentile_10": 0.00013,
+          "spread_spatial_mean": 0.000278,
+          "spread_percentile_90": 0.000483,
+          "spread_percentile_99": 0.000875,
+          "minimum": 4.7e-05,
+          "maximum": 0.020364
+        },
+        "soil_moisture_layer1": {
+          "variable": "smois",
+          "long_name": "Soil moisture (layer 1)",
+          "units": "m^3 m^{-3}",
+          "spread_percentile_1": 5.7e-05,
+          "spread_percentile_10": 0.000206,
+          "spread_spatial_mean": 0.003701,
+          "spread_percentile_90": 0.012733,
+          "spread_percentile_99": 0.024055,
+          "minimum": 0.016413,
+          "maximum": 0.492
+        },
+        "soil_temperature_layer1": {
+          "variable": "tslb",
+          "long_name": "Soil temperature (layer 1)",
+          "units": "K",
+          "spread_percentile_1": 0.052265,
+          "spread_percentile_10": 0.221131,
+          "spread_spatial_mean": 0.549966,
+          "spread_percentile_90": 0.947758,
+          "spread_percentile_99": 1.419745,
+          "minimum": 250.847321,
+          "maximum": 300.420685
+        }
+      },
       "cycle": "2026111010",
-      "status": "unavailable",
-      "reason": "report_missing",
-      "variables": {}
+      "members": 30,
+      "files_processed": 30,
+      "spread_ddof": 1,
+      "total_grid_cells": 2341818,
+      "land_grid_cells": 1461560,
+      "ocean_grid_cells": 880258,
+      "status": "available",
+      "alerts": [
+        {
+          "cycle": "2026111010",
+          "variable": "soil_temperature_layer1",
+          "field": "minimum",
+          "value": 250.847321,
+          "threshold": 253.0,
+          "units": "K",
+          "message": "soil_temperature_layer1 minimum 250.847321 K below 253 K"
+        }
+      ]
     },
     {
+      "source": "data/2026111009.txt",
+      "variables": {
+        "temperature_2m": {
+          "variable": "t2m",
+          "long_name": "2-meter temperature",
+          "units": "K",
+          "spread_percentile_1": 0.130912,
+          "spread_percentile_10": 0.261715,
+          "spread_spatial_mean": 0.508664,
+          "spread_percentile_90": 0.782909,
+          "spread_percentile_99": 1.169546,
+          "minimum": 259.19632,
+          "maximum": 300.517792
+        },
+        "specific_humidity_2m": {
+          "variable": "q2",
+          "long_name": "2-meter specific humidity",
+          "units": "kg kg^{-1}",
+          "spread_percentile_1": 7.8e-05,
+          "spread_percentile_10": 0.00013,
+          "spread_spatial_mean": 0.000288,
+          "spread_percentile_90": 0.000514,
+          "spread_percentile_99": 0.000917,
+          "minimum": 7e-05,
+          "maximum": 0.019853
+        },
+        "soil_moisture_layer1": {
+          "variable": "smois",
+          "long_name": "Soil moisture (layer 1)",
+          "units": "m^3 m^{-3}",
+          "spread_percentile_1": 5.2e-05,
+          "spread_percentile_10": 0.00018,
+          "spread_spatial_mean": 0.00374,
+          "spread_percentile_90": 0.013571,
+          "spread_percentile_99": 0.025015,
+          "minimum": 0.016137,
+          "maximum": 0.492
+        },
+        "soil_temperature_layer1": {
+          "variable": "tslb",
+          "long_name": "Soil temperature (layer 1)",
+          "units": "K",
+          "spread_percentile_1": 0.077315,
+          "spread_percentile_10": 0.216439,
+          "spread_spatial_mean": 0.545165,
+          "spread_percentile_90": 0.92491,
+          "spread_percentile_99": 1.330883,
+          "minimum": 251.433655,
+          "maximum": 300.445068
+        }
+      },
       "cycle": "2026111009",
-      "status": "unavailable",
-      "reason": "report_missing",
-      "variables": {}
+      "members": 30,
+      "files_processed": 30,
+      "spread_ddof": 1,
+      "total_grid_cells": 2341818,
+      "land_grid_cells": 1461560,
+      "ocean_grid_cells": 880258,
+      "status": "available",
+      "alerts": [
+        {
+          "cycle": "2026111009",
+          "variable": "soil_temperature_layer1",
+          "field": "minimum",
+          "value": 251.433655,
+          "threshold": 253.0,
+          "units": "K",
+          "message": "soil_temperature_layer1 minimum 251.433655 K below 253 K"
+        }
+      ]
     },
     {
+      "source": "data/2026111008.txt",
+      "variables": {
+        "temperature_2m": {
+          "variable": "t2m",
+          "long_name": "2-meter temperature",
+          "units": "K",
+          "spread_percentile_1": 0.166704,
+          "spread_percentile_10": 0.264444,
+          "spread_spatial_mean": 0.48032,
+          "spread_percentile_90": 0.756922,
+          "spread_percentile_99": 1.179521,
+          "minimum": 257.908508,
+          "maximum": 300.857178
+        },
+        "specific_humidity_2m": {
+          "variable": "q2",
+          "long_name": "2-meter specific humidity",
+          "units": "kg kg^{-1}",
+          "spread_percentile_1": 6.8e-05,
+          "spread_percentile_10": 0.000115,
+          "spread_spatial_mean": 0.000269,
+          "spread_percentile_90": 0.000462,
+          "spread_percentile_99": 0.00096,
+          "minimum": 1.4e-05,
+          "maximum": 0.020164
+        },
+        "soil_moisture_layer1": {
+          "variable": "smois",
+          "long_name": "Soil moisture (layer 1)",
+          "units": "m^3 m^{-3}",
+          "spread_percentile_1": 0.000136,
+          "spread_percentile_10": 0.000373,
+          "spread_spatial_mean": 0.003927,
+          "spread_percentile_90": 0.010781,
+          "spread_percentile_99": 0.029318,
+          "minimum": 0.00385,
+          "maximum": 0.492
+        },
+        "soil_temperature_layer1": {
+          "variable": "tslb",
+          "long_name": "Soil temperature (layer 1)",
+          "units": "K",
+          "spread_percentile_1": 0.040691,
+          "spread_percentile_10": 0.227586,
+          "spread_spatial_mean": 0.511153,
+          "spread_percentile_90": 0.881037,
+          "spread_percentile_99": 1.409371,
+          "minimum": 251.369034,
+          "maximum": 300.393799
+        }
+      },
       "cycle": "2026111008",
-      "status": "unavailable",
-      "reason": "report_missing",
-      "variables": {}
+      "members": 30,
+      "files_processed": 30,
+      "spread_ddof": 1,
+      "total_grid_cells": 2341818,
+      "land_grid_cells": 1461560,
+      "ocean_grid_cells": 880258,
+      "status": "available",
+      "alerts": [
+        {
+          "cycle": "2026111008",
+          "variable": "soil_temperature_layer1",
+          "field": "minimum",
+          "value": 251.369034,
+          "threshold": 253.0,
+          "units": "K",
+          "message": "soil_temperature_layer1 minimum 251.369034 K below 253 K"
+        }
+      ]
     },
     {
+      "source": "data/2026111007.txt",
+      "variables": {
+        "temperature_2m": {
+          "variable": "t2m",
+          "long_name": "2-meter temperature",
+          "units": "K",
+          "spread_percentile_1": 0.172655,
+          "spread_percentile_10": 0.271582,
+          "spread_spatial_mean": 0.481288,
+          "spread_percentile_90": 0.748294,
+          "spread_percentile_99": 1.16294,
+          "minimum": 258.646484,
+          "maximum": 301.25592
+        },
+        "specific_humidity_2m": {
+          "variable": "q2",
+          "long_name": "2-meter specific humidity",
+          "units": "kg kg^{-1}",
+          "spread_percentile_1": 7.2e-05,
+          "spread_percentile_10": 0.00012,
+          "spread_spatial_mean": 0.000281,
+          "spread_percentile_90": 0.000485,
+          "spread_percentile_99": 0.000991,
+          "minimum": 1.2e-05,
+          "maximum": 0.020225
+        },
+        "soil_moisture_layer1": {
+          "variable": "smois",
+          "long_name": "Soil moisture (layer 1)",
+          "units": "m^3 m^{-3}",
+          "spread_percentile_1": 0.000135,
+          "spread_percentile_10": 0.000372,
+          "spread_spatial_mean": 0.003986,
+          "spread_percentile_90": 0.011065,
+          "spread_percentile_99": 0.029957,
+          "minimum": 0.002998,
+          "maximum": 0.486847
+        },
+        "soil_temperature_layer1": {
+          "variable": "tslb",
+          "long_name": "Soil temperature (layer 1)",
+          "units": "K",
+          "spread_percentile_1": 0.050318,
+          "spread_percentile_10": 0.236071,
+          "spread_spatial_mean": 0.51468,
+          "spread_percentile_90": 0.875903,
+          "spread_percentile_99": 1.394916,
+          "minimum": 251.593475,
+          "maximum": 301.053131
+        }
+      },
       "cycle": "2026111007",
-      "status": "unavailable",
-      "reason": "report_missing",
-      "variables": {}
+      "members": 30,
+      "files_processed": 30,
+      "spread_ddof": 1,
+      "total_grid_cells": 2341818,
+      "land_grid_cells": 1461560,
+      "ocean_grid_cells": 880258,
+      "status": "available",
+      "alerts": [
+        {
+          "cycle": "2026111007",
+          "variable": "soil_temperature_layer1",
+          "field": "minimum",
+          "value": 251.593475,
+          "threshold": 253.0,
+          "units": "K",
+          "message": "soil_temperature_layer1 minimum 251.593475 K below 253 K"
+        }
+      ]
     },
     {
+      "source": "data/2026111006.txt",
+      "variables": {
+        "temperature_2m": {
+          "variable": "t2m",
+          "long_name": "2-meter temperature",
+          "units": "K",
+          "spread_percentile_1": 0.17712,
+          "spread_percentile_10": 0.275585,
+          "spread_spatial_mean": 0.478035,
+          "spread_percentile_90": 0.734683,
+          "spread_percentile_99": 1.115877,
+          "minimum": 259.37677,
+          "maximum": 301.016846
+        },
+        "specific_humidity_2m": {
+          "variable": "q2",
+          "long_name": "2-meter specific humidity",
+          "units": "kg kg^{-1}",
+          "spread_percentile_1": 7.6e-05,
+          "spread_percentile_10": 0.000126,
+          "spread_spatial_mean": 0.000292,
+          "spread_percentile_90": 0.000506,
+          "spread_percentile_99": 0.001011,
+          "minimum": 1.3e-05,
+          "maximum": 0.020124
+        },
+        "soil_moisture_layer1": {
+          "variable": "smois",
+          "long_name": "Soil moisture (layer 1)",
+          "units": "m^3 m^{-3}",
+          "spread_percentile_1": 0.000136,
+          "spread_percentile_10": 0.000373,
+          "spread_spatial_mean": 0.004029,
+          "spread_percentile_90": 0.011269,
+          "spread_percentile_99": 0.030372,
+          "minimum": 0.002766,
+          "maximum": 0.488583
+        },
+        "soil_temperature_layer1": {
+          "variable": "tslb",
+          "long_name": "Soil temperature (layer 1)",
+          "units": "K",
+          "spread_percentile_1": 0.062811,
+          "spread_percentile_10": 0.242644,
+          "spread_spatial_mean": 0.511026,
+          "spread_percentile_90": 0.857084,
+          "spread_percentile_99": 1.353051,
+          "minimum": 252.101578,
+          "maximum": 300.596191
+        }
+      },
       "cycle": "2026111006",
-      "status": "unavailable",
-      "reason": "report_missing",
-      "variables": {}
+      "members": 30,
+      "files_processed": 30,
+      "spread_ddof": 1,
+      "total_grid_cells": 2341818,
+      "land_grid_cells": 1461560,
+      "ocean_grid_cells": 880258,
+      "status": "available",
+      "alerts": [
+        {
+          "cycle": "2026111006",
+          "variable": "soil_temperature_layer1",
+          "field": "minimum",
+          "value": 252.101578,
+          "threshold": 253.0,
+          "units": "K",
+          "message": "soil_temperature_layer1 minimum 252.101578 K below 253 K"
+        }
+      ]
     },
     {
       "source": "data/2026111005.txt",
@@ -5205,770 +5709,6 @@
       "ocean_grid_cells": 880258,
       "status": "available",
       "alerts": []
-    },
-    {
-      "source": "data/2026110700.txt",
-      "variables": {
-        "temperature_2m": {
-          "variable": "t2m",
-          "long_name": "2-meter temperature",
-          "units": "K",
-          "spread_percentile_1": 0.106069,
-          "spread_percentile_10": 0.293067,
-          "spread_spatial_mean": 0.60243,
-          "spread_percentile_90": 0.948519,
-          "spread_percentile_99": 1.254752,
-          "minimum": 262.121704,
-          "maximum": 303.478119
-        },
-        "specific_humidity_2m": {
-          "variable": "q2",
-          "long_name": "2-meter specific humidity",
-          "units": "kg kg^{-1}",
-          "spread_percentile_1": 9.1e-05,
-          "spread_percentile_10": 0.000153,
-          "spread_spatial_mean": 0.000402,
-          "spread_percentile_90": 0.000729,
-          "spread_percentile_99": 0.001491,
-          "minimum": 2.1e-05,
-          "maximum": 0.020548
-        },
-        "soil_moisture_layer1": {
-          "variable": "smois",
-          "long_name": "Soil moisture (layer 1)",
-          "units": "m^3 m^{-3}",
-          "spread_percentile_1": 0.000287,
-          "spread_percentile_10": 0.000588,
-          "spread_spatial_mean": 0.006629,
-          "spread_percentile_90": 0.018115,
-          "spread_percentile_99": 0.044237,
-          "minimum": 0.010387,
-          "maximum": 0.492
-        },
-        "soil_temperature_layer1": {
-          "variable": "tslb",
-          "long_name": "Soil temperature (layer 1)",
-          "units": "K",
-          "spread_percentile_1": 0.038289,
-          "spread_percentile_10": 0.262257,
-          "spread_spatial_mean": 0.617515,
-          "spread_percentile_90": 0.983189,
-          "spread_percentile_99": 1.358647,
-          "minimum": 260.244446,
-          "maximum": 303.144226
-        }
-      },
-      "cycle": "2026110700",
-      "members": 30,
-      "files_processed": 30,
-      "spread_ddof": 1,
-      "total_grid_cells": 2341818,
-      "land_grid_cells": 1461560,
-      "ocean_grid_cells": 880258,
-      "status": "available",
-      "alerts": []
-    },
-    {
-      "source": "data/2026110623.txt",
-      "variables": {
-        "temperature_2m": {
-          "variable": "t2m",
-          "long_name": "2-meter temperature",
-          "units": "K",
-          "spread_percentile_1": 0.125126,
-          "spread_percentile_10": 0.306165,
-          "spread_spatial_mean": 0.661195,
-          "spread_percentile_90": 1.09517,
-          "spread_percentile_99": 1.45291,
-          "minimum": 262.664307,
-          "maximum": 306.25412
-        },
-        "specific_humidity_2m": {
-          "variable": "q2",
-          "long_name": "2-meter specific humidity",
-          "units": "kg kg^{-1}",
-          "spread_percentile_1": 9.4e-05,
-          "spread_percentile_10": 0.000159,
-          "spread_spatial_mean": 0.00042,
-          "spread_percentile_90": 0.000761,
-          "spread_percentile_99": 0.001507,
-          "minimum": 0.000126,
-          "maximum": 0.020998
-        },
-        "soil_moisture_layer1": {
-          "variable": "smois",
-          "long_name": "Soil moisture (layer 1)",
-          "units": "m^3 m^{-3}",
-          "spread_percentile_1": 0.000284,
-          "spread_percentile_10": 0.000584,
-          "spread_spatial_mean": 0.006674,
-          "spread_percentile_90": 0.01866,
-          "spread_percentile_99": 0.043841,
-          "minimum": 0.010384,
-          "maximum": 0.492
-        },
-        "soil_temperature_layer1": {
-          "variable": "tslb",
-          "long_name": "Soil temperature (layer 1)",
-          "units": "K",
-          "spread_percentile_1": 0.04332,
-          "spread_percentile_10": 0.275807,
-          "spread_spatial_mean": 0.650154,
-          "spread_percentile_90": 1.077259,
-          "spread_percentile_99": 1.418652,
-          "minimum": 263.515259,
-          "maximum": 306.716644
-        }
-      },
-      "cycle": "2026110623",
-      "members": 30,
-      "files_processed": 30,
-      "spread_ddof": 1,
-      "total_grid_cells": 2341818,
-      "land_grid_cells": 1461560,
-      "ocean_grid_cells": 880258,
-      "status": "available",
-      "alerts": []
-    },
-    {
-      "source": "data/2026110622.txt",
-      "variables": {
-        "temperature_2m": {
-          "variable": "t2m",
-          "long_name": "2-meter temperature",
-          "units": "K",
-          "spread_percentile_1": 0.172912,
-          "spread_percentile_10": 0.339692,
-          "spread_spatial_mean": 0.755057,
-          "spread_percentile_90": 1.331149,
-          "spread_percentile_99": 1.754892,
-          "minimum": 263.933929,
-          "maximum": 307.949341
-        },
-        "specific_humidity_2m": {
-          "variable": "q2",
-          "long_name": "2-meter specific humidity",
-          "units": "kg kg^{-1}",
-          "spread_percentile_1": 9.6e-05,
-          "spread_percentile_10": 0.000164,
-          "spread_spatial_mean": 0.000437,
-          "spread_percentile_90": 0.000812,
-          "spread_percentile_99": 0.001506,
-          "minimum": 0.000268,
-          "maximum": 0.021375
-        },
-        "soil_moisture_layer1": {
-          "variable": "smois",
-          "long_name": "Soil moisture (layer 1)",
-          "units": "m^3 m^{-3}",
-          "spread_percentile_1": 0.000259,
-          "spread_percentile_10": 0.000555,
-          "spread_spatial_mean": 0.006642,
-          "spread_percentile_90": 0.019087,
-          "spread_percentile_99": 0.043645,
-          "minimum": 0.00644,
-          "maximum": 0.492
-        },
-        "soil_temperature_layer1": {
-          "variable": "tslb",
-          "long_name": "Soil temperature (layer 1)",
-          "units": "K",
-          "spread_percentile_1": 0.056588,
-          "spread_percentile_10": 0.305944,
-          "spread_spatial_mean": 0.732221,
-          "spread_percentile_90": 1.264363,
-          "spread_percentile_99": 1.699086,
-          "minimum": 263.807404,
-          "maximum": 310.607178
-        }
-      },
-      "cycle": "2026110622",
-      "members": 30,
-      "files_processed": 30,
-      "spread_ddof": 1,
-      "total_grid_cells": 2341818,
-      "land_grid_cells": 1461560,
-      "ocean_grid_cells": 880258,
-      "status": "available",
-      "alerts": []
-    },
-    {
-      "source": "data/2026110621.txt",
-      "variables": {
-        "temperature_2m": {
-          "variable": "t2m",
-          "long_name": "2-meter temperature",
-          "units": "K",
-          "spread_percentile_1": 0.219306,
-          "spread_percentile_10": 0.374399,
-          "spread_spatial_mean": 0.872721,
-          "spread_percentile_90": 1.620428,
-          "spread_percentile_99": 2.113738,
-          "minimum": 263.588257,
-          "maximum": 309.120026
-        },
-        "specific_humidity_2m": {
-          "variable": "q2",
-          "long_name": "2-meter specific humidity",
-          "units": "kg kg^{-1}",
-          "spread_percentile_1": 9.6e-05,
-          "spread_percentile_10": 0.000162,
-          "spread_spatial_mean": 0.000445,
-          "spread_percentile_90": 0.000845,
-          "spread_percentile_99": 0.001524,
-          "minimum": 0.000299,
-          "maximum": 0.021905
-        },
-        "soil_moisture_layer1": {
-          "variable": "smois",
-          "long_name": "Soil moisture (layer 1)",
-          "units": "m^3 m^{-3}",
-          "spread_percentile_1": 0.000204,
-          "spread_percentile_10": 0.00045,
-          "spread_spatial_mean": 0.006417,
-          "spread_percentile_90": 0.019417,
-          "spread_percentile_99": 0.041822,
-          "minimum": 0.00644,
-          "maximum": 0.492
-        },
-        "soil_temperature_layer1": {
-          "variable": "tslb",
-          "long_name": "Soil temperature (layer 1)",
-          "units": "K",
-          "spread_percentile_1": 0.088605,
-          "spread_percentile_10": 0.348627,
-          "spread_spatial_mean": 0.888993,
-          "spread_percentile_90": 1.573885,
-          "spread_percentile_99": 2.12883,
-          "minimum": 263.373871,
-          "maximum": 314.146667
-        }
-      },
-      "cycle": "2026110621",
-      "members": 30,
-      "files_processed": 30,
-      "spread_ddof": 1,
-      "total_grid_cells": 2341818,
-      "land_grid_cells": 1461560,
-      "ocean_grid_cells": 880258,
-      "status": "available",
-      "alerts": []
-    },
-    {
-      "source": "data/2026110620.txt",
-      "variables": {
-        "temperature_2m": {
-          "variable": "t2m",
-          "long_name": "2-meter temperature",
-          "units": "K",
-          "spread_percentile_1": 0.183714,
-          "spread_percentile_10": 0.27151,
-          "spread_spatial_mean": 0.45906,
-          "spread_percentile_90": 0.68835,
-          "spread_percentile_99": 1.193757,
-          "minimum": 264.424072,
-          "maximum": 308.362
-        },
-        "specific_humidity_2m": {
-          "variable": "q2",
-          "long_name": "2-meter specific humidity",
-          "units": "kg kg^{-1}",
-          "spread_percentile_1": 7.6e-05,
-          "spread_percentile_10": 0.000117,
-          "spread_spatial_mean": 0.000338,
-          "spread_percentile_90": 0.00066,
-          "spread_percentile_99": 0.001206,
-          "minimum": 0.000125,
-          "maximum": 0.021429
-        },
-        "soil_moisture_layer1": {
-          "variable": "smois",
-          "long_name": "Soil moisture (layer 1)",
-          "units": "m^3 m^{-3}",
-          "spread_percentile_1": 0.000351,
-          "spread_percentile_10": 0.000677,
-          "spread_spatial_mean": 0.005407,
-          "spread_percentile_90": 0.01366,
-          "spread_percentile_99": 0.035244,
-          "minimum": 0.035363,
-          "maximum": 0.492
-        },
-        "soil_temperature_layer1": {
-          "variable": "tslb",
-          "long_name": "Soil temperature (layer 1)",
-          "units": "K",
-          "spread_percentile_1": 0.063138,
-          "spread_percentile_10": 0.264492,
-          "spread_spatial_mean": 0.545611,
-          "spread_percentile_90": 0.930969,
-          "spread_percentile_99": 1.883878,
-          "minimum": 263.515442,
-          "maximum": 315.12738
-        }
-      },
-      "cycle": "2026110620",
-      "members": 30,
-      "files_processed": 30,
-      "spread_ddof": 1,
-      "total_grid_cells": 2341818,
-      "land_grid_cells": 1461560,
-      "ocean_grid_cells": 880258,
-      "status": "available",
-      "alerts": []
-    },
-    {
-      "source": "data/2026110619.txt",
-      "variables": {
-        "temperature_2m": {
-          "variable": "t2m",
-          "long_name": "2-meter temperature",
-          "units": "K",
-          "spread_percentile_1": 0.192251,
-          "spread_percentile_10": 0.284119,
-          "spread_spatial_mean": 0.48442,
-          "spread_percentile_90": 0.725556,
-          "spread_percentile_99": 1.253699,
-          "minimum": 263.620422,
-          "maximum": 308.626129
-        },
-        "specific_humidity_2m": {
-          "variable": "q2",
-          "long_name": "2-meter specific humidity",
-          "units": "kg kg^{-1}",
-          "spread_percentile_1": 7.4e-05,
-          "spread_percentile_10": 0.000115,
-          "spread_spatial_mean": 0.000336,
-          "spread_percentile_90": 0.000661,
-          "spread_percentile_99": 0.00119,
-          "minimum": 0.000172,
-          "maximum": 0.021211
-        },
-        "soil_moisture_layer1": {
-          "variable": "smois",
-          "long_name": "Soil moisture (layer 1)",
-          "units": "m^3 m^{-3}",
-          "spread_percentile_1": 0.00035,
-          "spread_percentile_10": 0.000671,
-          "spread_spatial_mean": 0.005403,
-          "spread_percentile_90": 0.013577,
-          "spread_percentile_99": 0.036113,
-          "minimum": 0.035334,
-          "maximum": 0.492
-        },
-        "soil_temperature_layer1": {
-          "variable": "tslb",
-          "long_name": "Soil temperature (layer 1)",
-          "units": "K",
-          "spread_percentile_1": 0.064438,
-          "spread_percentile_10": 0.284101,
-          "spread_spatial_mean": 0.617329,
-          "spread_percentile_90": 1.067883,
-          "spread_percentile_99": 2.089797,
-          "minimum": 263.468811,
-          "maximum": 315.924805
-        }
-      },
-      "cycle": "2026110619",
-      "members": 30,
-      "files_processed": 30,
-      "spread_ddof": 1,
-      "total_grid_cells": 2341818,
-      "land_grid_cells": 1461560,
-      "ocean_grid_cells": 880258,
-      "status": "available",
-      "alerts": []
-    },
-    {
-      "source": "data/2026110618.txt",
-      "variables": {
-        "temperature_2m": {
-          "variable": "t2m",
-          "long_name": "2-meter temperature",
-          "units": "K",
-          "spread_percentile_1": 0.196188,
-          "spread_percentile_10": 0.295955,
-          "spread_spatial_mean": 0.505956,
-          "spread_percentile_90": 0.75398,
-          "spread_percentile_99": 1.266547,
-          "minimum": 264.00827,
-          "maximum": 308.568909
-        },
-        "specific_humidity_2m": {
-          "variable": "q2",
-          "long_name": "2-meter specific humidity",
-          "units": "kg kg^{-1}",
-          "spread_percentile_1": 7.3e-05,
-          "spread_percentile_10": 0.000113,
-          "spread_spatial_mean": 0.000335,
-          "spread_percentile_90": 0.000664,
-          "spread_percentile_99": 0.001192,
-          "minimum": 0.000137,
-          "maximum": 0.02114
-        },
-        "soil_moisture_layer1": {
-          "variable": "smois",
-          "long_name": "Soil moisture (layer 1)",
-          "units": "m^3 m^{-3}",
-          "spread_percentile_1": 0.000341,
-          "spread_percentile_10": 0.000644,
-          "spread_spatial_mean": 0.00542,
-          "spread_percentile_90": 0.013631,
-          "spread_percentile_99": 0.037403,
-          "minimum": 0.035305,
-          "maximum": 0.492
-        },
-        "soil_temperature_layer1": {
-          "variable": "tslb",
-          "long_name": "Soil temperature (layer 1)",
-          "units": "K",
-          "spread_percentile_1": 0.069619,
-          "spread_percentile_10": 0.29776,
-          "spread_spatial_mean": 0.665633,
-          "spread_percentile_90": 1.183231,
-          "spread_percentile_99": 2.170184,
-          "minimum": 263.418945,
-          "maximum": 315.684204
-        }
-      },
-      "cycle": "2026110618",
-      "members": 30,
-      "files_processed": 30,
-      "spread_ddof": 1,
-      "total_grid_cells": 2341818,
-      "land_grid_cells": 1461560,
-      "ocean_grid_cells": 880258,
-      "status": "available",
-      "alerts": []
-    },
-    {
-      "source": "data/2026110617.txt",
-      "variables": {
-        "temperature_2m": {
-          "variable": "t2m",
-          "long_name": "2-meter temperature",
-          "units": "K",
-          "spread_percentile_1": 0.192335,
-          "spread_percentile_10": 0.302543,
-          "spread_spatial_mean": 0.520565,
-          "spread_percentile_90": 0.770685,
-          "spread_percentile_99": 1.258831,
-          "minimum": 262.810272,
-          "maximum": 307.828033
-        },
-        "specific_humidity_2m": {
-          "variable": "q2",
-          "long_name": "2-meter specific humidity",
-          "units": "kg kg^{-1}",
-          "spread_percentile_1": 7.1e-05,
-          "spread_percentile_10": 0.00011,
-          "spread_spatial_mean": 0.000332,
-          "spread_percentile_90": 0.000666,
-          "spread_percentile_99": 0.001212,
-          "minimum": 6.5e-05,
-          "maximum": 0.021263
-        },
-        "soil_moisture_layer1": {
-          "variable": "smois",
-          "long_name": "Soil moisture (layer 1)",
-          "units": "m^3 m^{-3}",
-          "spread_percentile_1": 0.000318,
-          "spread_percentile_10": 0.000596,
-          "spread_spatial_mean": 0.005433,
-          "spread_percentile_90": 0.013695,
-          "spread_percentile_99": 0.038445,
-          "minimum": 0.035275,
-          "maximum": 0.492
-        },
-        "soil_temperature_layer1": {
-          "variable": "tslb",
-          "long_name": "Soil temperature (layer 1)",
-          "units": "K",
-          "spread_percentile_1": 0.081838,
-          "spread_percentile_10": 0.298447,
-          "spread_spatial_mean": 0.68168,
-          "spread_percentile_90": 1.225819,
-          "spread_percentile_99": 2.18665,
-          "minimum": 263.368439,
-          "maximum": 315.477112
-        }
-      },
-      "cycle": "2026110617",
-      "members": 30,
-      "files_processed": 30,
-      "spread_ddof": 1,
-      "total_grid_cells": 2341818,
-      "land_grid_cells": 1461560,
-      "ocean_grid_cells": 880258,
-      "status": "available",
-      "alerts": []
-    },
-    {
-      "source": "data/2026110616.txt",
-      "variables": {
-        "temperature_2m": {
-          "variable": "t2m",
-          "long_name": "2-meter temperature",
-          "units": "K",
-          "spread_percentile_1": 0.188345,
-          "spread_percentile_10": 0.302954,
-          "spread_spatial_mean": 0.525911,
-          "spread_percentile_90": 0.769709,
-          "spread_percentile_99": 1.241821,
-          "minimum": 260.528748,
-          "maximum": 306.826843
-        },
-        "specific_humidity_2m": {
-          "variable": "q2",
-          "long_name": "2-meter specific humidity",
-          "units": "kg kg^{-1}",
-          "spread_percentile_1": 6.8e-05,
-          "spread_percentile_10": 0.000107,
-          "spread_spatial_mean": 0.000326,
-          "spread_percentile_90": 0.00065,
-          "spread_percentile_99": 0.001244,
-          "minimum": 3.2e-05,
-          "maximum": 0.021942
-        },
-        "soil_moisture_layer1": {
-          "variable": "smois",
-          "long_name": "Soil moisture (layer 1)",
-          "units": "m^3 m^{-3}",
-          "spread_percentile_1": 0.000279,
-          "spread_percentile_10": 0.000527,
-          "spread_spatial_mean": 0.005433,
-          "spread_percentile_90": 0.013884,
-          "spread_percentile_99": 0.039583,
-          "minimum": 0.035244,
-          "maximum": 0.492
-        },
-        "soil_temperature_layer1": {
-          "variable": "tslb",
-          "long_name": "Soil temperature (layer 1)",
-          "units": "K",
-          "spread_percentile_1": 0.110345,
-          "spread_percentile_10": 0.285775,
-          "spread_spatial_mean": 0.660128,
-          "spread_percentile_90": 1.190458,
-          "spread_percentile_99": 2.075468,
-          "minimum": 262.028839,
-          "maximum": 314.364563
-        }
-      },
-      "cycle": "2026110616",
-      "members": 30,
-      "files_processed": 30,
-      "spread_ddof": 1,
-      "total_grid_cells": 2341818,
-      "land_grid_cells": 1461560,
-      "ocean_grid_cells": 880258,
-      "status": "available",
-      "alerts": []
-    },
-    {
-      "source": "data/2026110615.txt",
-      "variables": {
-        "temperature_2m": {
-          "variable": "t2m",
-          "long_name": "2-meter temperature",
-          "units": "K",
-          "spread_percentile_1": 0.185721,
-          "spread_percentile_10": 0.289531,
-          "spread_spatial_mean": 0.515311,
-          "spread_percentile_90": 0.754278,
-          "spread_percentile_99": 1.192326,
-          "minimum": 260.315216,
-          "maximum": 304.954651
-        },
-        "specific_humidity_2m": {
-          "variable": "q2",
-          "long_name": "2-meter specific humidity",
-          "units": "kg kg^{-1}",
-          "spread_percentile_1": 6.4e-05,
-          "spread_percentile_10": 0.000103,
-          "spread_spatial_mean": 0.000315,
-          "spread_percentile_90": 0.000612,
-          "spread_percentile_99": 0.001247,
-          "minimum": 1.7e-05,
-          "maximum": 0.021792
-        },
-        "soil_moisture_layer1": {
-          "variable": "smois",
-          "long_name": "Soil moisture (layer 1)",
-          "units": "m^3 m^{-3}",
-          "spread_percentile_1": 0.000229,
-          "spread_percentile_10": 0.00045,
-          "spread_spatial_mean": 0.005473,
-          "spread_percentile_90": 0.014143,
-          "spread_percentile_99": 0.041198,
-          "minimum": 0.035212,
-          "maximum": 0.492
-        },
-        "soil_temperature_layer1": {
-          "variable": "tslb",
-          "long_name": "Soil temperature (layer 1)",
-          "units": "K",
-          "spread_percentile_1": 0.127616,
-          "spread_percentile_10": 0.254522,
-          "spread_spatial_mean": 0.600438,
-          "spread_percentile_90": 1.077137,
-          "spread_percentile_99": 1.838467,
-          "minimum": 257.22522,
-          "maximum": 312.556213
-        }
-      },
-      "cycle": "2026110615",
-      "members": 30,
-      "files_processed": 30,
-      "spread_ddof": 1,
-      "total_grid_cells": 2341818,
-      "land_grid_cells": 1461560,
-      "ocean_grid_cells": 880258,
-      "status": "available",
-      "alerts": []
-    },
-    {
-      "source": "data/2026110614.txt",
-      "variables": {
-        "temperature_2m": {
-          "variable": "t2m",
-          "long_name": "2-meter temperature",
-          "units": "K",
-          "spread_percentile_1": 0.167871,
-          "spread_percentile_10": 0.270926,
-          "spread_spatial_mean": 0.50439,
-          "spread_percentile_90": 0.74128,
-          "spread_percentile_99": 1.171189,
-          "minimum": 257.863129,
-          "maximum": 303.912109
-        },
-        "specific_humidity_2m": {
-          "variable": "q2",
-          "long_name": "2-meter specific humidity",
-          "units": "kg kg^{-1}",
-          "spread_percentile_1": 6.1e-05,
-          "spread_percentile_10": 0.0001,
-          "spread_spatial_mean": 0.000308,
-          "spread_percentile_90": 0.000587,
-          "spread_percentile_99": 0.001262,
-          "minimum": 1.6e-05,
-          "maximum": 0.021126
-        },
-        "soil_moisture_layer1": {
-          "variable": "smois",
-          "long_name": "Soil moisture (layer 1)",
-          "units": "m^3 m^{-3}",
-          "spread_percentile_1": 0.000177,
-          "spread_percentile_10": 0.000393,
-          "spread_spatial_mean": 0.005508,
-          "spread_percentile_90": 0.014367,
-          "spread_percentile_99": 0.042706,
-          "minimum": 0.026516,
-          "maximum": 0.492
-        },
-        "soil_temperature_layer1": {
-          "variable": "tslb",
-          "long_name": "Soil temperature (layer 1)",
-          "units": "K",
-          "spread_percentile_1": 0.081144,
-          "spread_percentile_10": 0.229028,
-          "spread_spatial_mean": 0.548317,
-          "spread_percentile_90": 0.939301,
-          "spread_percentile_99": 1.537657,
-          "minimum": 251.872665,
-          "maximum": 310.575287
-        }
-      },
-      "cycle": "2026110614",
-      "members": 30,
-      "files_processed": 30,
-      "spread_ddof": 1,
-      "total_grid_cells": 2341818,
-      "land_grid_cells": 1461560,
-      "ocean_grid_cells": 880258,
-      "status": "available",
-      "alerts": [
-        {
-          "cycle": "2026110614",
-          "variable": "soil_temperature_layer1",
-          "field": "minimum",
-          "value": 251.872665,
-          "threshold": 253.0,
-          "units": "K",
-          "message": "soil_temperature_layer1 minimum 251.872665 K below 253 K"
-        }
-      ]
-    },
-    {
-      "source": "data/2026110613.txt",
-      "variables": {
-        "temperature_2m": {
-          "variable": "t2m",
-          "long_name": "2-meter temperature",
-          "units": "K",
-          "spread_percentile_1": 0.140449,
-          "spread_percentile_10": 0.264512,
-          "spread_spatial_mean": 0.514445,
-          "spread_percentile_90": 0.763948,
-          "spread_percentile_99": 1.169201,
-          "minimum": 255.698715,
-          "maximum": 302.943054
-        },
-        "specific_humidity_2m": {
-          "variable": "q2",
-          "long_name": "2-meter specific humidity",
-          "units": "kg kg^{-1}",
-          "spread_percentile_1": 5.9e-05,
-          "spread_percentile_10": 0.0001,
-          "spread_spatial_mean": 0.000309,
-          "spread_percentile_90": 0.000576,
-          "spread_percentile_99": 0.001294,
-          "minimum": 1.5e-05,
-          "maximum": 0.021268
-        },
-        "soil_moisture_layer1": {
-          "variable": "smois",
-          "long_name": "Soil moisture (layer 1)",
-          "units": "m^3 m^{-3}",
-          "spread_percentile_1": 0.000156,
-          "spread_percentile_10": 0.000366,
-          "spread_spatial_mean": 0.005625,
-          "spread_percentile_90": 0.014651,
-          "spread_percentile_99": 0.046641,
-          "minimum": 0.018941,
-          "maximum": 0.492
-        },
-        "soil_temperature_layer1": {
-          "variable": "tslb",
-          "long_name": "Soil temperature (layer 1)",
-          "units": "K",
-          "spread_percentile_1": 0.034112,
-          "spread_percentile_10": 0.204802,
-          "spread_spatial_mean": 0.53805,
-          "spread_percentile_90": 0.883689,
-          "spread_percentile_99": 1.407971,
-          "minimum": 251.38623,
-          "maximum": 307.71991
-        }
-      },
-      "cycle": "2026110613",
-      "members": 30,
-      "files_processed": 30,
-      "spread_ddof": 1,
-      "total_grid_cells": 2341818,
-      "land_grid_cells": 1461560,
-      "ocean_grid_cells": 880258,
-      "status": "available",
-      "alerts": [
-        {
-          "cycle": "2026110613",
-          "variable": "soil_temperature_layer1",
-          "field": "minimum",
-          "value": 251.38623,
-          "threshold": 253.0,
-          "units": "K",
-          "message": "soil_temperature_layer1 minimum 251.386230 K below 253 K"
-        }
-      ]
     }
   ]
 }
