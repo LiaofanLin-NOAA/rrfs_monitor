@@ -13,24 +13,24 @@ temperature_2m
   Variable: t2m
   Long name: 2-meter temperature
   Units: K
-  Spread percentile 1: 49.027451
-  Spread percentile 10: 49.922462
-  Spread spatial mean: 51.803482
-  Spread percentile 90: 53.727116
-  Spread percentile 99: 54.903255
-  Minimum: 0.000000
+  Spread percentile 1: 0.173194
+  Spread percentile 10: 0.300339
+  Spread spatial mean: 0.586810
+  Spread percentile 90: 0.922990
+  Spread percentile 99: 1.346359
+  Minimum: 256.000061
   Maximum: 308.750366
 
 specific_humidity_2m
   Variable: q2
   Long name: 2-meter specific humidity
   Units: kg kg^{-1}
-  Spread percentile 1: 0.000431
-  Spread percentile 10: 0.000629
-  Spread spatial mean: 0.001110
-  Spread percentile 90: 0.001720
-  Spread percentile 99: 0.002801
-  Minimum: 0.000000
+  Spread percentile 1: 0.000080
+  Spread percentile 10: 0.000140
+  Spread spatial mean: 0.000372
+  Spread percentile 90: 0.000690
+  Spread percentile 99: 0.001285
+  Minimum: 0.000028
   Maximum: 0.021676
 
 soil_moisture_layer1
