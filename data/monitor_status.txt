@@ -1,14 +1,14 @@
 ================================================================================
 RRFSv2X Ensemble Forecast Monitor
 ================================================================================
-Current UTC time: 2026-11-27 00:01:23 UTC
+Current UTC time: 2026-11-27 12:01:18 UTC
 Lookback cycles: 24
 Ensemble members: 30
 Expected files per member: 1
 File pattern: mpasout*
 
 ================================================================================
-Cycle: 2026112700
+Cycle: 2026112712
 ================================================================================
 mem001: MISSING (directory not found)
 mem002: MISSING (directory not found)
@@ -49,7 +49,7 @@ Summary:
 Processing cycle: SKIPPED (30 complete members required)
 
 ================================================================================
-Cycle: 2026112623
+Cycle: 2026112711
 ================================================================================
 mem001: MISSING (directory not found)
 mem002: MISSING (directory not found)
@@ -90,7 +90,7 @@ Summary:
 Processing cycle: SKIPPED (30 complete members required)
 
 ================================================================================
-Cycle: 2026112622
+Cycle: 2026112710
 ================================================================================
 mem001: MISSING (directory not found)
 mem002: MISSING (directory not found)
@@ -131,7 +131,7 @@ Summary:
 Processing cycle: SKIPPED (30 complete members required)
 
 ================================================================================
-Cycle: 2026112621
+Cycle: 2026112709
 ================================================================================
 mem001: MISSING (directory not found)
 mem002: MISSING (directory not found)
@@ -172,7 +172,7 @@ Summary:
 Processing cycle: SKIPPED (30 complete members required)
 
 ================================================================================
-Cycle: 2026112620
+Cycle: 2026112708
 ================================================================================
 mem001: MISSING (directory not found)
 mem002: MISSING (directory not found)
@@ -213,7 +213,7 @@ Summary:
 Processing cycle: SKIPPED (30 complete members required)
 
 ================================================================================
-Cycle: 2026112619
+Cycle: 2026112707
 ================================================================================
 mem001: MISSING (directory not found)
 mem002: MISSING (directory not found)
@@ -254,7 +254,7 @@ Summary:
 Processing cycle: SKIPPED (30 complete members required)
 
 ================================================================================
-Cycle: 2026112618
+Cycle: 2026112706
 ================================================================================
 mem001: MISSING (directory not found)
 mem002: MISSING (directory not found)
@@ -295,7 +295,7 @@ Summary:
 Processing cycle: SKIPPED (30 complete members required)
 
 ================================================================================
-Cycle: 2026112617
+Cycle: 2026112705
 ================================================================================
 mem001: MISSING (directory not found)
 mem002: MISSING (directory not found)
@@ -336,7 +336,7 @@ Summary:
 Processing cycle: SKIPPED (30 complete members required)
 
 ================================================================================
-Cycle: 2026112616
+Cycle: 2026112704
 ================================================================================
 mem001: MISSING (directory not found)
 mem002: MISSING (directory not found)
@@ -377,48 +377,7 @@ Summary:
 Processing cycle: SKIPPED (30 complete members required)
 
 ================================================================================
-Cycle: 2026112615
-================================================================================
-mem001: MISSING (directory not found)
-mem002: MISSING (directory not found)
-mem003: MISSING (directory not found)
-mem004: MISSING (directory not found)
-mem005: MISSING (directory not found)
-mem006: MISSING (directory not found)
-mem007: MISSING (directory not found)
-mem008: MISSING (directory not found)
-mem009: MISSING (directory not found)
-mem010: MISSING (directory not found)
-mem011: MISSING (directory not found)
-mem012: MISSING (directory not found)
-mem013: MISSING (directory not found)
-mem014: MISSING (directory not found)
-mem015: MISSING (directory not found)
-mem016: MISSING (directory not found)
-mem017: MISSING (directory not found)
-mem018: MISSING (directory not found)
-mem019: MISSING (directory not found)
-mem020: MISSING (directory not found)
-mem021: MISSING (directory not found)
-mem022: MISSING (directory not found)
-mem023: MISSING (directory not found)
-mem024: MISSING (directory not found)
-mem025: MISSING (directory not found)
-mem026: MISSING (directory not found)
-mem027: MISSING (directory not found)
-mem028: MISSING (directory not found)
-mem029: MISSING (directory not found)
-mem030: MISSING (directory not found)
-
-Summary:
-  Complete members: 0/30
-  Status: INCOMPLETE
-  Incomplete members: mem001, mem002, mem003, mem004, mem005, mem006, mem007, mem008, mem009, mem010, mem011, mem012, mem013, mem014, mem015, mem016, mem017, mem018, mem019, mem020, mem021, mem022, mem023, mem024, mem025, mem026, mem027, mem028, mem029, mem030
-
-Processing cycle: SKIPPED (30 complete members required)
-
-================================================================================
-Cycle: 2026112614
+Cycle: 2026112703
 ================================================================================
 mem001: MISSING (no mpasout* file)
 mem002: MISSING (no mpasout* file)
@@ -457,6 +416,539 @@ Summary:
   Incomplete members: mem001, mem002, mem003, mem004, mem005, mem006, mem007, mem008, mem009, mem010, mem011, mem012, mem013, mem014, mem015, mem016, mem017, mem018, mem019, mem020, mem021, mem022, mem023, mem024, mem025, mem026, mem027, mem028, mem029, mem030
 
 Processing cycle: SKIPPED (30 complete members required)
+
+================================================================================
+Cycle: 2026112702
+================================================================================
+mem001: OK (mpasout.2026-11-27_03.00.00.nc)
+mem002: OK (mpasout.2026-11-27_03.00.00.nc)
+mem003: OK (mpasout.2026-11-27_03.00.00.nc)
+mem004: OK (mpasout.2026-11-27_03.00.00.nc)
+mem005: OK (mpasout.2026-11-27_03.00.00.nc)
+mem006: OK (mpasout.2026-11-27_03.00.00.nc)
+mem007: OK (mpasout.2026-11-27_03.00.00.nc)
+mem008: OK (mpasout.2026-11-27_03.00.00.nc)
+mem009: OK (mpasout.2026-11-27_03.00.00.nc)
+mem010: OK (mpasout.2026-11-27_03.00.00.nc)
+mem011: OK (mpasout.2026-11-27_03.00.00.nc)
+mem012: OK (mpasout.2026-11-27_03.00.00.nc)
+mem013: OK (mpasout.2026-11-27_03.00.00.nc)
+mem014: OK (mpasout.2026-11-27_03.00.00.nc)
+mem015: OK (mpasout.2026-11-27_03.00.00.nc)
+mem016: OK (mpasout.2026-11-27_03.00.00.nc)
+mem017: OK (mpasout.2026-11-27_03.00.00.nc)
+mem018: OK (mpasout.2026-11-27_03.00.00.nc)
+mem019: OK (mpasout.2026-11-27_03.00.00.nc)
+mem020: OK (mpasout.2026-11-27_03.00.00.nc)
+mem021: OK (mpasout.2026-11-27_03.00.00.nc)
+mem022: OK (mpasout.2026-11-27_03.00.00.nc)
+mem023: OK (mpasout.2026-11-27_03.00.00.nc)
+mem024: OK (mpasout.2026-11-27_03.00.00.nc)
+mem025: OK (mpasout.2026-11-27_03.00.00.nc)
+mem026: OK (mpasout.2026-11-27_03.00.00.nc)
+mem027: OK (mpasout.2026-11-27_03.00.00.nc)
+mem028: OK (mpasout.2026-11-27_03.00.00.nc)
+mem029: OK (mpasout.2026-11-27_03.00.00.nc)
+mem030: OK (mpasout.2026-11-27_03.00.00.nc)
+
+Summary:
+  Complete members: 30/30
+  Status: COMPLETE
+
+Processing cycle:
+  SUCCESS: 2026112702.txt
+
+================================================================================
+Cycle: 2026112701
+================================================================================
+mem001: OK (mpasout.2026-11-27_02.00.00.nc)
+mem002: OK (mpasout.2026-11-27_02.00.00.nc)
+mem003: OK (mpasout.2026-11-27_02.00.00.nc)
+mem004: OK (mpasout.2026-11-27_02.00.00.nc)
+mem005: OK (mpasout.2026-11-27_02.00.00.nc)
+mem006: OK (mpasout.2026-11-27_02.00.00.nc)
+mem007: OK (mpasout.2026-11-27_02.00.00.nc)
+mem008: OK (mpasout.2026-11-27_02.00.00.nc)
+mem009: OK (mpasout.2026-11-27_02.00.00.nc)
+mem010: OK (mpasout.2026-11-27_02.00.00.nc)
+mem011: OK (mpasout.2026-11-27_02.00.00.nc)
+mem012: OK (mpasout.2026-11-27_02.00.00.nc)
+mem013: OK (mpasout.2026-11-27_02.00.00.nc)
+mem014: OK (mpasout.2026-11-27_02.00.00.nc)
+mem015: OK (mpasout.2026-11-27_02.00.00.nc)
+mem016: OK (mpasout.2026-11-27_02.00.00.nc)
+mem017: OK (mpasout.2026-11-27_02.00.00.nc)
+mem018: OK (mpasout.2026-11-27_02.00.00.nc)
+mem019: OK (mpasout.2026-11-27_02.00.00.nc)
+mem020: OK (mpasout.2026-11-27_02.00.00.nc)
+mem021: OK (mpasout.2026-11-27_02.00.00.nc)
+mem022: OK (mpasout.2026-11-27_02.00.00.nc)
+mem023: OK (mpasout.2026-11-27_02.00.00.nc)
+mem024: OK (mpasout.2026-11-27_02.00.00.nc)
+mem025: OK (mpasout.2026-11-27_02.00.00.nc)
+mem026: OK (mpasout.2026-11-27_02.00.00.nc)
+mem027: OK (mpasout.2026-11-27_02.00.00.nc)
+mem028: OK (mpasout.2026-11-27_02.00.00.nc)
+mem029: OK (mpasout.2026-11-27_02.00.00.nc)
+mem030: OK (mpasout.2026-11-27_02.00.00.nc)
+
+Summary:
+  Complete members: 30/30
+  Status: COMPLETE
+
+Processing cycle:
+  SUCCESS: 2026112701.txt
+
+================================================================================
+Cycle: 2026112700
+================================================================================
+mem001: OK (mpasout.2026-11-27_01.00.00.nc)
+mem002: OK (mpasout.2026-11-27_01.00.00.nc)
+mem003: OK (mpasout.2026-11-27_01.00.00.nc)
+mem004: OK (mpasout.2026-11-27_01.00.00.nc)
+mem005: OK (mpasout.2026-11-27_01.00.00.nc)
+mem006: OK (mpasout.2026-11-27_01.00.00.nc)
+mem007: OK (mpasout.2026-11-27_01.00.00.nc)
+mem008: OK (mpasout.2026-11-27_01.00.00.nc)
+mem009: OK (mpasout.2026-11-27_01.00.00.nc)
+mem010: OK (mpasout.2026-11-27_01.00.00.nc)
+mem011: OK (mpasout.2026-11-27_01.00.00.nc)
+mem012: OK (mpasout.2026-11-27_01.00.00.nc)
+mem013: OK (mpasout.2026-11-27_01.00.00.nc)
+mem014: OK (mpasout.2026-11-27_01.00.00.nc)
+mem015: OK (mpasout.2026-11-27_01.00.00.nc)
+mem016: OK (mpasout.2026-11-27_01.00.00.nc)
+mem017: OK (mpasout.2026-11-27_01.00.00.nc)
+mem018: OK (mpasout.2026-11-27_01.00.00.nc)
+mem019: OK (mpasout.2026-11-27_01.00.00.nc)
+mem020: OK (mpasout.2026-11-27_01.00.00.nc)
+mem021: OK (mpasout.2026-11-27_01.00.00.nc)
+mem022: OK (mpasout.2026-11-27_01.00.00.nc)
+mem023: OK (mpasout.2026-11-27_01.00.00.nc)
+mem024: OK (mpasout.2026-11-27_01.00.00.nc)
+mem025: OK (mpasout.2026-11-27_01.00.00.nc)
+mem026: OK (mpasout.2026-11-27_01.00.00.nc)
+mem027: OK (mpasout.2026-11-27_01.00.00.nc)
+mem028: OK (mpasout.2026-11-27_01.00.00.nc)
+mem029: OK (mpasout.2026-11-27_01.00.00.nc)
+mem030: OK (mpasout.2026-11-27_01.00.00.nc)
+
+Summary:
+  Complete members: 30/30
+  Status: COMPLETE
+
+Processing cycle:
+  SUCCESS: 2026112700.txt
+
+================================================================================
+Cycle: 2026112623
+================================================================================
+mem001: OK (mpasout.2026-11-27_00.00.00.nc)
+mem002: OK (mpasout.2026-11-27_00.00.00.nc)
+mem003: OK (mpasout.2026-11-27_00.00.00.nc)
+mem004: OK (mpasout.2026-11-27_00.00.00.nc)
+mem005: OK (mpasout.2026-11-27_00.00.00.nc)
+mem006: OK (mpasout.2026-11-27_00.00.00.nc)
+mem007: OK (mpasout.2026-11-27_00.00.00.nc)
+mem008: OK (mpasout.2026-11-27_00.00.00.nc)
+mem009: OK (mpasout.2026-11-27_00.00.00.nc)
+mem010: OK (mpasout.2026-11-27_00.00.00.nc)
+mem011: OK (mpasout.2026-11-27_00.00.00.nc)
+mem012: OK (mpasout.2026-11-27_00.00.00.nc)
+mem013: OK (mpasout.2026-11-27_00.00.00.nc)
+mem014: OK (mpasout.2026-11-27_00.00.00.nc)
+mem015: OK (mpasout.2026-11-27_00.00.00.nc)
+mem016: OK (mpasout.2026-11-27_00.00.00.nc)
+mem017: OK (mpasout.2026-11-27_00.00.00.nc)
+mem018: OK (mpasout.2026-11-27_00.00.00.nc)
+mem019: OK (mpasout.2026-11-27_00.00.00.nc)
+mem020: OK (mpasout.2026-11-27_00.00.00.nc)
+mem021: OK (mpasout.2026-11-27_00.00.00.nc)
+mem022: OK (mpasout.2026-11-27_00.00.00.nc)
+mem023: OK (mpasout.2026-11-27_00.00.00.nc)
+mem024: OK (mpasout.2026-11-27_00.00.00.nc)
+mem025: OK (mpasout.2026-11-27_00.00.00.nc)
+mem026: OK (mpasout.2026-11-27_00.00.00.nc)
+mem027: OK (mpasout.2026-11-27_00.00.00.nc)
+mem028: OK (mpasout.2026-11-27_00.00.00.nc)
+mem029: OK (mpasout.2026-11-27_00.00.00.nc)
+mem030: OK (mpasout.2026-11-27_00.00.00.nc)
+
+Summary:
+  Complete members: 30/30
+  Status: COMPLETE
+
+Processing cycle:
+  SUCCESS: 2026112623.txt
+
+================================================================================
+Cycle: 2026112622
+================================================================================
+mem001: OK (mpasout.2026-11-26_23.00.00.nc)
+mem002: OK (mpasout.2026-11-26_23.00.00.nc)
+mem003: OK (mpasout.2026-11-26_23.00.00.nc)
+mem004: OK (mpasout.2026-11-26_23.00.00.nc)
+mem005: OK (mpasout.2026-11-26_23.00.00.nc)
+mem006: OK (mpasout.2026-11-26_23.00.00.nc)
+mem007: OK (mpasout.2026-11-26_23.00.00.nc)
+mem008: OK (mpasout.2026-11-26_23.00.00.nc)
+mem009: OK (mpasout.2026-11-26_23.00.00.nc)
+mem010: OK (mpasout.2026-11-26_23.00.00.nc)
+mem011: OK (mpasout.2026-11-26_23.00.00.nc)
+mem012: OK (mpasout.2026-11-26_23.00.00.nc)
+mem013: OK (mpasout.2026-11-26_23.00.00.nc)
+mem014: OK (mpasout.2026-11-26_23.00.00.nc)
+mem015: OK (mpasout.2026-11-26_23.00.00.nc)
+mem016: OK (mpasout.2026-11-26_23.00.00.nc)
+mem017: OK (mpasout.2026-11-26_23.00.00.nc)
+mem018: OK (mpasout.2026-11-26_23.00.00.nc)
+mem019: OK (mpasout.2026-11-26_23.00.00.nc)
+mem020: OK (mpasout.2026-11-26_23.00.00.nc)
+mem021: OK (mpasout.2026-11-26_23.00.00.nc)
+mem022: OK (mpasout.2026-11-26_23.00.00.nc)
+mem023: OK (mpasout.2026-11-26_23.00.00.nc)
+mem024: OK (mpasout.2026-11-26_23.00.00.nc)
+mem025: OK (mpasout.2026-11-26_23.00.00.nc)
+mem026: OK (mpasout.2026-11-26_23.00.00.nc)
+mem027: OK (mpasout.2026-11-26_23.00.00.nc)
+mem028: OK (mpasout.2026-11-26_23.00.00.nc)
+mem029: OK (mpasout.2026-11-26_23.00.00.nc)
+mem030: OK (mpasout.2026-11-26_23.00.00.nc)
+
+Summary:
+  Complete members: 30/30
+  Status: COMPLETE
+
+Processing cycle:
+  SUCCESS: 2026112622.txt
+
+================================================================================
+Cycle: 2026112621
+================================================================================
+mem001: OK (mpasout.2026-11-26_22.00.00.nc)
+mem002: OK (mpasout.2026-11-26_22.00.00.nc)
+mem003: OK (mpasout.2026-11-26_22.00.00.nc)
+mem004: OK (mpasout.2026-11-26_22.00.00.nc)
+mem005: OK (mpasout.2026-11-26_22.00.00.nc)
+mem006: OK (mpasout.2026-11-26_22.00.00.nc)
+mem007: OK (mpasout.2026-11-26_22.00.00.nc)
+mem008: OK (mpasout.2026-11-26_22.00.00.nc)
+mem009: OK (mpasout.2026-11-26_22.00.00.nc)
+mem010: OK (mpasout.2026-11-26_22.00.00.nc)
+mem011: OK (mpasout.2026-11-26_22.00.00.nc)
+mem012: OK (mpasout.2026-11-26_22.00.00.nc)
+mem013: OK (mpasout.2026-11-26_22.00.00.nc)
+mem014: OK (mpasout.2026-11-26_22.00.00.nc)
+mem015: OK (mpasout.2026-11-26_22.00.00.nc)
+mem016: OK (mpasout.2026-11-26_22.00.00.nc)
+mem017: OK (mpasout.2026-11-26_22.00.00.nc)
+mem018: OK (mpasout.2026-11-26_22.00.00.nc)
+mem019: OK (mpasout.2026-11-26_22.00.00.nc)
+mem020: OK (mpasout.2026-11-26_22.00.00.nc)
+mem021: OK (mpasout.2026-11-26_22.00.00.nc)
+mem022: OK (mpasout.2026-11-26_22.00.00.nc)
+mem023: OK (mpasout.2026-11-26_22.00.00.nc)
+mem024: OK (mpasout.2026-11-26_22.00.00.nc)
+mem025: OK (mpasout.2026-11-26_22.00.00.nc)
+mem026: OK (mpasout.2026-11-26_22.00.00.nc)
+mem027: OK (mpasout.2026-11-26_22.00.00.nc)
+mem028: OK (mpasout.2026-11-26_22.00.00.nc)
+mem029: OK (mpasout.2026-11-26_22.00.00.nc)
+mem030: OK (mpasout.2026-11-26_22.00.00.nc)
+
+Summary:
+  Complete members: 30/30
+  Status: COMPLETE
+
+Processing cycle:
+  SUCCESS: 2026112621.txt
+
+================================================================================
+Cycle: 2026112620
+================================================================================
+mem001: OK (mpasout.2026-11-26_21.00.00.nc)
+mem002: OK (mpasout.2026-11-26_21.00.00.nc)
+mem003: OK (mpasout.2026-11-26_21.00.00.nc)
+mem004: OK (mpasout.2026-11-26_21.00.00.nc)
+mem005: OK (mpasout.2026-11-26_21.00.00.nc)
+mem006: OK (mpasout.2026-11-26_21.00.00.nc)
+mem007: OK (mpasout.2026-11-26_21.00.00.nc)
+mem008: OK (mpasout.2026-11-26_21.00.00.nc)
+mem009: OK (mpasout.2026-11-26_21.00.00.nc)
+mem010: OK (mpasout.2026-11-26_21.00.00.nc)
+mem011: OK (mpasout.2026-11-26_21.00.00.nc)
+mem012: OK (mpasout.2026-11-26_21.00.00.nc)
+mem013: OK (mpasout.2026-11-26_21.00.00.nc)
+mem014: OK (mpasout.2026-11-26_21.00.00.nc)
+mem015: OK (mpasout.2026-11-26_21.00.00.nc)
+mem016: OK (mpasout.2026-11-26_21.00.00.nc)
+mem017: OK (mpasout.2026-11-26_21.00.00.nc)
+mem018: OK (mpasout.2026-11-26_21.00.00.nc)
+mem019: OK (mpasout.2026-11-26_21.00.00.nc)
+mem020: OK (mpasout.2026-11-26_21.00.00.nc)
+mem021: OK (mpasout.2026-11-26_21.00.00.nc)
+mem022: OK (mpasout.2026-11-26_21.00.00.nc)
+mem023: OK (mpasout.2026-11-26_21.00.00.nc)
+mem024: OK (mpasout.2026-11-26_21.00.00.nc)
+mem025: OK (mpasout.2026-11-26_21.00.00.nc)
+mem026: OK (mpasout.2026-11-26_21.00.00.nc)
+mem027: OK (mpasout.2026-11-26_21.00.00.nc)
+mem028: OK (mpasout.2026-11-26_21.00.00.nc)
+mem029: OK (mpasout.2026-11-26_21.00.00.nc)
+mem030: OK (mpasout.2026-11-26_21.00.00.nc)
+
+Summary:
+  Complete members: 30/30
+  Status: COMPLETE
+
+Processing cycle:
+  SUCCESS: 2026112620.txt
+
+================================================================================
+Cycle: 2026112619
+================================================================================
+mem001: OK (mpasout.2026-11-26_20.00.00.nc)
+mem002: OK (mpasout.2026-11-26_20.00.00.nc)
+mem003: OK (mpasout.2026-11-26_20.00.00.nc)
+mem004: OK (mpasout.2026-11-26_20.00.00.nc)
+mem005: OK (mpasout.2026-11-26_20.00.00.nc)
+mem006: OK (mpasout.2026-11-26_20.00.00.nc)
+mem007: OK (mpasout.2026-11-26_20.00.00.nc)
+mem008: OK (mpasout.2026-11-26_20.00.00.nc)
+mem009: OK (mpasout.2026-11-26_20.00.00.nc)
+mem010: OK (mpasout.2026-11-26_20.00.00.nc)
+mem011: OK (mpasout.2026-11-26_20.00.00.nc)
+mem012: OK (mpasout.2026-11-26_20.00.00.nc)
+mem013: OK (mpasout.2026-11-26_20.00.00.nc)
+mem014: OK (mpasout.2026-11-26_20.00.00.nc)
+mem015: OK (mpasout.2026-11-26_20.00.00.nc)
+mem016: OK (mpasout.2026-11-26_20.00.00.nc)
+mem017: OK (mpasout.2026-11-26_20.00.00.nc)
+mem018: OK (mpasout.2026-11-26_20.00.00.nc)
+mem019: OK (mpasout.2026-11-26_20.00.00.nc)
+mem020: OK (mpasout.2026-11-26_20.00.00.nc)
+mem021: OK (mpasout.2026-11-26_20.00.00.nc)
+mem022: OK (mpasout.2026-11-26_20.00.00.nc)
+mem023: OK (mpasout.2026-11-26_20.00.00.nc)
+mem024: OK (mpasout.2026-11-26_20.00.00.nc)
+mem025: OK (mpasout.2026-11-26_20.00.00.nc)
+mem026: OK (mpasout.2026-11-26_20.00.00.nc)
+mem027: OK (mpasout.2026-11-26_20.00.00.nc)
+mem028: OK (mpasout.2026-11-26_20.00.00.nc)
+mem029: OK (mpasout.2026-11-26_20.00.00.nc)
+mem030: OK (mpasout.2026-11-26_20.00.00.nc)
+
+Summary:
+  Complete members: 30/30
+  Status: COMPLETE
+
+Processing cycle:
+  SUCCESS: 2026112619.txt
+
+================================================================================
+Cycle: 2026112618
+================================================================================
+mem001: OK (mpasout.2026-11-26_19.00.00.nc)
+mem002: OK (mpasout.2026-11-26_19.00.00.nc)
+mem003: OK (mpasout.2026-11-26_19.00.00.nc)
+mem004: OK (mpasout.2026-11-26_19.00.00.nc)
+mem005: OK (mpasout.2026-11-26_19.00.00.nc)
+mem006: OK (mpasout.2026-11-26_19.00.00.nc)
+mem007: OK (mpasout.2026-11-26_19.00.00.nc)
+mem008: OK (mpasout.2026-11-26_19.00.00.nc)
+mem009: OK (mpasout.2026-11-26_19.00.00.nc)
+mem010: OK (mpasout.2026-11-26_19.00.00.nc)
+mem011: OK (mpasout.2026-11-26_19.00.00.nc)
+mem012: OK (mpasout.2026-11-26_19.00.00.nc)
+mem013: OK (mpasout.2026-11-26_19.00.00.nc)
+mem014: OK (mpasout.2026-11-26_19.00.00.nc)
+mem015: OK (mpasout.2026-11-26_19.00.00.nc)
+mem016: OK (mpasout.2026-11-26_19.00.00.nc)
+mem017: OK (mpasout.2026-11-26_19.00.00.nc)
+mem018: OK (mpasout.2026-11-26_19.00.00.nc)
+mem019: OK (mpasout.2026-11-26_19.00.00.nc)
+mem020: OK (mpasout.2026-11-26_19.00.00.nc)
+mem021: OK (mpasout.2026-11-26_19.00.00.nc)
+mem022: OK (mpasout.2026-11-26_19.00.00.nc)
+mem023: OK (mpasout.2026-11-26_19.00.00.nc)
+mem024: OK (mpasout.2026-11-26_19.00.00.nc)
+mem025: OK (mpasout.2026-11-26_19.00.00.nc)
+mem026: OK (mpasout.2026-11-26_19.00.00.nc)
+mem027: OK (mpasout.2026-11-26_19.00.00.nc)
+mem028: OK (mpasout.2026-11-26_19.00.00.nc)
+mem029: OK (mpasout.2026-11-26_19.00.00.nc)
+mem030: OK (mpasout.2026-11-26_19.00.00.nc)
+
+Summary:
+  Complete members: 30/30
+  Status: COMPLETE
+
+Processing cycle:
+  SUCCESS: 2026112618.txt
+
+================================================================================
+Cycle: 2026112617
+================================================================================
+mem001: OK (mpasout.2026-11-26_18.00.00.nc)
+mem002: OK (mpasout.2026-11-26_18.00.00.nc)
+mem003: OK (mpasout.2026-11-26_18.00.00.nc)
+mem004: OK (mpasout.2026-11-26_18.00.00.nc)
+mem005: OK (mpasout.2026-11-26_18.00.00.nc)
+mem006: OK (mpasout.2026-11-26_18.00.00.nc)
+mem007: OK (mpasout.2026-11-26_18.00.00.nc)
+mem008: OK (mpasout.2026-11-26_18.00.00.nc)
+mem009: OK (mpasout.2026-11-26_18.00.00.nc)
+mem010: OK (mpasout.2026-11-26_18.00.00.nc)
+mem011: OK (mpasout.2026-11-26_18.00.00.nc)
+mem012: OK (mpasout.2026-11-26_18.00.00.nc)
+mem013: OK (mpasout.2026-11-26_18.00.00.nc)
+mem014: OK (mpasout.2026-11-26_18.00.00.nc)
+mem015: OK (mpasout.2026-11-26_18.00.00.nc)
+mem016: OK (mpasout.2026-11-26_18.00.00.nc)
+mem017: OK (mpasout.2026-11-26_18.00.00.nc)
+mem018: OK (mpasout.2026-11-26_18.00.00.nc)
+mem019: OK (mpasout.2026-11-26_18.00.00.nc)
+mem020: OK (mpasout.2026-11-26_18.00.00.nc)
+mem021: OK (mpasout.2026-11-26_18.00.00.nc)
+mem022: OK (mpasout.2026-11-26_18.00.00.nc)
+mem023: OK (mpasout.2026-11-26_18.00.00.nc)
+mem024: OK (mpasout.2026-11-26_18.00.00.nc)
+mem025: OK (mpasout.2026-11-26_18.00.00.nc)
+mem026: OK (mpasout.2026-11-26_18.00.00.nc)
+mem027: OK (mpasout.2026-11-26_18.00.00.nc)
+mem028: OK (mpasout.2026-11-26_18.00.00.nc)
+mem029: OK (mpasout.2026-11-26_18.00.00.nc)
+mem030: OK (mpasout.2026-11-26_18.00.00.nc)
+
+Summary:
+  Complete members: 30/30
+  Status: COMPLETE
+
+Processing cycle:
+  SUCCESS: 2026112617.txt
+
+================================================================================
+Cycle: 2026112616
+================================================================================
+mem001: OK (mpasout.2026-11-26_17.00.00.nc)
+mem002: OK (mpasout.2026-11-26_17.00.00.nc)
+mem003: OK (mpasout.2026-11-26_17.00.00.nc)
+mem004: OK (mpasout.2026-11-26_17.00.00.nc)
+mem005: OK (mpasout.2026-11-26_17.00.00.nc)
+mem006: OK (mpasout.2026-11-26_17.00.00.nc)
+mem007: OK (mpasout.2026-11-26_17.00.00.nc)
+mem008: OK (mpasout.2026-11-26_17.00.00.nc)
+mem009: OK (mpasout.2026-11-26_17.00.00.nc)
+mem010: OK (mpasout.2026-11-26_17.00.00.nc)
+mem011: OK (mpasout.2026-11-26_17.00.00.nc)
+mem012: OK (mpasout.2026-11-26_17.00.00.nc)
+mem013: OK (mpasout.2026-11-26_17.00.00.nc)
+mem014: OK (mpasout.2026-11-26_17.00.00.nc)
+mem015: OK (mpasout.2026-11-26_17.00.00.nc)
+mem016: OK (mpasout.2026-11-26_17.00.00.nc)
+mem017: OK (mpasout.2026-11-26_17.00.00.nc)
+mem018: OK (mpasout.2026-11-26_17.00.00.nc)
+mem019: OK (mpasout.2026-11-26_17.00.00.nc)
+mem020: OK (mpasout.2026-11-26_17.00.00.nc)
+mem021: OK (mpasout.2026-11-26_17.00.00.nc)
+mem022: OK (mpasout.2026-11-26_17.00.00.nc)
+mem023: OK (mpasout.2026-11-26_17.00.00.nc)
+mem024: OK (mpasout.2026-11-26_17.00.00.nc)
+mem025: OK (mpasout.2026-11-26_17.00.00.nc)
+mem026: OK (mpasout.2026-11-26_17.00.00.nc)
+mem027: OK (mpasout.2026-11-26_17.00.00.nc)
+mem028: OK (mpasout.2026-11-26_17.00.00.nc)
+mem029: OK (mpasout.2026-11-26_17.00.00.nc)
+mem030: OK (mpasout.2026-11-26_17.00.00.nc)
+
+Summary:
+  Complete members: 30/30
+  Status: COMPLETE
+
+Processing cycle:
+  SUCCESS: 2026112616.txt
+
+================================================================================
+Cycle: 2026112615
+================================================================================
+mem001: OK (mpasout.2026-11-26_16.00.00.nc)
+mem002: OK (mpasout.2026-11-26_16.00.00.nc)
+mem003: OK (mpasout.2026-11-26_16.00.00.nc)
+mem004: OK (mpasout.2026-11-26_16.00.00.nc)
+mem005: OK (mpasout.2026-11-26_16.00.00.nc)
+mem006: OK (mpasout.2026-11-26_16.00.00.nc)
+mem007: OK (mpasout.2026-11-26_16.00.00.nc)
+mem008: OK (mpasout.2026-11-26_16.00.00.nc)
+mem009: OK (mpasout.2026-11-26_16.00.00.nc)
+mem010: OK (mpasout.2026-11-26_16.00.00.nc)
+mem011: OK (mpasout.2026-11-26_16.00.00.nc)
+mem012: OK (mpasout.2026-11-26_16.00.00.nc)
+mem013: OK (mpasout.2026-11-26_16.00.00.nc)
+mem014: OK (mpasout.2026-11-26_16.00.00.nc)
+mem015: OK (mpasout.2026-11-26_16.00.00.nc)
+mem016: OK (mpasout.2026-11-26_16.00.00.nc)
+mem017: OK (mpasout.2026-11-26_16.00.00.nc)
+mem018: OK (mpasout.2026-11-26_16.00.00.nc)
+mem019: OK (mpasout.2026-11-26_16.00.00.nc)
+mem020: OK (mpasout.2026-11-26_16.00.00.nc)
+mem021: OK (mpasout.2026-11-26_16.00.00.nc)
+mem022: OK (mpasout.2026-11-26_16.00.00.nc)
+mem023: OK (mpasout.2026-11-26_16.00.00.nc)
+mem024: OK (mpasout.2026-11-26_16.00.00.nc)
+mem025: OK (mpasout.2026-11-26_16.00.00.nc)
+mem026: OK (mpasout.2026-11-26_16.00.00.nc)
+mem027: OK (mpasout.2026-11-26_16.00.00.nc)
+mem028: OK (mpasout.2026-11-26_16.00.00.nc)
+mem029: OK (mpasout.2026-11-26_16.00.00.nc)
+mem030: OK (mpasout.2026-11-26_16.00.00.nc)
+
+Summary:
+  Complete members: 30/30
+  Status: COMPLETE
+
+Processing cycle:
+  SUCCESS: 2026112615.txt
+
+================================================================================
+Cycle: 2026112614
+================================================================================
+mem001: OK (mpasout.2026-11-26_15.00.00.nc)
+mem002: OK (mpasout.2026-11-26_15.00.00.nc)
+mem003: OK (mpasout.2026-11-26_15.00.00.nc)
+mem004: OK (mpasout.2026-11-26_15.00.00.nc)
+mem005: OK (mpasout.2026-11-26_15.00.00.nc)
+mem006: OK (mpasout.2026-11-26_15.00.00.nc)
+mem007: OK (mpasout.2026-11-26_15.00.00.nc)
+mem008: OK (mpasout.2026-11-26_15.00.00.nc)
+mem009: OK (mpasout.2026-11-26_15.00.00.nc)
+mem010: OK (mpasout.2026-11-26_15.00.00.nc)
+mem011: OK (mpasout.2026-11-26_15.00.00.nc)
+mem012: OK (mpasout.2026-11-26_15.00.00.nc)
+mem013: OK (mpasout.2026-11-26_15.00.00.nc)
+mem014: OK (mpasout.2026-11-26_15.00.00.nc)
+mem015: OK (mpasout.2026-11-26_15.00.00.nc)
+mem016: OK (mpasout.2026-11-26_15.00.00.nc)
+mem017: OK (mpasout.2026-11-26_15.00.00.nc)
+mem018: OK (mpasout.2026-11-26_15.00.00.nc)
+mem019: OK (mpasout.2026-11-26_15.00.00.nc)
+mem020: OK (mpasout.2026-11-26_15.00.00.nc)
+mem021: OK (mpasout.2026-11-26_15.00.00.nc)
+mem022: OK (mpasout.2026-11-26_15.00.00.nc)
+mem023: OK (mpasout.2026-11-26_15.00.00.nc)
+mem024: OK (mpasout.2026-11-26_15.00.00.nc)
+mem025: OK (mpasout.2026-11-26_15.00.00.nc)
+mem026: OK (mpasout.2026-11-26_15.00.00.nc)
+mem027: OK (mpasout.2026-11-26_15.00.00.nc)
+mem028: OK (mpasout.2026-11-26_15.00.00.nc)
+mem029: OK (mpasout.2026-11-26_15.00.00.nc)
+mem030: OK (mpasout.2026-11-26_15.00.00.nc)
+
+Summary:
+  Complete members: 30/30
+  Status: COMPLETE
+
+Processing cycle:
+  SUCCESS: 2026112614.txt
 
 ================================================================================
 Cycle: 2026112613
@@ -498,497 +990,5 @@ Summary:
 
 Processing cycle:
   SUCCESS: 2026112613.txt
-
-================================================================================
-Cycle: 2026112612
-================================================================================
-mem001: OK (mpasout.2026-11-26_13.00.00.nc)
-mem002: OK (mpasout.2026-11-26_13.00.00.nc)
-mem003: OK (mpasout.2026-11-26_13.00.00.nc)
-mem004: OK (mpasout.2026-11-26_13.00.00.nc)
-mem005: OK (mpasout.2026-11-26_13.00.00.nc)
-mem006: OK (mpasout.2026-11-26_13.00.00.nc)
-mem007: OK (mpasout.2026-11-26_13.00.00.nc)
-mem008: OK (mpasout.2026-11-26_13.00.00.nc)
-mem009: OK (mpasout.2026-11-26_13.00.00.nc)
-mem010: OK (mpasout.2026-11-26_13.00.00.nc)
-mem011: OK (mpasout.2026-11-26_13.00.00.nc)
-mem012: OK (mpasout.2026-11-26_13.00.00.nc)
-mem013: OK (mpasout.2026-11-26_13.00.00.nc)
-mem014: OK (mpasout.2026-11-26_13.00.00.nc)
-mem015: OK (mpasout.2026-11-26_13.00.00.nc)
-mem016: OK (mpasout.2026-11-26_13.00.00.nc)
-mem017: OK (mpasout.2026-11-26_13.00.00.nc)
-mem018: OK (mpasout.2026-11-26_13.00.00.nc)
-mem019: OK (mpasout.2026-11-26_13.00.00.nc)
-mem020: OK (mpasout.2026-11-26_13.00.00.nc)
-mem021: OK (mpasout.2026-11-26_13.00.00.nc)
-mem022: OK (mpasout.2026-11-26_13.00.00.nc)
-mem023: OK (mpasout.2026-11-26_13.00.00.nc)
-mem024: OK (mpasout.2026-11-26_13.00.00.nc)
-mem025: OK (mpasout.2026-11-26_13.00.00.nc)
-mem026: OK (mpasout.2026-11-26_13.00.00.nc)
-mem027: OK (mpasout.2026-11-26_13.00.00.nc)
-mem028: OK (mpasout.2026-11-26_13.00.00.nc)
-mem029: OK (mpasout.2026-11-26_13.00.00.nc)
-mem030: OK (mpasout.2026-11-26_13.00.00.nc)
-
-Summary:
-  Complete members: 30/30
-  Status: COMPLETE
-
-Processing cycle:
-  SUCCESS: 2026112612.txt
-
-================================================================================
-Cycle: 2026112611
-================================================================================
-mem001: OK (mpasout.2026-11-26_12.00.00.nc)
-mem002: OK (mpasout.2026-11-26_12.00.00.nc)
-mem003: OK (mpasout.2026-11-26_12.00.00.nc)
-mem004: OK (mpasout.2026-11-26_12.00.00.nc)
-mem005: OK (mpasout.2026-11-26_12.00.00.nc)
-mem006: OK (mpasout.2026-11-26_12.00.00.nc)
-mem007: OK (mpasout.2026-11-26_12.00.00.nc)
-mem008: OK (mpasout.2026-11-26_12.00.00.nc)
-mem009: OK (mpasout.2026-11-26_12.00.00.nc)
-mem010: OK (mpasout.2026-11-26_12.00.00.nc)
-mem011: OK (mpasout.2026-11-26_12.00.00.nc)
-mem012: OK (mpasout.2026-11-26_12.00.00.nc)
-mem013: OK (mpasout.2026-11-26_12.00.00.nc)
-mem014: OK (mpasout.2026-11-26_12.00.00.nc)
-mem015: OK (mpasout.2026-11-26_12.00.00.nc)
-mem016: OK (mpasout.2026-11-26_12.00.00.nc)
-mem017: OK (mpasout.2026-11-26_12.00.00.nc)
-mem018: OK (mpasout.2026-11-26_12.00.00.nc)
-mem019: OK (mpasout.2026-11-26_12.00.00.nc)
-mem020: OK (mpasout.2026-11-26_12.00.00.nc)
-mem021: OK (mpasout.2026-11-26_12.00.00.nc)
-mem022: OK (mpasout.2026-11-26_12.00.00.nc)
-mem023: OK (mpasout.2026-11-26_12.00.00.nc)
-mem024: OK (mpasout.2026-11-26_12.00.00.nc)
-mem025: OK (mpasout.2026-11-26_12.00.00.nc)
-mem026: OK (mpasout.2026-11-26_12.00.00.nc)
-mem027: OK (mpasout.2026-11-26_12.00.00.nc)
-mem028: OK (mpasout.2026-11-26_12.00.00.nc)
-mem029: OK (mpasout.2026-11-26_12.00.00.nc)
-mem030: OK (mpasout.2026-11-26_12.00.00.nc)
-
-Summary:
-  Complete members: 30/30
-  Status: COMPLETE
-
-Processing cycle:
-  SUCCESS: 2026112611.txt
-
-================================================================================
-Cycle: 2026112610
-================================================================================
-mem001: OK (mpasout.2026-11-26_11.00.00.nc)
-mem002: OK (mpasout.2026-11-26_11.00.00.nc)
-mem003: OK (mpasout.2026-11-26_11.00.00.nc)
-mem004: OK (mpasout.2026-11-26_11.00.00.nc)
-mem005: OK (mpasout.2026-11-26_11.00.00.nc)
-mem006: OK (mpasout.2026-11-26_11.00.00.nc)
-mem007: OK (mpasout.2026-11-26_11.00.00.nc)
-mem008: OK (mpasout.2026-11-26_11.00.00.nc)
-mem009: OK (mpasout.2026-11-26_11.00.00.nc)
-mem010: OK (mpasout.2026-11-26_11.00.00.nc)
-mem011: OK (mpasout.2026-11-26_11.00.00.nc)
-mem012: OK (mpasout.2026-11-26_11.00.00.nc)
-mem013: OK (mpasout.2026-11-26_11.00.00.nc)
-mem014: OK (mpasout.2026-11-26_11.00.00.nc)
-mem015: OK (mpasout.2026-11-26_11.00.00.nc)
-mem016: OK (mpasout.2026-11-26_11.00.00.nc)
-mem017: OK (mpasout.2026-11-26_11.00.00.nc)
-mem018: OK (mpasout.2026-11-26_11.00.00.nc)
-mem019: OK (mpasout.2026-11-26_11.00.00.nc)
-mem020: OK (mpasout.2026-11-26_11.00.00.nc)
-mem021: OK (mpasout.2026-11-26_11.00.00.nc)
-mem022: OK (mpasout.2026-11-26_11.00.00.nc)
-mem023: OK (mpasout.2026-11-26_11.00.00.nc)
-mem024: OK (mpasout.2026-11-26_11.00.00.nc)
-mem025: OK (mpasout.2026-11-26_11.00.00.nc)
-mem026: OK (mpasout.2026-11-26_11.00.00.nc)
-mem027: OK (mpasout.2026-11-26_11.00.00.nc)
-mem028: OK (mpasout.2026-11-26_11.00.00.nc)
-mem029: OK (mpasout.2026-11-26_11.00.00.nc)
-mem030: OK (mpasout.2026-11-26_11.00.00.nc)
-
-Summary:
-  Complete members: 30/30
-  Status: COMPLETE
-
-Processing cycle:
-  SUCCESS: 2026112610.txt
-
-================================================================================
-Cycle: 2026112609
-================================================================================
-mem001: OK (mpasout.2026-11-26_10.00.00.nc)
-mem002: OK (mpasout.2026-11-26_10.00.00.nc)
-mem003: OK (mpasout.2026-11-26_10.00.00.nc)
-mem004: OK (mpasout.2026-11-26_10.00.00.nc)
-mem005: OK (mpasout.2026-11-26_10.00.00.nc)
-mem006: OK (mpasout.2026-11-26_10.00.00.nc)
-mem007: OK (mpasout.2026-11-26_10.00.00.nc)
-mem008: OK (mpasout.2026-11-26_10.00.00.nc)
-mem009: OK (mpasout.2026-11-26_10.00.00.nc)
-mem010: OK (mpasout.2026-11-26_10.00.00.nc)
-mem011: OK (mpasout.2026-11-26_10.00.00.nc)
-mem012: OK (mpasout.2026-11-26_10.00.00.nc)
-mem013: OK (mpasout.2026-11-26_10.00.00.nc)
-mem014: OK (mpasout.2026-11-26_10.00.00.nc)
-mem015: OK (mpasout.2026-11-26_10.00.00.nc)
-mem016: OK (mpasout.2026-11-26_10.00.00.nc)
-mem017: OK (mpasout.2026-11-26_10.00.00.nc)
-mem018: OK (mpasout.2026-11-26_10.00.00.nc)
-mem019: OK (mpasout.2026-11-26_10.00.00.nc)
-mem020: OK (mpasout.2026-11-26_10.00.00.nc)
-mem021: OK (mpasout.2026-11-26_10.00.00.nc)
-mem022: OK (mpasout.2026-11-26_10.00.00.nc)
-mem023: OK (mpasout.2026-11-26_10.00.00.nc)
-mem024: OK (mpasout.2026-11-26_10.00.00.nc)
-mem025: OK (mpasout.2026-11-26_10.00.00.nc)
-mem026: OK (mpasout.2026-11-26_10.00.00.nc)
-mem027: OK (mpasout.2026-11-26_10.00.00.nc)
-mem028: OK (mpasout.2026-11-26_10.00.00.nc)
-mem029: OK (mpasout.2026-11-26_10.00.00.nc)
-mem030: OK (mpasout.2026-11-26_10.00.00.nc)
-
-Summary:
-  Complete members: 30/30
-  Status: COMPLETE
-
-Processing cycle:
-  SUCCESS: 2026112609.txt
-
-================================================================================
-Cycle: 2026112608
-================================================================================
-mem001: OK (mpasout.2026-11-26_09.00.00.nc)
-mem002: OK (mpasout.2026-11-26_09.00.00.nc)
-mem003: OK (mpasout.2026-11-26_09.00.00.nc)
-mem004: OK (mpasout.2026-11-26_09.00.00.nc)
-mem005: OK (mpasout.2026-11-26_09.00.00.nc)
-mem006: OK (mpasout.2026-11-26_09.00.00.nc)
-mem007: OK (mpasout.2026-11-26_09.00.00.nc)
-mem008: OK (mpasout.2026-11-26_09.00.00.nc)
-mem009: OK (mpasout.2026-11-26_09.00.00.nc)
-mem010: OK (mpasout.2026-11-26_09.00.00.nc)
-mem011: OK (mpasout.2026-11-26_09.00.00.nc)
-mem012: OK (mpasout.2026-11-26_09.00.00.nc)
-mem013: OK (mpasout.2026-11-26_09.00.00.nc)
-mem014: OK (mpasout.2026-11-26_09.00.00.nc)
-mem015: OK (mpasout.2026-11-26_09.00.00.nc)
-mem016: OK (mpasout.2026-11-26_09.00.00.nc)
-mem017: OK (mpasout.2026-11-26_09.00.00.nc)
-mem018: OK (mpasout.2026-11-26_09.00.00.nc)
-mem019: OK (mpasout.2026-11-26_09.00.00.nc)
-mem020: OK (mpasout.2026-11-26_09.00.00.nc)
-mem021: OK (mpasout.2026-11-26_09.00.00.nc)
-mem022: OK (mpasout.2026-11-26_09.00.00.nc)
-mem023: OK (mpasout.2026-11-26_09.00.00.nc)
-mem024: OK (mpasout.2026-11-26_09.00.00.nc)
-mem025: OK (mpasout.2026-11-26_09.00.00.nc)
-mem026: OK (mpasout.2026-11-26_09.00.00.nc)
-mem027: OK (mpasout.2026-11-26_09.00.00.nc)
-mem028: OK (mpasout.2026-11-26_09.00.00.nc)
-mem029: OK (mpasout.2026-11-26_09.00.00.nc)
-mem030: OK (mpasout.2026-11-26_09.00.00.nc)
-
-Summary:
-  Complete members: 30/30
-  Status: COMPLETE
-
-Processing cycle:
-  SUCCESS: 2026112608.txt
-
-================================================================================
-Cycle: 2026112607
-================================================================================
-mem001: OK (mpasout.2026-11-26_08.00.00.nc)
-mem002: OK (mpasout.2026-11-26_08.00.00.nc)
-mem003: OK (mpasout.2026-11-26_08.00.00.nc)
-mem004: OK (mpasout.2026-11-26_08.00.00.nc)
-mem005: OK (mpasout.2026-11-26_08.00.00.nc)
-mem006: OK (mpasout.2026-11-26_08.00.00.nc)
-mem007: OK (mpasout.2026-11-26_08.00.00.nc)
-mem008: OK (mpasout.2026-11-26_08.00.00.nc)
-mem009: OK (mpasout.2026-11-26_08.00.00.nc)
-mem010: OK (mpasout.2026-11-26_08.00.00.nc)
-mem011: OK (mpasout.2026-11-26_08.00.00.nc)
-mem012: OK (mpasout.2026-11-26_08.00.00.nc)
-mem013: OK (mpasout.2026-11-26_08.00.00.nc)
-mem014: OK (mpasout.2026-11-26_08.00.00.nc)
-mem015: OK (mpasout.2026-11-26_08.00.00.nc)
-mem016: OK (mpasout.2026-11-26_08.00.00.nc)
-mem017: OK (mpasout.2026-11-26_08.00.00.nc)
-mem018: OK (mpasout.2026-11-26_08.00.00.nc)
-mem019: OK (mpasout.2026-11-26_08.00.00.nc)
-mem020: OK (mpasout.2026-11-26_08.00.00.nc)
-mem021: OK (mpasout.2026-11-26_08.00.00.nc)
-mem022: OK (mpasout.2026-11-26_08.00.00.nc)
-mem023: OK (mpasout.2026-11-26_08.00.00.nc)
-mem024: OK (mpasout.2026-11-26_08.00.00.nc)
-mem025: OK (mpasout.2026-11-26_08.00.00.nc)
-mem026: OK (mpasout.2026-11-26_08.00.00.nc)
-mem027: OK (mpasout.2026-11-26_08.00.00.nc)
-mem028: OK (mpasout.2026-11-26_08.00.00.nc)
-mem029: OK (mpasout.2026-11-26_08.00.00.nc)
-mem030: OK (mpasout.2026-11-26_08.00.00.nc)
-
-Summary:
-  Complete members: 30/30
-  Status: COMPLETE
-
-Processing cycle:
-  SUCCESS: 2026112607.txt
-
-================================================================================
-Cycle: 2026112606
-================================================================================
-mem001: OK (mpasout.2026-11-26_07.00.00.nc)
-mem002: OK (mpasout.2026-11-26_07.00.00.nc)
-mem003: OK (mpasout.2026-11-26_07.00.00.nc)
-mem004: OK (mpasout.2026-11-26_07.00.00.nc)
-mem005: OK (mpasout.2026-11-26_07.00.00.nc)
-mem006: OK (mpasout.2026-11-26_07.00.00.nc)
-mem007: OK (mpasout.2026-11-26_07.00.00.nc)
-mem008: OK (mpasout.2026-11-26_07.00.00.nc)
-mem009: OK (mpasout.2026-11-26_07.00.00.nc)
-mem010: OK (mpasout.2026-11-26_07.00.00.nc)
-mem011: OK (mpasout.2026-11-26_07.00.00.nc)
-mem012: OK (mpasout.2026-11-26_07.00.00.nc)
-mem013: OK (mpasout.2026-11-26_07.00.00.nc)
-mem014: OK (mpasout.2026-11-26_07.00.00.nc)
-mem015: OK (mpasout.2026-11-26_07.00.00.nc)
-mem016: OK (mpasout.2026-11-26_07.00.00.nc)
-mem017: OK (mpasout.2026-11-26_07.00.00.nc)
-mem018: OK (mpasout.2026-11-26_07.00.00.nc)
-mem019: OK (mpasout.2026-11-26_07.00.00.nc)
-mem020: OK (mpasout.2026-11-26_07.00.00.nc)
-mem021: OK (mpasout.2026-11-26_07.00.00.nc)
-mem022: OK (mpasout.2026-11-26_07.00.00.nc)
-mem023: OK (mpasout.2026-11-26_07.00.00.nc)
-mem024: OK (mpasout.2026-11-26_07.00.00.nc)
-mem025: OK (mpasout.2026-11-26_07.00.00.nc)
-mem026: OK (mpasout.2026-11-26_07.00.00.nc)
-mem027: OK (mpasout.2026-11-26_07.00.00.nc)
-mem028: OK (mpasout.2026-11-26_07.00.00.nc)
-mem029: OK (mpasout.2026-11-26_07.00.00.nc)
-mem030: OK (mpasout.2026-11-26_07.00.00.nc)
-
-Summary:
-  Complete members: 30/30
-  Status: COMPLETE
-
-Processing cycle:
-  SUCCESS: 2026112606.txt
-
-================================================================================
-Cycle: 2026112605
-================================================================================
-mem001: OK (mpasout.2026-11-26_06.00.00.nc)
-mem002: OK (mpasout.2026-11-26_06.00.00.nc)
-mem003: OK (mpasout.2026-11-26_06.00.00.nc)
-mem004: OK (mpasout.2026-11-26_06.00.00.nc)
-mem005: OK (mpasout.2026-11-26_06.00.00.nc)
-mem006: OK (mpasout.2026-11-26_06.00.00.nc)
-mem007: OK (mpasout.2026-11-26_06.00.00.nc)
-mem008: OK (mpasout.2026-11-26_06.00.00.nc)
-mem009: OK (mpasout.2026-11-26_06.00.00.nc)
-mem010: OK (mpasout.2026-11-26_06.00.00.nc)
-mem011: OK (mpasout.2026-11-26_06.00.00.nc)
-mem012: OK (mpasout.2026-11-26_06.00.00.nc)
-mem013: OK (mpasout.2026-11-26_06.00.00.nc)
-mem014: OK (mpasout.2026-11-26_06.00.00.nc)
-mem015: OK (mpasout.2026-11-26_06.00.00.nc)
-mem016: OK (mpasout.2026-11-26_06.00.00.nc)
-mem017: OK (mpasout.2026-11-26_06.00.00.nc)
-mem018: OK (mpasout.2026-11-26_06.00.00.nc)
-mem019: OK (mpasout.2026-11-26_06.00.00.nc)
-mem020: OK (mpasout.2026-11-26_06.00.00.nc)
-mem021: OK (mpasout.2026-11-26_06.00.00.nc)
-mem022: OK (mpasout.2026-11-26_06.00.00.nc)
-mem023: OK (mpasout.2026-11-26_06.00.00.nc)
-mem024: OK (mpasout.2026-11-26_06.00.00.nc)
-mem025: OK (mpasout.2026-11-26_06.00.00.nc)
-mem026: OK (mpasout.2026-11-26_06.00.00.nc)
-mem027: OK (mpasout.2026-11-26_06.00.00.nc)
-mem028: OK (mpasout.2026-11-26_06.00.00.nc)
-mem029: OK (mpasout.2026-11-26_06.00.00.nc)
-mem030: OK (mpasout.2026-11-26_06.00.00.nc)
-
-Summary:
-  Complete members: 30/30
-  Status: COMPLETE
-
-Processing cycle:
-  SUCCESS: 2026112605.txt
-
-================================================================================
-Cycle: 2026112604
-================================================================================
-mem001: OK (mpasout.2026-11-26_05.00.00.nc)
-mem002: OK (mpasout.2026-11-26_05.00.00.nc)
-mem003: OK (mpasout.2026-11-26_05.00.00.nc)
-mem004: OK (mpasout.2026-11-26_05.00.00.nc)
-mem005: OK (mpasout.2026-11-26_05.00.00.nc)
-mem006: OK (mpasout.2026-11-26_05.00.00.nc)
-mem007: OK (mpasout.2026-11-26_05.00.00.nc)
-mem008: OK (mpasout.2026-11-26_05.00.00.nc)
-mem009: OK (mpasout.2026-11-26_05.00.00.nc)
-mem010: OK (mpasout.2026-11-26_05.00.00.nc)
-mem011: OK (mpasout.2026-11-26_05.00.00.nc)
-mem012: OK (mpasout.2026-11-26_05.00.00.nc)
-mem013: OK (mpasout.2026-11-26_05.00.00.nc)
-mem014: OK (mpasout.2026-11-26_05.00.00.nc)
-mem015: OK (mpasout.2026-11-26_05.00.00.nc)
-mem016: OK (mpasout.2026-11-26_05.00.00.nc)
-mem017: OK (mpasout.2026-11-26_05.00.00.nc)
-mem018: OK (mpasout.2026-11-26_05.00.00.nc)
-mem019: OK (mpasout.2026-11-26_05.00.00.nc)
-mem020: OK (mpasout.2026-11-26_05.00.00.nc)
-mem021: OK (mpasout.2026-11-26_05.00.00.nc)
-mem022: OK (mpasout.2026-11-26_05.00.00.nc)
-mem023: OK (mpasout.2026-11-26_05.00.00.nc)
-mem024: OK (mpasout.2026-11-26_05.00.00.nc)
-mem025: OK (mpasout.2026-11-26_05.00.00.nc)
-mem026: OK (mpasout.2026-11-26_05.00.00.nc)
-mem027: OK (mpasout.2026-11-26_05.00.00.nc)
-mem028: OK (mpasout.2026-11-26_05.00.00.nc)
-mem029: OK (mpasout.2026-11-26_05.00.00.nc)
-mem030: OK (mpasout.2026-11-26_05.00.00.nc)
-
-Summary:
-  Complete members: 30/30
-  Status: COMPLETE
-
-Processing cycle:
-  SUCCESS: 2026112604.txt
-
-================================================================================
-Cycle: 2026112603
-================================================================================
-mem001: OK (mpasout.2026-11-26_04.00.00.nc)
-mem002: OK (mpasout.2026-11-26_04.00.00.nc)
-mem003: OK (mpasout.2026-11-26_04.00.00.nc)
-mem004: OK (mpasout.2026-11-26_04.00.00.nc)
-mem005: OK (mpasout.2026-11-26_04.00.00.nc)
-mem006: OK (mpasout.2026-11-26_04.00.00.nc)
-mem007: OK (mpasout.2026-11-26_04.00.00.nc)
-mem008: OK (mpasout.2026-11-26_04.00.00.nc)
-mem009: OK (mpasout.2026-11-26_04.00.00.nc)
-mem010: OK (mpasout.2026-11-26_04.00.00.nc)
-mem011: OK (mpasout.2026-11-26_04.00.00.nc)
-mem012: OK (mpasout.2026-11-26_04.00.00.nc)
-mem013: OK (mpasout.2026-11-26_04.00.00.nc)
-mem014: OK (mpasout.2026-11-26_04.00.00.nc)
-mem015: OK (mpasout.2026-11-26_04.00.00.nc)
-mem016: OK (mpasout.2026-11-26_04.00.00.nc)
-mem017: OK (mpasout.2026-11-26_04.00.00.nc)
-mem018: OK (mpasout.2026-11-26_04.00.00.nc)
-mem019: OK (mpasout.2026-11-26_04.00.00.nc)
-mem020: OK (mpasout.2026-11-26_04.00.00.nc)
-mem021: OK (mpasout.2026-11-26_04.00.00.nc)
-mem022: OK (mpasout.2026-11-26_04.00.00.nc)
-mem023: OK (mpasout.2026-11-26_04.00.00.nc)
-mem024: OK (mpasout.2026-11-26_04.00.00.nc)
-mem025: OK (mpasout.2026-11-26_04.00.00.nc)
-mem026: OK (mpasout.2026-11-26_04.00.00.nc)
-mem027: OK (mpasout.2026-11-26_04.00.00.nc)
-mem028: OK (mpasout.2026-11-26_04.00.00.nc)
-mem029: OK (mpasout.2026-11-26_04.00.00.nc)
-mem030: OK (mpasout.2026-11-26_04.00.00.nc)
-
-Summary:
-  Complete members: 30/30
-  Status: COMPLETE
-
-Processing cycle:
-  SUCCESS: 2026112603.txt
-
-================================================================================
-Cycle: 2026112602
-================================================================================
-mem001: OK (mpasout.2026-11-26_03.00.00.nc)
-mem002: OK (mpasout.2026-11-26_03.00.00.nc)
-mem003: OK (mpasout.2026-11-26_03.00.00.nc)
-mem004: OK (mpasout.2026-11-26_03.00.00.nc)
-mem005: OK (mpasout.2026-11-26_03.00.00.nc)
-mem006: OK (mpasout.2026-11-26_03.00.00.nc)
-mem007: OK (mpasout.2026-11-26_03.00.00.nc)
-mem008: OK (mpasout.2026-11-26_03.00.00.nc)
-mem009: OK (mpasout.2026-11-26_03.00.00.nc)
-mem010: OK (mpasout.2026-11-26_03.00.00.nc)
-mem011: OK (mpasout.2026-11-26_03.00.00.nc)
-mem012: OK (mpasout.2026-11-26_03.00.00.nc)
-mem013: OK (mpasout.2026-11-26_03.00.00.nc)
-mem014: OK (mpasout.2026-11-26_03.00.00.nc)
-mem015: OK (mpasout.2026-11-26_03.00.00.nc)
-mem016: OK (mpasout.2026-11-26_03.00.00.nc)
-mem017: OK (mpasout.2026-11-26_03.00.00.nc)
-mem018: OK (mpasout.2026-11-26_03.00.00.nc)
-mem019: OK (mpasout.2026-11-26_03.00.00.nc)
-mem020: OK (mpasout.2026-11-26_03.00.00.nc)
-mem021: OK (mpasout.2026-11-26_03.00.00.nc)
-mem022: OK (mpasout.2026-11-26_03.00.00.nc)
-mem023: OK (mpasout.2026-11-26_03.00.00.nc)
-mem024: OK (mpasout.2026-11-26_03.00.00.nc)
-mem025: OK (mpasout.2026-11-26_03.00.00.nc)
-mem026: OK (mpasout.2026-11-26_03.00.00.nc)
-mem027: OK (mpasout.2026-11-26_03.00.00.nc)
-mem028: OK (mpasout.2026-11-26_03.00.00.nc)
-mem029: OK (mpasout.2026-11-26_03.00.00.nc)
-mem030: OK (mpasout.2026-11-26_03.00.00.nc)
-
-Summary:
-  Complete members: 30/30
-  Status: COMPLETE
-
-Processing cycle:
-  SUCCESS: 2026112602.txt
-
-================================================================================
-Cycle: 2026112601
-================================================================================
-mem001: OK (mpasout.2026-11-26_02.00.00.nc)
-mem002: OK (mpasout.2026-11-26_02.00.00.nc)
-mem003: OK (mpasout.2026-11-26_02.00.00.nc)
-mem004: OK (mpasout.2026-11-26_02.00.00.nc)
-mem005: OK (mpasout.2026-11-26_02.00.00.nc)
-mem006: OK (mpasout.2026-11-26_02.00.00.nc)
-mem007: OK (mpasout.2026-11-26_02.00.00.nc)
-mem008: OK (mpasout.2026-11-26_02.00.00.nc)
-mem009: OK (mpasout.2026-11-26_02.00.00.nc)
-mem010: OK (mpasout.2026-11-26_02.00.00.nc)
-mem011: OK (mpasout.2026-11-26_02.00.00.nc)
-mem012: OK (mpasout.2026-11-26_02.00.00.nc)
-mem013: OK (mpasout.2026-11-26_02.00.00.nc)
-mem014: OK (mpasout.2026-11-26_02.00.00.nc)
-mem015: OK (mpasout.2026-11-26_02.00.00.nc)
-mem016: OK (mpasout.2026-11-26_02.00.00.nc)
-mem017: OK (mpasout.2026-11-26_02.00.00.nc)
-mem018: OK (mpasout.2026-11-26_02.00.00.nc)
-mem019: OK (mpasout.2026-11-26_02.00.00.nc)
-mem020: OK (mpasout.2026-11-26_02.00.00.nc)
-mem021: OK (mpasout.2026-11-26_02.00.00.nc)
-mem022: OK (mpasout.2026-11-26_02.00.00.nc)
-mem023: OK (mpasout.2026-11-26_02.00.00.nc)
-mem024: OK (mpasout.2026-11-26_02.00.00.nc)
-mem025: OK (mpasout.2026-11-26_02.00.00.nc)
-mem026: OK (mpasout.2026-11-26_02.00.00.nc)
-mem027: OK (mpasout.2026-11-26_02.00.00.nc)
-mem028: OK (mpasout.2026-11-26_02.00.00.nc)
-mem029: OK (mpasout.2026-11-26_02.00.00.nc)
-mem030: OK (mpasout.2026-11-26_02.00.00.nc)
-
-Summary:
-  Complete members: 30/30
-  Status: COMPLETE
-
-Processing cycle:
-  SUCCESS: 2026112601.txt
 
 ================================================================================
